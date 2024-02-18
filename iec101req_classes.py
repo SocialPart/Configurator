@@ -23,7 +23,7 @@ class IEC101_req_Device:
                  common_address_of_asdu: int = 1, asdu_address_bytes: int = 1, obj_address_bytes: int = 2,
                  cot_bytes: int = 1, station_address_bytes: int = 1, interrogation_check: int = 60,
                  clock_sync: int = 1, clock_sync_check: int = 60, sleep: int = 0):
-        self.points = IEC101req_default_points
+        self.points = []
         self.commands = []
         self.name = name
         self.desc = desc
@@ -38,6 +38,9 @@ class IEC101_req_Device:
         self.clock_sync = clock_sync
         self.clock_sync_check = clock_sync_check
         self.sleep = sleep
+
+"""Дефолтные каналы будут добавляться только при создании новго клиента, 
+в остальном же - парситься из xml-файла"""
 
 IEC101req_default_points = [IEC101_req_Point(name='Connect', address=0),
                             IEC101_req_Point(name='ActiveConnect', address=0)]
