@@ -19,24 +19,29 @@ class IEC101_req_Command:
         self.wait_a = wait_a
 
 class IEC101_req_Device:
-    def __init__(self, name, desc, disabled, station_address, common_address_of_asdu,
-                 asdu_address_bytes, obj_address_bytes, cot_bytes, station_address_bytes,
-                 interrogation_check, clock_sync, clock_sync_check, sleep):
+    def __init__(self, name: str = '', desc: str = '', disabled: int = 0, station_address: int = 1,
+                 common_address_of_asdu: int = 1, asdu_address_bytes: int = 1, obj_address_bytes: int = 2,
+                 cot_bytes: int = 1, station_address_bytes: int = 1, interrogation_check: int = 60,
+                 clock_sync: int = 1, clock_sync_check: int = 60, sleep: int = 0):
         self.points = IEC101req_default_points
         self.commands = []
-        self.name: str = ''
-        self.disabled: int = 0
-        self.station_address: int = 1
-        self.common_address_of_asdu: int = 1
-        self.asdu_address_bytes: int = 1
-        self.obj_address_bytes: int = 2
-        self.cot_bytes: int = 1
-        self.station_address_bytes: int = 1
-        self.interrogation_check: int = 60
-        self.clock_sync: int = 1
-        self.clock_sync_check: int = 60
-        sel.sleep: int = 0
+        self.name = name
+        self.desc = desc
+        self.disabled = disabled
+        self.station_address = station_address
+        self.common_address_of_asdu = common_address_of_asdu
+        self.asdu_address_bytes = asdu_address_bytes
+        self.obj_address_bytes = obj_address_bytes
+        self.cot_bytes = cot_bytes
+        self.station_address_bytes = station_address_bytes
+        self.interrogation_check = interrogation_check
+        self.clock_sync = clock_sync
+        self.clock_sync_check = clock_sync_check
+        self.sleep = sleep
 
 IEC101req_default_points = [IEC101_req_Point(name='Connect', address=0),
                             IEC101_req_Point(name='ActiveConnect', address=0)]
-print(IEC101req_default_points[1].name)
+
+s = IEC101_req_Device(name='ss')
+s.points.append(IEC101_req_Point(name='Test', address=123))
+print(s.points)
