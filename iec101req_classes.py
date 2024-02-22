@@ -3,13 +3,13 @@
 """Создание класса для хранения данных клиента МЭК-101"""
 
 
-class IEC101req_Point:
+class IEC101reqPoint:
     def __init__(self, name: str = '', address: int = 0):
         self.name = name
         self.address = address
 
 
-class IEC101req_Command:
+class IEC101reqCommand:
     def __init__(self, name: str = '', address: int = 0, off_address: int = 0,
                  qu: int = 0, common_address: int = 1, type_id: str = 'C_SC_NA_1',
                  signal_type: int = 14, wait_a: int = 0):
@@ -23,7 +23,7 @@ class IEC101req_Command:
         self.wait_a = wait_a
 
 
-class IEC101req_Device:
+class IEC101reqDevice:
     def __init__(self, points: list = None, commands: list = None, name: str = '', desc: str = '',
                  disabled: int = 0, station_address: int = 1, tz: int = None,
                  common_address_of_asdu: int = 1, asdu_address_bytes: int = 1, obj_address_bytes: int = 2,
@@ -47,7 +47,7 @@ class IEC101req_Device:
         self.sleep = sleep
 
 
-class IEC101req_data_source:
+class IEC101reqDataSource:
     def __init__(self, port: str = '', port_speed: int = 9600, byte_reading: int = 0, byte_reading_timeout: int = 100,
                  port_parity: int = 0, port_bytesize: int = 8, port_stopbits: int = 0, balanced: int = 0,
                  retries: int = 3, interleave: int = 100, responce_to: int = 500):
@@ -64,7 +64,7 @@ class IEC101req_data_source:
         self.responce_to = responce_to
 
 
-class IEC101req_slave:
+class IEC101reqSlave:
     def __init__(self, name: str = '', data_sources: list = None, devices: list = None):
         self.data_sources = data_sources
         self.devices = devices
@@ -74,8 +74,8 @@ class IEC101req_slave:
 """Дефолтные каналы будут добавляться только при создании новго клиента, 
 в остальном же - парситься из xml-файла"""
 
-IEC101req_default_points = [IEC101req_Point(name='Connect', address=0),
-                            IEC101req_Point(name='ActiveConnect', address=0)]
+IEC101req_default_points = [IEC101reqPoint(name='Connect', address=0),
+                            IEC101reqPoint(name='ActiveConnect', address=0)]
 
 # s = IEC101req_Device(name='ss')
 # s.points.append(IEC101req_Point(name='Test', address=123))
