@@ -10,9 +10,10 @@ class IEC101reqPoint:
 
 
 class IEC101reqCommand:
-    def __init__(self, name: str = '', address: int = 0, off_address: int = 0,
+    def __init__(self, tag, name: str = '', address: int = 0, off_address: int = 0,
                  qu: int = 0, common_address: int = 1, type_id: str = 'C_SC_NA_1',
-                 signal_type: int = 14, wait_a: int = 0):
+                 signal_type: int = 14, wait_a: int = None):
+        self.tag = tag
         self.name = name
         self.address = address
         self.off_address = off_address
@@ -27,8 +28,9 @@ class IEC101reqDevice:
     def __init__(self, points: list = None, commands: list = None, name: str = '', desc: str = '',
                  disabled: int = 0, station_address: int = 1, tz: int = None,
                  common_address_of_asdu: int = 1, asdu_address_bytes: int = 1, obj_address_bytes: int = 2,
-                 cot_bytes: int = 1, station_address_bytes: int = 1, interrogation_check: int = 60,
-                 clock_sync: int = 1, clock_sync_check: int = 60, sleep: int = 0):
+                 cot_bytes: int = 1, station_address_bytes: int = 1, interrogation_check: int = 60, InterrogationType: str = None,
+                 clock_sync: int = 1, clock_sync_check: int = 60, ClockSyncType: str = None,
+                sleep: int = 0):
         self.points = points
         self.commands = commands
         self.name = name
@@ -42,8 +44,10 @@ class IEC101reqDevice:
         self.cot_bytes = cot_bytes
         self.station_address_bytes = station_address_bytes
         self.interrogation_check = interrogation_check
+        self.interrogation_type = InterrogationType
         self.clock_sync = clock_sync
         self.clock_sync_check = clock_sync_check
+        self.clock_sync_type = ClockSyncType
         self.sleep = sleep
 
 

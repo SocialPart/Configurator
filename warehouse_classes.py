@@ -29,11 +29,22 @@ class DiscretePoint:
         self.aging = aging
         self.invert = invert
 
+
 class CommandPoint:
-    def __init__(self):
+    def __init__(self, name: str = '', signal_type: int = 15, naming: str = '',
+                 state: str = None, last: str = None, lock_cond_on: str = None,
+                 lock_cond_off: str = None, trk: str = None, use_tracking: int = 0):
+        self.name = name
+        self.c = 2
+        self.signal_type = signal_type
+        self.naming = naming
+        self.state = state
+        self.last = last
+        self.lock_cond_on = lock_cond_on
+        self.lock_cond_off = lock_cond_off
+        self.trk = trk
+        self.use_tracking = use_tracking
 
 
-
-
-s = AnalogPoint()
-print(s.c)
+s = CommandPoint()
+print(s.use_tracking)

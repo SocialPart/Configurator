@@ -1,16 +1,6 @@
 from lxml import etree
 import iec101req_classes
-
-
-def parse_iec101_req(element):
-    if len(element) == 0:
-        return element.text.strip() if element.text else None
-    else:
-        result = {}
-        for child in element:
-            result[child.tag] = parse_iec101_req(child)
-        return result
-
+import defs
 
 path = 'Temp/etc/KC/iec101_req.xml'
 
@@ -22,7 +12,7 @@ slaves = []
 
 for slave_element in slaves_element.findall('SLAVE'):
     print(slave_element)
-    slave_info = parse_iec101_req(slave_element)
+    slave_info = defs.parse_xml(slave_element)
     slave_name = slave_element.get('NAME')
     ds_sources_element = slave_element.find('DATA_SOURCES')
     data_sources_lst = []
@@ -60,6 +50,7 @@ for slave_element in slaves_element.findall('SLAVE'):
         commands_element = device_element.find('COMMANDS')
         commands_lst = []
         for command_element in commands_element.findall('COMMAND'):
+            command_tag = command_element.getparent()
             command_name = command_element.get('NAME')
             command_address = command_element.get('ADDRESS')
             command_off_address = command_element.get('OFF_ADDRESS')
@@ -68,7 +59,7 @@ for slave_element in slaves_element.findall('SLAVE'):
             command_type_id = command_element.get('TYPE_ID')
             command_signal_type = command_element.get('SIGNAL_TYPE')
             command_wait_a = command_element.get('WAIT_A')
-            command = iec101req_classes.IEC101reqCommand(name=command_name, address=command_address,
+            command = iec101req_classes.IEC101reqCommand(tag=command_tag, name=command_name, address=command_address,
                                                          off_address=command_off_address, qu=command_qu,
                                                          common_address=command_common_address, type_id=command_type_id,
                                                          signal_type=command_signal_type, wait_a=command_wait_a)
@@ -103,4 +94,4 @@ for slave_element in slaves_element.findall('SLAVE'):
     slave = iec101req_classes.IEC101reqSlave(name=slave_name, data_sources=data_sources_lst, devices=devices_lst)
     slaves.append(slave)
 
-print(slaves[0].devices[0].station_address)
+print(slaves[0].devices[0].commands[1].tag)
