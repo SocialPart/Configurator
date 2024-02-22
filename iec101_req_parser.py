@@ -3,21 +3,26 @@ import iec101req_classes
 import defs
 
 path = 'Temp/etc/KC/iec101_req.xml'
+initial_tag = 'IEC 60870-5-101 Req'
 
 tree = etree.parse(path)
 root = tree.getroot()
+#print(root)
 slaves_element = root.find('SLAVES')
 
 slaves = []
 
 for slave_element in slaves_element.findall('SLAVE'):
-    print(slave_element)
     slave_info = defs.parse_xml(slave_element)
     slave_name = slave_element.get('NAME')
+    slave_tag = initial_tag + '.' + slave_name
     ds_sources_element = slave_element.find('DATA_SOURCES')
     data_sources_lst = []
+    devices_element = slave_element.find('DEVICES')
+    devices_lst = []
+    slave = iec101req_classes.IEC101reqSlave(name=slave_name, data_sources=data_sources_lst, devices=devices_lst)
+    slaves.append(slave)
     for ds_element in ds_sources_element.findall('DS'):
-        print(ds_element)
         ds_port = ds_element.get('PORT')
         ds_port_speed = ds_element.get('PORT_SPEED')
         ds_byte_reading = ds_element.get('BYTE_READING')
@@ -37,34 +42,16 @@ for slave_element in slaves_element.findall('SLAVE'):
                                                             retries=ds_retries, interleave=ds_interleave,
                                                             responce_to=ds_response_to)
         data_sources_lst.append(data_source)
-    devices_element = slave_element.find('DEVICES')
-    devices_lst = []
+
     for device_element in devices_element.findall('DEVICE'):
         points_element = device_element.find('POINTS')
         points_lst = []
-        for point_element in points_element.findall('POINT'):
-            point_name = point_element.get('NAME')
-            point_address = point_element.get('ADDRESS')
-            point = iec101req_classes.IEC101reqPoint(name=point_name, address=point_address)
-            points_lst.append(point)
+
         commands_element = device_element.find('COMMANDS')
         commands_lst = []
-        for command_element in commands_element.findall('COMMAND'):
-            command_tag = command_element.getparent()
-            command_name = command_element.get('NAME')
-            command_address = command_element.get('ADDRESS')
-            command_off_address = command_element.get('OFF_ADDRESS')
-            command_qu = command_element.get('QU')
-            command_common_address = command_element.get('COMMON_ADDRESS')
-            command_type_id = command_element.get('TYPE_ID')
-            command_signal_type = command_element.get('SIGNAL_TYPE')
-            command_wait_a = command_element.get('WAIT_A')
-            command = iec101req_classes.IEC101reqCommand(tag=command_tag, name=command_name, address=command_address,
-                                                         off_address=command_off_address, qu=command_qu,
-                                                         common_address=command_common_address, type_id=command_type_id,
-                                                         signal_type=command_signal_type, wait_a=command_wait_a)
-            commands_lst.append(command)
+
         device_name = device_element.get('NAME')
+        device_tag = slave_tag + '.' + device_name
         device_desc = device_element.get('DESC')
         device_disabled = device_element.get('DISABLED')
         device_tz = device_element.get('TZ')
@@ -91,7 +78,36 @@ for slave_element in slaves_element.findall('SLAVE'):
                                                    clock_sync=device_clock_sync,
                                                    clock_sync_check=device_clock_sync_check, sleep=device_sleep)
         devices_lst.append(device)
-    slave = iec101req_classes.IEC101reqSlave(name=slave_name, data_sources=data_sources_lst, devices=devices_lst)
-    slaves.append(slave)
 
-print(slaves[0].devices[0].commands[1].tag)
+        for point_element in points_element.findall('POINT'):
+            point_name = point_element.get('NAME')
+            point_tag = device_tag + '.' + point_name
+            point_address = point_element.get('ADDRESS')
+            point = iec101req_classes.IEC101reqPoint(tag=point_tag, name=point_name, address=point_address)
+            points_lst.append(point)
+
+        device.points = points_lst
+
+        for command_element in commands_element.findall('COMMAND'):
+            command_name = command_element.get('NAME')
+            command_tag = device_tag + '.' + command_name
+            command_address = command_element.get('ADDRESS')
+            command_off_address = command_element.get('OFF_ADDRESS')
+            command_qu = command_element.get('QU')
+            command_common_address = command_element.get('COMMON_ADDRESS')
+            command_type_id = command_element.get('TYPE_ID')
+            command_signal_type = command_element.get('SIGNAL_TYPE')
+            command_wait_a = command_element.get('WAIT_A')
+            command = iec101req_classes.IEC101reqCommand(tag=command_tag, name=command_name, address=command_address,
+                                                         off_address=command_off_address, qu=command_qu,
+                                                         common_address=command_common_address, type_id=command_type_id,
+                                                         signal_type=command_signal_type, wait_a=command_wait_a)
+            commands_lst.append(command)
+
+        device.commands = commands_lst
+
+    slave.data_sources = data_sources_lst
+    slave.devices = devices_lst
+
+
+print(slaves[0].devices[1].points[1].tag)
