@@ -85,7 +85,7 @@ for slave_element in slaves_element.findall('SLAVE'):
             #print(point_element)
             point_name = point_element.get('NAME')
             point_tag = device_tag + '.' + point_name
-            point_warehouse_link = defs.warehouse_point_link(point_tag, warehouse)
+            point_warehouse_link = defs.warehouse_point_link(point_element, point_tag, warehouse)
             point_address = point_element.get('ADDRESS')
             point = iec101req_classes.IEC101reqPoint(warehouse_tag=point_tag, warehouse_link=point_warehouse_link,
                                                      name=point_name, address=point_address)
@@ -97,7 +97,7 @@ for slave_element in slaves_element.findall('SLAVE'):
             #print(command_element.tag)
             command_name = command_element.get('NAME')
             command_tag = device_tag + '.' + command_name
-            command_warehouse_link = defs.warehouse_command_link(command_tag, warehouse)
+            command_warehouse_link = defs.warehouse_command_link(command_element, command_tag, warehouse)
             command_address = command_element.get('ADDRESS')
             command_off_address = command_element.get('OFF_ADDRESS')
             command_qu = command_element.get('QU')
@@ -122,3 +122,7 @@ for slave_element in slaves_element.findall('SLAVE'):
 print(sys.getsizeof(slaves))
 print(slaves[0].devices[0].points[0].warehouse_link.name)
 print(slaves[0].devices[0].points[0].warehouse_tag)
+print(warehouse['points'][344].source_link.warehouse_tag)
+print(warehouse['points'][344].name)
+print(warehouse['commands'][4].source_link.warehouse_tag)
+print(warehouse['commands'][4].name)

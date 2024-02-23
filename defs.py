@@ -17,15 +17,19 @@ def parse_xml(element):
 "Также можно использовать и для Kernel если он имеет вид словаря с Points и Commands"
 
 
-def warehouse_point_link(point_tag, warehouse):
+def warehouse_point_link(element, point_tag, warehouse):
     for point_warehouse in warehouse['points']:
         if point_tag == point_warehouse.name:
+            point_warehouse.source_link = element
             return point_warehouse
 
 "Ссылка на экземпляр Command в Warehouse для дополнительной информации и возможности конфигурирования"
 
 
-def warehouse_command_link(point_tag, warehouse):
+def warehouse_command_link(element, command_tag, warehouse):
+    #print(element)
     for command_warehouse in warehouse['commands']:
-        if point_tag == command_warehouse.name:
+        #print(command_warehouse.name)
+        if command_tag == command_warehouse.name:
+            command_warehouse.source_link = element
             return command_warehouse

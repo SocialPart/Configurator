@@ -18,6 +18,7 @@ class IEC101reqCommand:
                  signal_type: int = 14, wait_a: int = None):
         self.warehouse_tag = warehouse_tag
         self.warehouse_link = warehouse_link
+        self.to_warehouse_link = warehouse_link.source_link = self
         self.name = name
         self.address = address
         self.off_address = off_address
