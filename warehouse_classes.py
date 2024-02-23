@@ -3,7 +3,7 @@
 
 class AnalogPoint:
     def __init__(self, name: str = '', signal_type: int = 10, naming: str = '',
-                 lo: int = None, hi: int = None, formula=None,
+                 lo: int = None, hi: int = None, formula: str = None,
                  formula_time: str = None, aging: int = None):
         self.name = name
         self.c = 0

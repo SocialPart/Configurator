@@ -1,7 +1,7 @@
 from lxml import etree
 import iec101req_classes
 from warehouse_parser import warehouse
-
+import sys
 import defs
 
 path = 'Temp/etc/KC/iec101_req.xml'
@@ -82,19 +82,22 @@ for slave_element in slaves_element.findall('SLAVE'):
         devices_lst.append(device)
 
         for point_element in points_element.findall('POINT'):
+            #print(point_element)
             point_name = point_element.get('NAME')
             point_tag = device_tag + '.' + point_name
-            point_address = point_element.get('ADDRESS')
             point_warehouse_link = defs.warehouse_point_link(point_tag, warehouse)
-            point = iec101req_classes.IEC101reqPoint(tag=point_tag, warehouse_link=point_warehouse_link,
+            point_address = point_element.get('ADDRESS')
+            point = iec101req_classes.IEC101reqPoint(warehouse_tag=point_tag, warehouse_link=point_warehouse_link,
                                                      name=point_name, address=point_address)
             points_lst.append(point)
 
         device.points = points_lst
 
         for command_element in commands_element.findall('COMMAND'):
+            #print(command_element.tag)
             command_name = command_element.get('NAME')
             command_tag = device_tag + '.' + command_name
+            command_warehouse_link = defs.warehouse_command_link(command_tag, warehouse)
             command_address = command_element.get('ADDRESS')
             command_off_address = command_element.get('OFF_ADDRESS')
             command_qu = command_element.get('QU')
@@ -102,7 +105,9 @@ for slave_element in slaves_element.findall('SLAVE'):
             command_type_id = command_element.get('TYPE_ID')
             command_signal_type = command_element.get('SIGNAL_TYPE')
             command_wait_a = command_element.get('WAIT_A')
-            command = iec101req_classes.IEC101reqCommand(tag=command_tag, name=command_name, address=command_address,
+            command = iec101req_classes.IEC101reqCommand(warehouse_tag=command_tag,
+                                                         warehouse_link=command_warehouse_link,
+                                                         name=command_name, address=command_address,
                                                          off_address=command_off_address, qu=command_qu,
                                                          common_address=command_common_address, type_id=command_type_id,
                                                          signal_type=command_signal_type, wait_a=command_wait_a)
@@ -113,5 +118,7 @@ for slave_element in slaves_element.findall('SLAVE'):
     slave.data_sources = data_sources_lst
     slave.devices = devices_lst
 
-print(slaves[0].devices[1].points[1].tag)
-print(slaves[0].devices[1].points[1].warehouse_link.name)
+
+print(sys.getsizeof(slaves))
+print(slaves[0].devices[0].points[0].warehouse_link.name)
+print(slaves[0].devices[0].points[0].warehouse_tag)

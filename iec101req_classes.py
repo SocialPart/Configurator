@@ -4,18 +4,20 @@
 
 
 class IEC101reqPoint:
-    def __init__(self, tag, warehouse_link, name: str = '', address: int = 0):
-        self.tag = tag
+    def __init__(self, warehouse_tag, warehouse_link, name: str = '', address: int = 0):
+        self.warehouse_tag = warehouse_tag
         self.warehouse_link = warehouse_link
+        self.to_warehouse_link = warehouse_link.source_link = self
         self.name = name
         self.address = address
 
 
 class IEC101reqCommand:
-    def __init__(self, tag, name: str = '', address: int = 0, off_address: int = 0,
+    def __init__(self, warehouse_tag, warehouse_link, name: str = '', address: int = 0, off_address: int = 0,
                  qu: int = 0, common_address: int = 1, type_id: str = 'C_SC_NA_1',
                  signal_type: int = 14, wait_a: int = None):
-        self.tag = tag
+        self.warehouse_tag = warehouse_tag
+        self.warehouse_link = warehouse_link
         self.name = name
         self.address = address
         self.off_address = off_address
