@@ -4,8 +4,9 @@
 
 
 class IEC101reqPoint:
-    def __init__(self, tag, name: str = '', address: int = 0):
+    def __init__(self, tag, warehouse_link, name: str = '', address: int = 0):
         self.tag = tag
+        self.warehouse_link = warehouse_link
         self.name = name
         self.address = address
 
@@ -76,7 +77,7 @@ class IEC101reqSlave:
         self.name = name
 
 
-"""Дефолтные каналы будут добавляться только при создании новго клиента, 
+"""Дефолтные каналы будут добавляться только при создании нового клиента, 
 в остальном же - парситься из xml-файла"""
 
 # IEC101req_default_points = [IEC101reqPoint(name='Connect', address=0),

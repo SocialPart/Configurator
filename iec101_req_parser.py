@@ -1,5 +1,7 @@
 from lxml import etree
 import iec101req_classes
+from warehouse_parser import warehouse
+
 import defs
 
 path = 'Temp/etc/KC/iec101_req.xml'
@@ -83,7 +85,9 @@ for slave_element in slaves_element.findall('SLAVE'):
             point_name = point_element.get('NAME')
             point_tag = device_tag + '.' + point_name
             point_address = point_element.get('ADDRESS')
-            point = iec101req_classes.IEC101reqPoint(tag=point_tag, name=point_name, address=point_address)
+            point_warehouse_link = defs.warehouse_point_link(point_tag, warehouse)
+            point = iec101req_classes.IEC101reqPoint(tag=point_tag, warehouse_link=point_warehouse_link,
+                                                     name=point_name, address=point_address)
             points_lst.append(point)
 
         device.points = points_lst
@@ -109,5 +113,5 @@ for slave_element in slaves_element.findall('SLAVE'):
     slave.data_sources = data_sources_lst
     slave.devices = devices_lst
 
-
 print(slaves[0].devices[1].points[1].tag)
+print(slaves[0].devices[1].points[1].warehouse_link.name)

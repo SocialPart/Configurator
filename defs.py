@@ -12,3 +12,9 @@ def parse_xml(element):
             result[child.tag] = parse_xml(child)
         return result
 
+
+"Ссылка на экземпляр в Warehouse для дополнительной информации и возможности конифгурирования"
+def warehouse_point_link(tag, warehouse):
+    for point_warehouse in warehouse['points']:
+        if tag == point_warehouse.name:
+            return point_warehouse

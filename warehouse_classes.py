@@ -46,5 +46,3 @@ class CommandPoint:
         self.use_tracking = use_tracking
 
 
-s = CommandPoint()
-print(s.use_tracking)
