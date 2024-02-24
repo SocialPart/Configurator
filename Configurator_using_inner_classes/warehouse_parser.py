@@ -1,8 +1,7 @@
 from lxml import etree
 import warehouse_classes
-import defs
 
-path = 'Temp/etc/KC/warehouse.xml'
+path = '../Temp/etc/KC/warehouse.xml'
 
 warehouse = dict(points=[], commands=[])
 

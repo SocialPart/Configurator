@@ -6,7 +6,7 @@ import shutil
 
 #Import and extraction directories config, etc, var in Temp
 def open_and_extract(path):
-    extract_dir = 'Temp'
+    extract_dir = '../Temp'
     if not os.path.exists(extract_dir):
         os.makedirs(extract_dir)
 
@@ -18,4 +18,4 @@ def open_and_extract(path):
            inner_tar.extractall(path=extract_dir)
 
 def deleting_temp_after_close():
-    shutil.rmtree('Temp', ignore_errors=True, onerror='Any')
+    shutil.rmtree('../Temp', ignore_errors=True, onerror='Any')
