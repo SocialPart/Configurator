@@ -26,6 +26,8 @@ def parse_warehouse(path: str = '../Temp/etc/KC/warehouse.xml') -> dict:
         point_formula_time = point_element.get('FORMULA_TIME')
         point_aging = point_element.get('AGING')
         points_invert = point_element.get('INVERT')
+
+        # Проверка типа сигнала для установки в несоответствующих атрибутах NaN
         if point_c == '0':
             points_invert = np.NAN
         if point_c == '1':
@@ -61,6 +63,46 @@ def parse_warehouse(path: str = '../Temp/etc/KC/warehouse.xml') -> dict:
     warehouse['commands'].set_index('name', inplace=True)
 
     return warehouse
+
+
+def parse_kernel(path: str = '../Temp/etc/KC/kernel.xml') -> dict:
+    kernel = dict(points=pd.DataFrame(),
+                     commands=pd.DataFrame())
+    tree = etree.parse(path)
+    root = tree.getroot()
+
+    points_element = root.find('POINTS')
+    commands_element = root.find('COMMANDS')
+
+    for point_element in points_element.findall('POINT'):
+        point_name = point_element.get('NAME')
+        point_signal_type = point_element.get('SIGNAL_TYPE')
+        points_invert = point_element.get('INVERT')
+        point_lo = point_element.get('LO')
+        point_hi = point_element.get('HI')
+        point_var = point_element.get('VAR')
+        point_abs_var = point_element.get('ABS_VAR')
+        point_formula = point_element.get('FORMULA')
+        point_aging = point_element.get('AGING')
+
+        point = {'name': point_name, 'signal_type': point_signal_type, 'invert': points_invert,
+                 'lo': point_lo, 'hi': point_hi, 'var': point_var, 'abs_var': point_abs_var,
+                 'formula': point_formula, 'aging': point_aging,}
+        kernel['points'] = kernel['points']._append(point, ignore_index=True)
+
+    for command_element in commands_element.findall('COMMAND'):
+        command_name = command_element.get('NAME')
+        command_signal_type = command_element.get('SIGNAL_TYPE')
+        command_trk = command_element.get('TRK')
+        command_use_tracking = command_element.get('USE_TRACKING')
+        command = {'name': command_name, 'signal_type': command_signal_type,
+                   'trk': command_trk, 'use_tracking': command_use_tracking}
+        kernel['commands'] = kernel['commands']._append(command, ignore_index=True)
+
+    kernel['points'].set_index('name', inplace=True)
+    kernel['commands'].set_index('name', inplace=True)
+
+    return kernel
 # for i in warehouse.get('points'):
 #     print(i.name)
 
