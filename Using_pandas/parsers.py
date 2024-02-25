@@ -1,12 +1,14 @@
 from lxml import etree
 import pandas as pd
 import numpy as np
+import defs
 
 """Создание парсера warehouse. """
 
+
 def parse_warehouse(path: str = '../Temp/etc/KC/warehouse.xml') -> dict:
     warehouse = dict(points=pd.DataFrame(),
-                 commands=pd.DataFrame())
+                     commands=pd.DataFrame())
     tree = etree.parse(path)
     root = tree.getroot()
 
@@ -64,19 +66,20 @@ def parse_warehouse(path: str = '../Temp/etc/KC/warehouse.xml') -> dict:
 
     return warehouse
 
+
 """В отличии от Warehouse отдельно добавлять Points и делить их на ТС и ТС по параметру С не получится
 Добавляем все каналы Point. По существу парсить и создавать класс под Kernel для экспорта в xlsx не требуется 
 (только далее при работе конфигуратором)"""
 
+
 def parse_kernel(path: str = '../Temp/etc/KC/kernel.xml') -> dict:
     kernel = dict(points=pd.DataFrame(),
-                     commands=pd.DataFrame())
+                  commands=pd.DataFrame())
     tree = etree.parse(path)
     root = tree.getroot()
 
     points_element = root.find('POINTS')
     commands_element = root.find('COMMANDS')
-
 
     for point_element in points_element.findall('POINT'):
         point_name = point_element.get('NAME')
@@ -108,5 +111,112 @@ def parse_kernel(path: str = '../Temp/etc/KC/kernel.xml') -> dict:
     return kernel
 
 
+def parse_iec101req(path: str = '../Temp/etc/KC/iec101_req.xml'):
+    iec101req = dict(slaves=dict())
+    initial_tag = 'IEC 60870-5-101 Req'
+    tree = etree.parse(path)
+    root = tree.getroot()
+    slaves_element = root.find('SLAVES')
+
+    for slave_element in slaves_element.findall('SLAVE'):
+        slave_name = slave_element.get('NAME')
+        iec101req['slaves'][slave_name] = dict(data_sources=pd.DataFrame(), devices=pd.DataFrame())
+        slave_tag = initial_tag + '.' + slave_name
+        ds_sources_element = slave_element.find('DATA_SOURCES')
+        devices_element = slave_element.find('DEVICES')
+        for ds_element in ds_sources_element.findall('DS'):
+            ds_port = ds_element.get('PORT')
+            ds_port_speed = ds_element.get('PORT_SPEED')
+            ds_byte_reading = ds_element.get('BYTE_READING')
+            ds_byte_reading_timeout = ds_element.get('BYTE_READING_TIMEOUT')
+            ds_port_parity = ds_element.get('PORT_PARITY')
+            ds_port_bytesize = ds_element.get('PORT_BYTESIZE')
+            ds_port_stopbits = ds_element.get('PORT_STOPBITS')
+            ds_balanced = ds_element.get('BALANCED')
+            ds_retries = ds_element.get('RETRIES')
+            ds_interleave = ds_element.get('INTERLEAVE')
+            ds_response_to = ds_element.get('RESPONSE_TO')
+            d_s = {'port': ds_port, 'port_speed': ds_port_speed, 'byte_reading': ds_byte_reading,
+                   'byte_reading_timeout': ds_byte_reading_timeout, 'port_parity': ds_port_parity,
+                   'port_bytesize': ds_port_bytesize, 'port_stopbits': ds_port_stopbits, 'balanced': ds_balanced,
+                   'retries': ds_retries, 'interleave': ds_interleave, 'responce_to': ds_response_to}
+            iec101req['slaves'][slave_name]['data_sources'] = \
+                iec101req['slaves'][slave_name]['data_sources']._append(d_s, ignore_index=True)
+
+        for device_element in devices_element.findall('DEVICE'):
+
+            points_element = device_element.find('POINTS')
+
+            commands_element = device_element.find('COMMANDS')
+
+            device_translation = dict(points=pd.DataFrame(), commands=pd.DataFrame())
+            device_name = device_element.get('NAME')
+            device_tag = slave_tag + '.' + device_name
+            device_desc = device_element.get('DESC')
+            device_disabled = device_element.get('DISABLED')
+            device_tz = device_element.get('TZ')
+            device_station_address = device_element.get('STATION_ADDRESS')
+            device_common_address_of_asdu = device_element.get('COMMON_ADDRESS_OF_ASDU')
+            device_asdu_address_bytes = device_element.get('ASDU_ADDRESS_BYTES')
+            device_obj_address_bytes = device_element.get('OBJ_ADDRESS_BYTES')
+            device_cot_bytes = device_element.get('COT_BYTES')
+            device_station_address_bytes = device_element.get('STATION_ADDRESS_BYTES')
+            device_interrogation_check = device_element.get('INTERROGATION_CHECK')
+            device_clock_sync = device_element.get('CLOCK_SYNC')
+            device_clock_sync_check = device_element.get('CLOCK_SYNC_CHECK')
+            device_sleep = device_element.get('SLEEP')
 
 
+            device = {'translation': device_translation, 'name': device_name, 'desc': device_desc,
+                      'disabled': device_disabled, 'tz': device_tz, 'station_address': device_station_address,
+                      'common_address_of_asdu': device_common_address_of_asdu,
+                      'asdu_address_bytes': device_asdu_address_bytes,
+                      'obj_address_bytes': device_obj_address_bytes, 'cot_bytes': device_cot_bytes,
+                      'station_address_bytes': device_station_address_bytes,
+                      'interrogation_check': device_interrogation_check,
+                      'clock_sync': device_clock_sync, 'clock_sync_check': device_clock_sync_check, 'sleep': device_sleep}
+
+            iec101req['slaves'][slave_name]['devices'] = \
+                iec101req['slaves'][slave_name]['devices']._append(device, ignore_index=True)
+
+            for point_element in points_element.findall('POINT'):
+                point_name = point_element.get('NAME')
+                point_tag = device_tag + '.' + point_name
+                #point_warehouse_link = defs.warehouse_link(point_element, point_tag, warehouse)
+                point_address = point_element.get('ADDRESS')
+                point = {'warehouse_tag': point_tag, 'name': point_name, 'address': point_address}
+
+                ### Остановился здесь, слишком длинные ссылки получаются, надо оптимизировать
+                iec101req['slaves'][slave_name]['devices'][device]['translation']['points'] = \
+                    iec101req['slaves'][slave_name]['devices'][device]['translation']['points']._append(point, ignore_index=True)
+
+            #device.points = points_lst
+
+            for command_element in commands_element.findall('COMMAND'):
+                # print(command_element.tag)
+                command_name = command_element.get('NAME')
+                command_tag = device_tag + '.' + command_name
+                command_warehouse_link = defs.warehouse_link(command_element, command_tag, warehouse)
+                command_address = command_element.get('ADDRESS')
+                command_off_address = command_element.get('OFF_ADDRESS')
+                command_qu = command_element.get('QU')
+                command_common_address = command_element.get('COMMON_ADDRESS')
+                command_type_id = command_element.get('TYPE_ID')
+                command_signal_type = command_element.get('SIGNAL_TYPE')
+                command_wait_a = command_element.get('WAIT_A')
+                command = iec101req_classes.IEC101reqCommand(warehouse_tag=command_tag,
+                                                             warehouse_link=command_warehouse_link,
+                                                             name=command_name, address=command_address,
+                                                             off_address=command_off_address, qu=command_qu,
+                                                             common_address=command_common_address,
+                                                             type_id=command_type_id,
+                                                             signal_type=command_signal_type, wait_a=command_wait_a)
+                commands_lst.append(command)
+
+            device.commands = commands_lst
+
+        slave.data_sources = data_sources_lst
+        slave.devices = devices_lst
+
+
+parse_iec101req()
