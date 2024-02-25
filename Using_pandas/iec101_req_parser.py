@@ -1,6 +1,6 @@
 from lxml import etree
 import iec101req_classes
-from warehouse_parser import warehouse
+from parsers import warehouse
 import sys
 import defs
 import pandas as pd

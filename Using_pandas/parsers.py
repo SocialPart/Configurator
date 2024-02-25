@@ -1,9 +1,8 @@
 from lxml import etree
 import pandas as pd
+import numpy as np
 
-path = '../Temp/etc/KC/warehouse.xml'
-
-def parse_warehouse(path):
+def parse_warehouse(path: str = '../Temp/etc/KC/warehouse.xml'):
     warehouse = dict(points=pd.DataFrame(),
                  commands=pd.DataFrame())
     tree = etree.parse(path)
@@ -19,16 +18,24 @@ def parse_warehouse(path):
         point_naming = point_element.get('NAMING')
         point_lo = point_element.get('LO')
         point_hi = point_element.get('HI')
+        point_var = point_element.get('VAR')
+        point_abs_var = point_element.get('ABS_VAR')
         point_formula = point_element.get('FORMULA')
         point_formula_time = point_element.get('FORMULA_TIME')
         point_aging = point_element.get('AGING')
         points_invert = point_element.get('INVERT')
+        if point_c == '0':
+            points_invert = np.NAN
+        if point_c == '1':
+            point_lo = np.NAN
+            point_hi = np.NAN
+            point_var = np.NAN
+            point_abs_var = np.NAN
         point = {'name': point_name, 'c': point_c, 'signal_type': point_signal_type, 'naming': point_naming,
-                 'lo': point_lo, 'hi': point_hi, 'formula': point_formula,
-                 'formula_time': point_formula_time, 'aging': point_aging, 'invert': points_invert}
+                 'lo': point_lo, 'hi': point_hi, 'var': point_var, 'abs_var': point_abs_var,
+                 'formula': point_formula, 'formula_time': point_formula_time, 'aging': point_aging,
+                 'invert': points_invert}
         warehouse['points'] = warehouse['points']._append(point, ignore_index=True)
-
-    warehouse['points'].set_index('name', inplace=True)
 
     for command_element in commands_element.findall('COMMAND'):
         command_name = command_element.get('NAME')
@@ -48,11 +55,12 @@ def parse_warehouse(path):
                    'use_tracking': command_use_tracking}
         warehouse['commands'] = warehouse['commands']._append(command, ignore_index=True)
 
+    warehouse['points'].set_index('name', inplace=True)
     warehouse['commands'].set_index('name', inplace=True)
 
     return warehouse
 # for i in warehouse.get('points'):
 #     print(i.name)
-s = parse_warehouse(path)
+s = parse_warehouse()
 
-print(s['commands'].loc['KC.Kernel.Reboot']['naming'])
+print(s['points'])
