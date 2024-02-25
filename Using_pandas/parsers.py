@@ -2,7 +2,9 @@ from lxml import etree
 import pandas as pd
 import numpy as np
 
-def parse_warehouse(path: str = '../Temp/etc/KC/warehouse.xml'):
+"""Создание парсера warehouse. """
+
+def parse_warehouse(path: str = '../Temp/etc/KC/warehouse.xml') -> dict:
     warehouse = dict(points=pd.DataFrame(),
                  commands=pd.DataFrame())
     tree = etree.parse(path)
@@ -61,6 +63,6 @@ def parse_warehouse(path: str = '../Temp/etc/KC/warehouse.xml'):
     return warehouse
 # for i in warehouse.get('points'):
 #     print(i.name)
-s = parse_warehouse()
 
-print(s['points'])
+
+
