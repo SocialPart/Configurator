@@ -64,6 +64,9 @@ def parse_warehouse(path: str = '../Temp/etc/KC/warehouse.xml') -> dict:
 
     return warehouse
 
+"""В отличии от Warehouse отдельно добавлять Points и делить их на ТС и ТС по параметру С не получится
+Добавляем все каналы Point. По существу парсить и создавать класс под Kernel для экспорта в xlsx не требуется 
+(только далее при работе конфигуратором)"""
 
 def parse_kernel(path: str = '../Temp/etc/KC/kernel.xml') -> dict:
     kernel = dict(points=pd.DataFrame(),
@@ -74,6 +77,7 @@ def parse_kernel(path: str = '../Temp/etc/KC/kernel.xml') -> dict:
     points_element = root.find('POINTS')
     commands_element = root.find('COMMANDS')
 
+
     for point_element in points_element.findall('POINT'):
         point_name = point_element.get('NAME')
         point_signal_type = point_element.get('SIGNAL_TYPE')
@@ -83,11 +87,10 @@ def parse_kernel(path: str = '../Temp/etc/KC/kernel.xml') -> dict:
         point_var = point_element.get('VAR')
         point_abs_var = point_element.get('ABS_VAR')
         point_formula = point_element.get('FORMULA')
-        point_aging = point_element.get('AGING')
 
         point = {'name': point_name, 'signal_type': point_signal_type, 'invert': points_invert,
                  'lo': point_lo, 'hi': point_hi, 'var': point_var, 'abs_var': point_abs_var,
-                 'formula': point_formula, 'aging': point_aging,}
+                 'formula': point_formula}
         kernel['points'] = kernel['points']._append(point, ignore_index=True)
 
     for command_element in commands_element.findall('COMMAND'):
@@ -103,8 +106,7 @@ def parse_kernel(path: str = '../Temp/etc/KC/kernel.xml') -> dict:
     kernel['commands'].set_index('name', inplace=True)
 
     return kernel
-# for i in warehouse.get('points'):
-#     print(i.name)
+
 
 
 
