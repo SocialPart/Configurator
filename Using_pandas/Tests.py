@@ -23,6 +23,10 @@ wh = classes.Warehouse()
 print(wh)
 print(wh.points)
 wh.add_discrete(name='Testing')
+wh.add_analog(name='Testing_analog')
+wh.add_command(name='wh_command')
 wh_points_filename = 'wh_points.xlsx'
+wh_commands_filename = 'wh_commands.xlsx'
 wh.points.to_excel(wh_points_filename)
+wh.commands.to_excel(wh_commands_filename)
 

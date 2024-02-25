@@ -25,13 +25,13 @@ class Warehouse:
                   'formula': formula, 'formula_time': formula_time, 'aging': aging}
         self.points.loc[name] = analog
 
-    def add_command(self, name: str, c: str = '1', signal_type: str = '1', naming: str = None,
-                    lo: str = None, hi: str = None, var: str = None, abs_var: str = None,
-                    formula: str = None, formula_time: str = None, aging: str = None):
-        analog = {'name': name, 'c': c, 'signal_type': signal_type, 'naming': naming,
-                  'lo': lo, 'hi': hi, 'var': var, 'abs_var': abs_var,
-                  'formula': formula, 'formula_time': formula_time, 'aging': aging}
-        self.points.loc[name] = analog
+    def add_command(self, name: str, c: str = '2', signal_type: str = '14', naming: str = None,
+                    state: str = None, last: str = None, lock_cond_on: str = None, lock_cond_off: str = None,
+                    trk: str = None, use_tracking: str = '0'):
+        command = {'name': name, 'c': c, 'signal_type': signal_type, 'naming': naming,
+                   'state': state, 'last': last, 'lock_cond_on': lock_cond_on, 'lock_cond_off': lock_cond_off,
+                   'trk': trk, 'use_tracking': use_tracking}
+        self.commands.loc[name] = command
 
 
 class Kernel:
