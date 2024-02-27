@@ -157,14 +157,14 @@ def parse_iec101req(path: str = '../Temp/etc/KC/iec101_req.xml'):
             # print(iec101req['slaves'][slave_name]['data_sources'])
 
         slave['data_sources'].set_index('port', inplace=True)
-        print(slave['data_sources'])
+        #print(slave['data_sources'])
 
         for device_element in devices_element.findall('DEVICE'):
             points_element = device_element.find('POINTS')
             commands_element = device_element.find('COMMANDS')
 
             ###Определение структуры трансляции модуля
-            device_translation = dict()
+            device_translation = dict(points=pd.DataFrame(), commands=pd.DataFrame())
 
             device_name = device_element.get('NAME')
             device_tag = slave_tag + '.' + device_name
@@ -192,10 +192,16 @@ def parse_iec101req(path: str = '../Temp/etc/KC/iec101_req.xml'):
                         'clock_sync': device_clock_sync, 'clock_sync_check': device_clock_sync_check,
                         'sleep': device_sleep, 'translation': device_translation}
 
-            #device = pd.DataFrame(dev_dict)
             slave['devices'] = slave['devices']._append(dev_dict, ignore_index=True)
 
-            translation = dict(points=pd.DataFrame(), commands=pd.DataFrame())
+            ### Проиндексировал поиск по имени, т.к. в трансляции оно уникальное для Группы
+
+            slave['devices'].set_index('name', inplace=True)
+
+            ###Ввел переменную для укорочения
+
+            # translation = dict(points=pd.DataFrame(), commands=pd.DataFrame())
+            translation = slave['devices'].iloc[-1]['translation']
 
             for point_element in points_element.findall('POINT'):
                 point_name = point_element.get('NAME')
@@ -203,39 +209,34 @@ def parse_iec101req(path: str = '../Temp/etc/KC/iec101_req.xml'):
                 # point_warehouse_link = defs.warehouse_link(point_element, point_tag, warehouse)
                 point_address = point_element.get('ADDRESS')
                 point_dict = {'name': point_name, 'address': point_address, 'warehouse_tag': point_tag}
-                #p = pd.DataFrame(point_dict)
-                # print(point)
-                #points = slave['devices'][device_name]['translation']['points']
-                # ### Остановился здесь, слишком длинные ссылки получаются, надо оптимизировать
+
+                #### Остановился здесь, слишком длинные ссылки получаются, надо оптимизировать
                 translation['points'] = translation['points']._append(point_dict, ignore_index=True)
-            #print(translation['points'])
-            #slave['devices'].iloc[-1]['translation'] = translation
-            print(slave['devices'].iloc[-1])
-                #print(device_translation['points'])
-            #slave['devices'].set_index('name', inplace=True)
-            #print(slave['devices'])
-            #slave['devices'].set_index('name', inplace=True)
-        #     for command_element in commands_element.findall('COMMAND'):
-        #         # print(command_element.tag)
-        #         command_name = command_element.get('NAME')
-        #         command_tag = device_tag + '.' + command_name
-        #         command_warehouse_link = defs.warehouse_link(command_element, command_tag, warehouse)
-        #         command_address = command_element.get('ADDRESS')
-        #         command_off_address = command_element.get('OFF_ADDRESS')
-        #         command_qu = command_element.get('QU')
-        #         command_common_address = command_element.get('COMMON_ADDRESS')
-        #         command_type_id = command_element.get('TYPE_ID')
-        #         command_signal_type = command_element.get('SIGNAL_TYPE')
-        #         command_wait_a = command_element.get('WAIT_A')
-        #         command = iec101req_classes.IEC101reqCommand(warehouse_tag=command_tag,
-        #                                                      warehouse_link=command_warehouse_link,
-        #                                                      name=command_name, address=command_address,
-        #                                                      off_address=command_off_address, qu=command_qu,
-        #                                                      common_address=command_common_address,
-        #                                                      type_id=command_type_id,
-        #                                                      signal_type=command_signal_type, wait_a=command_wait_a)
-        #         commands_lst.append(command)
-        #
+
+            for command_element in commands_element.findall('COMMAND'):
+                # print(command_element.tag)
+                command_name = command_element.get('NAME')
+                command_tag = device_tag + '.' + command_name
+                #command_warehouse_link = defs.warehouse_link(command_element, command_tag, warehouse)
+                command_address = command_element.get('ADDRESS')
+                command_off_address = command_element.get('OFF_ADDRESS')
+                command_qu = command_element.get('QU')
+                command_common_address = command_element.get('COMMON_ADDRESS')
+                command_type_id = command_element.get('TYPE_ID')
+                command_signal_type = command_element.get('SIGNAL_TYPE')
+                command_wait_a = command_element.get('WAIT_A')
+                command_dict = {'warehouse_tag': command_tag, 'name': command_name, 'address': command_address,
+                                'off_address': command_off_address, 'qu': command_qu,
+                                'common_address': command_common_address, 'type_id': command_type_id,
+                                'signal_type': command_signal_type, 'wait_a': command_wait_a}
+
+                translation['commands'] = translation['commands']._append(command_dict, ignore_index=True)
+
+            ###Поиск в датафрейме будет по тэгу в Warehouse
+
+            translation['points'].set_index('warehouse_tag', inplace=True)
+            translation['commands'].set_index('warehouse_tag', inplace=True)
+
         #     device.commands = commands_lst
         #
         # slave.data_sources = data_sources_lst
@@ -243,4 +244,4 @@ def parse_iec101req(path: str = '../Temp/etc/KC/iec101_req.xml'):
 
         # iec101req['slaves'][slave_name]['devices'][device_name]['translation']['points'].to_excel(f'{device_name}.xlsx')
 
-parse_iec101req()
+    return iec101req

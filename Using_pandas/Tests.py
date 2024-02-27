@@ -33,11 +33,17 @@ import classes
 
 "Проверка конструктора экземпляра классов для Kernel и проверка методов"
 
-ker = classes.Kernel()
+# ker = classes.Kernel()
+#
+# ker.add_point(name='PointTest')
+# ker.add_command(name='CommandTest')
+# ker_p_filename = 'ker_points.xlsx'
+# ker_c_filename = 'ker_commands.xlsx'
+# ker.points.to_excel(ker_p_filename)
+# ker.commands.to_excel(ker_c_filename)
 
-ker.add_point(name='PointTest')
-ker.add_command(name='CommandTest')
-ker_p_filename = 'ker_points.xlsx'
-ker_c_filename = 'ker_commands.xlsx'
-ker.points.to_excel(ker_p_filename)
-ker.commands.to_excel(ker_c_filename)
+"""Проверка работы парсера iec101req"""
+
+iec101req = parsers.parse_iec101req()
+
+print(iec101req['slaves']['Группа 1']['devices'].iloc[5]['translation']['points'])
