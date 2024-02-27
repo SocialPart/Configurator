@@ -1,9 +1,11 @@
 from lxml import etree
 import pandas as pd
 import numpy as np
+from memory_profiler import profile
 import defs
 
 """Создание парсера warehouse. """
+
 
 
 def parse_warehouse(path: str = '../Temp/etc/KC/warehouse.xml') -> dict:
@@ -67,9 +69,10 @@ def parse_warehouse(path: str = '../Temp/etc/KC/warehouse.xml') -> dict:
     return warehouse
 
 
-"""В отличии от Warehouse отдельно добавлять Points и делить их на ТС и ТС по параметру С не получится
+"""В отличии от Warehouse отдельно добавлять Points и делить их на ТС и ТИ по параметру С не получится
 Добавляем все каналы Point. По существу парсить и создавать класс под Kernel для экспорта в xlsx не требуется 
 (только далее при работе конфигуратором)"""
+
 
 
 def parse_kernel(path: str = '../Temp/etc/KC/kernel.xml') -> dict:
@@ -111,7 +114,8 @@ def parse_kernel(path: str = '../Temp/etc/KC/kernel.xml') -> dict:
     return kernel
 
 
-def parse_iec101req(path: str = '../Temp/etc/KC/iec101_req.xml'):
+
+def parse_iec101req(path: str = '../Temp/etc/KC/iec101_req.xml') -> dict:
     iec101req = dict(slaves=dict())
     initial_tag = 'IEC 60870-5-101 Req'
     tree = etree.parse(path)
@@ -154,7 +158,6 @@ def parse_iec101req(path: str = '../Temp/etc/KC/iec101_req.xml'):
 
             slave['data_sources'] = slave['data_sources']._append(d_s, ignore_index=True)
 
-            # print(iec101req['slaves'][slave_name]['data_sources'])
 
         slave['data_sources'].set_index('port', inplace=True)
         #print(slave['data_sources'])
@@ -200,13 +203,11 @@ def parse_iec101req(path: str = '../Temp/etc/KC/iec101_req.xml'):
 
             ###Ввел переменную для укорочения
 
-            # translation = dict(points=pd.DataFrame(), commands=pd.DataFrame())
             translation = slave['devices'].iloc[-1]['translation']
 
             for point_element in points_element.findall('POINT'):
                 point_name = point_element.get('NAME')
                 point_tag = str(device_tag + '.' + point_name)
-                # point_warehouse_link = defs.warehouse_link(point_element, point_tag, warehouse)
                 point_address = point_element.get('ADDRESS')
                 point_dict = {'name': point_name, 'address': point_address, 'warehouse_tag': point_tag}
 
@@ -214,10 +215,8 @@ def parse_iec101req(path: str = '../Temp/etc/KC/iec101_req.xml'):
                 translation['points'] = translation['points']._append(point_dict, ignore_index=True)
 
             for command_element in commands_element.findall('COMMAND'):
-                # print(command_element.tag)
                 command_name = command_element.get('NAME')
                 command_tag = device_tag + '.' + command_name
-                #command_warehouse_link = defs.warehouse_link(command_element, command_tag, warehouse)
                 command_address = command_element.get('ADDRESS')
                 command_off_address = command_element.get('OFF_ADDRESS')
                 command_qu = command_element.get('QU')
@@ -236,12 +235,5 @@ def parse_iec101req(path: str = '../Temp/etc/KC/iec101_req.xml'):
 
             translation['points'].set_index('warehouse_tag', inplace=True)
             translation['commands'].set_index('warehouse_tag', inplace=True)
-
-        #     device.commands = commands_lst
-        #
-        # slave.data_sources = data_sources_lst
-        # slave.devices = devices_lst
-
-        # iec101req['slaves'][slave_name]['devices'][device_name]['translation']['points'].to_excel(f'{device_name}.xlsx')
 
     return iec101req
