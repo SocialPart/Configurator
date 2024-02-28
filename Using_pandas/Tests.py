@@ -48,16 +48,17 @@ from memory_profiler import profile
 
 """Проверка работы парсеров Warehouse, Kernel, iec101req и оценка затрачиваемой оперативной памяти (примерно 1,3 МБ)"""
 
-# tracemalloc.start()
-# warehouse = parsers.parse_warehouse()
-# kernel = parsers.parse_kernel()
-# iec101req = parsers.parse_iec101req()
-#
-# print(iec101req['slaves']['Группа 1']['devices'].iloc[5]['translation']['points'])
-# #tracemalloc.stop()
-#
-# s = tracemalloc.get_traced_memory()
-# snap = tracemalloc.take_snapshot()
-# top_stats = snap.statistics('lineno')
-# print(top_stats)
-# print(s)
+tracemalloc.start()
+warehouse = parsers.parse_warehouse()
+kernel = parsers.parse_kernel()
+iec101req = parsers.parse_iec101req()
+
+#print(iec101req['slaves']['Группа 1']['devices'].iloc[5]['translation']['points'])
+#tracemalloc.stop()
+
+s = tracemalloc.get_traced_memory()
+snap = tracemalloc.take_snapshot()
+top_stats = snap.statistics('lineno')
+print(top_stats)
+print(s)
+print(iec101req['slaves'])

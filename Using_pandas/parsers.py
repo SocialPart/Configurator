@@ -1,11 +1,11 @@
 from lxml import etree
 import pandas as pd
 import numpy as np
-from memory_profiler import profile
-import defs
+
+# from memory_profiler import profile
+# import defs
 
 """Создание парсера warehouse. """
-
 
 
 def parse_warehouse(path: str = '../Temp/etc/KC/warehouse.xml') -> dict:
@@ -74,7 +74,6 @@ def parse_warehouse(path: str = '../Temp/etc/KC/warehouse.xml') -> dict:
 (только далее при работе конфигуратором)"""
 
 
-
 def parse_kernel(path: str = '../Temp/etc/KC/kernel.xml') -> dict:
     kernel = dict(points=pd.DataFrame(),
                   commands=pd.DataFrame())
@@ -114,14 +113,13 @@ def parse_kernel(path: str = '../Temp/etc/KC/kernel.xml') -> dict:
     return kernel
 
 
-
 def parse_iec101req(path: str = '../Temp/etc/KC/iec101_req.xml') -> dict:
     iec101req = dict(slaves=dict())
     initial_tag = 'IEC 60870-5-101 Req'
     tree = etree.parse(path)
     root = tree.getroot()
     slaves_element = root.find('SLAVES')
-    c = 0
+
     for slave_element in slaves_element.findall('SLAVE'):
         slave_name = slave_element.get('NAME')
 
@@ -135,7 +133,7 @@ def parse_iec101req(path: str = '../Temp/etc/KC/iec101_req.xml') -> dict:
         ds_sources_element = slave_element.find('DATA_SOURCES')
         devices_element = slave_element.find('DEVICES')
 
-        ###Ввел переменные для сокращенного обращения к атрибутам
+        # Ввел переменные для сокращенного обращения к атрибутам
         slave = iec101req['slaves'][slave_name]
 
         for ds_element in ds_sources_element.findall('DS'):
@@ -158,15 +156,14 @@ def parse_iec101req(path: str = '../Temp/etc/KC/iec101_req.xml') -> dict:
 
             slave['data_sources'] = slave['data_sources']._append(d_s, ignore_index=True)
 
-
         slave['data_sources'].set_index('port', inplace=True)
-        #print(slave['data_sources'])
+        # print(slave['data_sources'])
 
         for device_element in devices_element.findall('DEVICE'):
             points_element = device_element.find('POINTS')
             commands_element = device_element.find('COMMANDS')
 
-            ###Определение структуры трансляции модуля
+            # Определение структуры трансляции модуля
             device_translation = dict(points=pd.DataFrame(), commands=pd.DataFrame())
 
             device_name = device_element.get('NAME')
@@ -197,11 +194,11 @@ def parse_iec101req(path: str = '../Temp/etc/KC/iec101_req.xml') -> dict:
 
             slave['devices'] = slave['devices']._append(dev_dict, ignore_index=True)
 
-            ### Проиндексировал поиск по имени, т.к. в трансляции оно уникальное для Группы
+            # Проиндексировал поиск по имени, т.к. в трансляции оно уникальное для Группы
 
             slave['devices'].set_index('name', inplace=True)
 
-            ###Ввел переменную для укорочения
+            # Ввел переменную для укорочения
 
             translation = slave['devices'].iloc[-1]['translation']
 
@@ -211,7 +208,7 @@ def parse_iec101req(path: str = '../Temp/etc/KC/iec101_req.xml') -> dict:
                 point_address = point_element.get('ADDRESS')
                 point_dict = {'name': point_name, 'address': point_address, 'warehouse_tag': point_tag}
 
-                #### Остановился здесь, слишком длинные ссылки получаются, надо оптимизировать
+                # Остановился здесь, слишком длинные ссылки получаются, надо оптимизировать
                 translation['points'] = translation['points']._append(point_dict, ignore_index=True)
 
             for command_element in commands_element.findall('COMMAND'):
@@ -231,7 +228,7 @@ def parse_iec101req(path: str = '../Temp/etc/KC/iec101_req.xml') -> dict:
 
                 translation['commands'] = translation['commands']._append(command_dict, ignore_index=True)
 
-            ###Поиск в датафрейме будет по тэгу в Warehouse
+            # Поиск в датафрейме будет по тэгу в Warehouse
 
             translation['points'].set_index('warehouse_tag', inplace=True)
             translation['commands'].set_index('warehouse_tag', inplace=True)
