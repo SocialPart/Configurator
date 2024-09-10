@@ -4,17 +4,21 @@ from tkinter import filedialog
 import tar_prepare as prep
 
 
-# Getting backup path
+# Получение расположения бэкапа
+
 def open_file():
     filepath = filedialog.askopenfilename()
     prep.open_and_extract(filepath)
     change_page()
     print(filepath)
 
-# Close application
+# Закрытие приложения
+
 def finish():
     prep.deleting_temp_after_close()
     root.destroy()
+
+# Показать страницу
 
 def show_page(page):
     # Скрыть все страницы
