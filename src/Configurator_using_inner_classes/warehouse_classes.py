@@ -1,6 +1,5 @@
 # warehouse_classes.py
 
-
 class AnalogPoint:
     def __init__(self, source_link: str = None, name: str = '', signal_type: int = 10, naming: str = '',
                  lo: int = None, hi: int = None, formula: str = None,
