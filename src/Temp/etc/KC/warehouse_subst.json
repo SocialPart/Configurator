@@ -1,0 +1,138 @@
+[
+   {
+      "name" : "LOC.Control.Local",
+      "value" : "0"
+   },
+   {
+      "name" : "LOC.TestSAVS.DI-676",
+      "value" : "0"
+   },
+   {
+      "name" : "LOC.TestSAVS.DI-679",
+      "value" : "0"
+   },
+   {
+      "name" : "LOC.TestSAVS.DI-678",
+      "value" : "0"
+   },
+   {
+      "name" : "LOC.TestSAVS.DI-677",
+      "value" : "0"
+   },
+   {
+      "name" : "LOC.SG_F1.mfz_time_command",
+      "value" : "50.000000000000"
+   },
+   {
+      "name" : "LOC.SG_F1.mfz_time_delay",
+      "value" : "60.000000000000"
+   },
+   {
+      "name" : "LOC.SG_F1.ozz_time_command",
+      "value" : "75.000000000000"
+   },
+   {
+      "name" : "LOC.SG_F1.ozz_time_delay",
+      "value" : "70.000000000000"
+   },
+   {
+      "name" : "LOC.SG_F1.ozz_Kset",
+      "value" : "1.500000000000"
+   },
+   {
+      "name" : "LOC.SG_F1.ozz_time_reset_ozz",
+      "value" : "5.000000000000"
+   },
+   {
+      "name" : "LOC.SG_F1.ozz_KadaptTT",
+      "value" : "1.000000000000"
+   },
+   {
+      "name" : "LOC.SG_F1.calc_harm_T_add",
+      "value" : "10.000000000000"
+   },
+   {
+      "name" : "LOC.SG_F1.calc_harm_t_fix",
+      "value" : "65.000000000000"
+   },
+   {
+      "name" : "LOC.SG_F2.mfz_time_delay",
+      "value" : "60.000000000000"
+   },
+   {
+      "name" : "LOC.SG_F2.mfz_time_command",
+      "value" : "50.000000000000"
+   },
+   {
+      "name" : "LOC.SG_F2.ozz_time_command",
+      "value" : "75.000000000000"
+   },
+   {
+      "name" : "LOC.SG_F2.ozz_Kset",
+      "value" : "9.600000381470"
+   },
+   {
+      "name" : "LOC.SG_F2.ozz_time_delay",
+      "value" : "70.000000000000"
+   },
+   {
+      "name" : "LOC.SG_F2.ozz_time_reset_ozz",
+      "value" : "5.000000000000"
+   },
+   {
+      "name" : "LOC.SG_F2.ozz_KadaptTT",
+      "value" : "1.000000000000"
+   },
+   {
+      "name" : "LOC.SG_F2.calc_harm_T_add",
+      "value" : "10.000000000000"
+   },
+   {
+      "name" : "LOC.SG_F2.calc_harm_t_fix",
+      "value" : "65.000000000000"
+   },
+   {
+      "name" : "LOC.SG_F1.ozz_Head_control",
+      "value" : "1"
+   },
+   {
+      "name" : "LOC.SG_F1.P_set",
+      "value" : "1"
+   },
+   {
+      "name" : "LOC.SG_F2.P_set",
+      "value" : "1"
+   },
+   {
+      "name" : "LOC.SG_F2.ozz_Head_control",
+      "value" : "1"
+   },
+   {
+      "name" : "LOC.Дорасчет.AI-1911",
+      "value" : "150.000000000000"
+   },
+   {
+      "name" : "LOC.Дорасчет.DI-1592",
+      "value" : "1"
+   },
+   {
+      "name" : "LOC.Дорасчет.DI-1593",
+      "value" : "0"
+   },
+   {
+      "name" : "LOC.Control.Disabled",
+      "value" : "0"
+   },
+   {
+      "name" : "LOC.Control.Remote",
+      "value" : "1"
+   },
+   {
+      "name" : "LOC.SG_F2.AI-1552",
+      "value" : "0.047699999064"
+   },
+   {
+      "name" : "LOC.SG_F1.AI-1551",
+      "value" : "0.005299999844"
+   }
+]

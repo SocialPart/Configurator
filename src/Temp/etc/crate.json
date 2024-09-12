@@ -1,0 +1,129 @@
+{
+  "crates": [
+    {
+      "ethernet_name": "en0",
+      "modules": [
+        {
+          "type": 0,
+          "subtype": 0,
+          "mac": "0x000000000000",
+          "is_head": false,
+          "module_name": "Модуль 0",
+          "quality_control_enabled": false
+        },
+        {
+          "type": 7,
+          "subtype": 9,
+          "mac": "0x000013F1E68F",
+          "is_head": true,
+          "module_name": "Модуль 1",
+          "quality_control_enabled": false
+        },
+        {
+          "type": 1,
+          "subtype": 4,
+          "mac": "0x000013F1F3AA",
+          "is_head": true,
+          "module_name": "Модуль 2",
+          "quality_control_enabled": false
+        },
+        {
+          "type": 1,
+          "subtype": 4,
+          "mac": "0x000013F1F120",
+          "is_head": true,
+          "module_name": "Модуль 3",
+          "quality_control_enabled": false
+        },
+        {
+          "type": 1,
+          "subtype": 4,
+          "mac": "0x000013F1E7B8",
+          "is_head": true,
+          "module_name": "Модуль 4",
+          "quality_control_enabled": false
+        },
+        {
+          "type": 0,
+          "subtype": 0,
+          "mac": "0x000000000000",
+          "is_head": false,
+          "module_name": "Модуль 5",
+          "quality_control_enabled": false
+        },
+        {
+          "type": 0,
+          "subtype": 0,
+          "mac": "0x000000000000",
+          "is_head": false,
+          "module_name": "Модуль 6",
+          "quality_control_enabled": false
+        },
+        {
+          "type": 0,
+          "subtype": 0,
+          "mac": "0x000000000000",
+          "is_head": false,
+          "module_name": "",
+          "quality_control_enabled": false
+        },
+        {
+          "type": 0,
+          "subtype": 0,
+          "mac": "0x000000000000",
+          "is_head": false,
+          "module_name": "",
+          "quality_control_enabled": false
+        },
+        {
+          "type": 0,
+          "subtype": 0,
+          "mac": "0x000000000000",
+          "is_head": false,
+          "module_name": "",
+          "quality_control_enabled": false
+        },
+        {
+          "type": 0,
+          "subtype": 0,
+          "mac": "0x000000000000",
+          "is_head": false,
+          "module_name": "",
+          "quality_control_enabled": false
+        },
+        {
+          "type": 0,
+          "subtype": 0,
+          "mac": "0x000000000000",
+          "is_head": false,
+          "module_name": "",
+          "quality_control_enabled": false
+        },
+        {
+          "type": 0,
+          "subtype": 0,
+          "mac": "0x000000000000",
+          "is_head": false,
+          "module_name": "",
+          "quality_control_enabled": false
+        },
+        {
+          "type": 0,
+          "subtype": 0,
+          "mac": "0x000000000000",
+          "is_head": false,
+          "module_name": "",
+          "quality_control_enabled": false
+        },
+        {
+          "type": 0,
+          "subtype": 0,
+          "mac": "0x000000000000",
+          "is_head": false,
+          "module_name": "",
+          "quality_control_enabled": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,862 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<NODES VERSION="2">
+  <LOG>
+    <PARAMS LOG_ENABLE="1" LOG_LEVEL="INFO"/>
+    <LOG_DST TYPE="FILE" FILE_NAME="/var/log/kc/./libiec104_serv.so.log"/>
+  </LOG>
+  <GLOBAL_CONFIG TRACE="0" TRACE_ADDRESS=""/>
+  <SETTINGS INIT_TIME="0"/>
+  <MASTERS>
+    <MASTER NAME="Aris SCADA" DESC="" PORT="2404" DISABLED="0">
+      <PARAMS IP_ADDRESS="10.99.150.50" LOC_IP="" TZ="" INTEGRITY_CHECK="0" COMMON_ADDRESS="1" ASDU_ADDRESS_BYTES="2" OBJ_ADDRESS_BYTES="3" COT_BYTES="2" MAX_T1="30" MAX_T2="10" MAX_T3="20" MAX_W="8" ALLOWABLE_DELAY="0" ALLOW_SUBST="0" SPONTANEOUS="1" GI_FIRST="1" SQ="0" PYRAM_GI_ADDR="0" PYRAM_GI_TIMESTAMP="0" USE_ARCHIVE="1" ARCH_MAX="1000" CONTROL_PRIORITY="" SYNC_TIME_SHMEM_UNIT="1"/>
+      <PARAMS IP_ADDRESS="10.99.150.52" LOC_IP="" TZ="" INTEGRITY_CHECK="0" COMMON_ADDRESS="1" ASDU_ADDRESS_BYTES="2" OBJ_ADDRESS_BYTES="3" COT_BYTES="2" MAX_T1="30" MAX_T2="10" MAX_T3="20" MAX_W="8" ALLOWABLE_DELAY="0" ALLOW_SUBST="0" SPONTANEOUS="1" GI_FIRST="1" SQ="0" PYRAM_GI_ADDR="0" PYRAM_GI_TIMESTAMP="0" USE_ARCHIVE="1" ARCH_MAX="1000" CONTROL_PRIORITY="" SYNC_TIME_SHMEM_UNIT="2"/>
+      <PARAMS IP_ADDRESS="10.99.160.68" LOC_IP="" TZ="" INTEGRITY_CHECK="0" COMMON_ADDRESS="1" ASDU_ADDRESS_BYTES="2" OBJ_ADDRESS_BYTES="3" COT_BYTES="2" MAX_T1="15" MAX_T2="10" MAX_T3="20" MAX_W="8" ALLOWABLE_DELAY="0" ALLOW_SUBST="0" SPONTANEOUS="1" GI_FIRST="1" SQ="0" PYRAM_GI_ADDR="0" PYRAM_GI_TIMESTAMP="0" USE_ARCHIVE="1" ARCH_MAX="1000" CONTROL_PRIORITY="" SYNC_TIME_SHMEM_UNIT="3"/>
+      <PARAMS IP_ADDRESS="10.99.160.69" LOC_IP="" TZ="" INTEGRITY_CHECK="0" COMMON_ADDRESS="1" ASDU_ADDRESS_BYTES="2" OBJ_ADDRESS_BYTES="3" COT_BYTES="2" MAX_T1="15" MAX_T2="10" MAX_T3="20" MAX_W="8" ALLOWABLE_DELAY="0" ALLOW_SUBST="0" SPONTANEOUS="1" GI_FIRST="1" SQ="0" PYRAM_GI_ADDR="0" PYRAM_GI_TIMESTAMP="0" USE_ARCHIVE="1" ARCH_MAX="1000" CONTROL_PRIORITY="" SYNC_TIME_SHMEM_UNIT="4"/>
+      <POINTS>
+        <POINT NAME="LOC.Control.Local" ADDRESS="907" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.Control.Remote" ADDRESS="908" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.Control.Disabled" ADDRESS="909" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.Time.Sync" ADDRESS="910" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.System.DI01" ADDRESS="906" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.CS01.Connect" ADDRESS="901" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.DI02.01" ADDRESS="1" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.DI02.02" ADDRESS="2" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.DI02.03" ADDRESS="3" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.DI02.04" ADDRESS="4" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.DI02.05" ADDRESS="5" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.DI02.06" ADDRESS="6" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.DI02.07" ADDRESS="7" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.DI02.08" ADDRESS="8" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.DI02.09" ADDRESS="9" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.DI02.10" ADDRESS="10" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.DI02.11" ADDRESS="11" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.DI02.12" ADDRESS="12" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.DI02.13" ADDRESS="13" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.DI02.14" ADDRESS="14" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.DI02.15" ADDRESS="15" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.DI02.Connect" ADDRESS="902" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.DI03.01" ADDRESS="16" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.DI03.02" ADDRESS="17" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.DI03.03" ADDRESS="18" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.DI03.04" ADDRESS="19" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.DI03.05" ADDRESS="20" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.DI03.06" ADDRESS="21" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.DI03.07" ADDRESS="22" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.DI03.08" ADDRESS="23" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.DI03.09" ADDRESS="24" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.DI03.10" ADDRESS="25" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.DI03.11" ADDRESS="26" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.DI03.12" ADDRESS="27" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.DI03.13" ADDRESS="28" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.DI03.14" ADDRESS="29" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.DI03.15" ADDRESS="30" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.DI03.Connect" ADDRESS="903" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.DI04.01" ADDRESS="31" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.DI04.02" ADDRESS="32" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.DI04.03" ADDRESS="33" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.DI04.04" ADDRESS="34" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.DI04.05" ADDRESS="35" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.DI04.06" ADDRESS="36" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.DI04.07" ADDRESS="37" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.DI04.08" ADDRESS="38" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.DI04.09" ADDRESS="39" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.DI04.10" ADDRESS="40" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.DI04.11" ADDRESS="41" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.DI04.12" ADDRESS="42" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.DI04.13" ADDRESS="43" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.DI04.14" ADDRESS="44" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.DI04.15" ADDRESS="45" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.DI04.Connect" ADDRESS="904" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="Modbus-serial.Группа 1.TPM200.Connect" ADDRESS="911" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="Modbus-serial.Группа 1.TPM200.AI-90" ADDRESS="2281" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="Modbus-serial.Группа 1.TPM200.AI-91" ADDRESS="2282" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="LOC.SG_F1.Fault" ADDRESS="501" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.Fault_divide" ADDRESS="502" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.Fault_Z" ADDRESS="503" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_ON_head_SCADA" ADDRESS="506" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.mfz_Work_mfz" ADDRESS="544" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.X" ADDRESS="701" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="LOC.SG_F1.Y" ADDRESS="702" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="LOC.SG_F1.ozz_Work_ozz" ADDRESS="545" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_OFF_Q01_SCADA" ADDRESS="507" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_ON_Q01_SCADA" ADDRESS="508" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.Fault" ADDRESS="2501" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.Fault_divide" ADDRESS="2502" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.Fault_Z" ADDRESS="2503" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_ON_head_SCADA" ADDRESS="2506" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.mfz_Work_mfz" ADDRESS="2544" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.X" ADDRESS="2701" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="LOC.SG_F2.Y" ADDRESS="2702" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="LOC.SG_F2.ozz_Work_ozz" ADDRESS="2545" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_OFF_Q01_SCADA" ADDRESS="2507" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_ON_Q01_SCADA" ADDRESS="2508" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_OFF_Q02_SCADA" ADDRESS="509" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_ON_Q02_SCADA" ADDRESS="510" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_OFF_Q03_SCADA" ADDRESS="511" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_ON_Q03_SCADA" ADDRESS="512" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_OFF_Q04_SCADA" ADDRESS="513" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_ON_Q04_SCADA" ADDRESS="514" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_OFF_Q05_SCADA" ADDRESS="515" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_ON_Q05_SCADA" ADDRESS="516" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_OFF_Q06_SCADA" ADDRESS="517" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_ON_Q06_SCADA" ADDRESS="518" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_OFF_Q07_SCADA" ADDRESS="519" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_ON_Q07_SCADA" ADDRESS="520" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_OFF_Q08_SCADA" ADDRESS="521" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_ON_Q08_SCADA" ADDRESS="522" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_OFF_Q09_SCADA" ADDRESS="523" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_ON_Q09_SCADA" ADDRESS="524" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_OFF_Q10_SCADA" ADDRESS="525" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_ON_Q10_SCADA" ADDRESS="526" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_OFF_Q11_SCADA" ADDRESS="527" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_ON_Q11_SCADA" ADDRESS="528" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_OFF_Q12_SCADA" ADDRESS="529" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_ON_Q12_SCADA" ADDRESS="530" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_OFF_Q13_SCADA" ADDRESS="531" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_ON_Q13_SCADA" ADDRESS="532" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_OFF_Q14_SCADA" ADDRESS="533" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_ON_Q14_SCADA" ADDRESS="534" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_OFF_Q15_SCADA" ADDRESS="535" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_ON_Q15_SCADA" ADDRESS="536" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_OFF_Q16_SCADA" ADDRESS="537" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_ON_Q16_SCADA" ADDRESS="538" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_OFF_Q17_SCADA" ADDRESS="539" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_ON_Q17_SCADA" ADDRESS="540" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_OFF_Q18_SCADA" ADDRESS="541" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_ON_Q18_SCADA" ADDRESS="542" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_OFF_Q02_SCADA" ADDRESS="2509" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_ON_Q02_SCADA" ADDRESS="2510" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_OFF_Q03_SCADA" ADDRESS="2511" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_ON_Q03_SCADA" ADDRESS="2512" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_OFF_Q04_SCADA" ADDRESS="2513" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_ON_Q04_SCADA" ADDRESS="2514" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_OFF_Q05_SCADA" ADDRESS="2515" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_ON_Q05_SCADA" ADDRESS="2516" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_OFF_Q06_SCADA" ADDRESS="2517" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_ON_Q06_SCADA" ADDRESS="2518" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_OFF_Q07_SCADA" ADDRESS="2519" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_ON_Q07_SCADA" ADDRESS="2520" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_OFF_Q08_SCADA" ADDRESS="2521" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_ON_Q08_SCADA" ADDRESS="2522" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_OFF_Q09_SCADA" ADDRESS="2523" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_ON_Q09_SCADA" ADDRESS="2524" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_OFF_Q10_SCADA" ADDRESS="2525" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_ON_Q10_SCADA" ADDRESS="2526" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_OFF_Q11_SCADA" ADDRESS="2527" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_ON_Q11_SCADA" ADDRESS="2528" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_OFF_Q12_SCADA" ADDRESS="2529" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_ON_Q12_SCADA" ADDRESS="2530" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_OFF_Q13_SCADA" ADDRESS="2531" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_ON_Q13_SCADA" ADDRESS="2532" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_OFF_Q14_SCADA" ADDRESS="2533" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_ON_Q14_SCADA" ADDRESS="2534" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_OFF_Q15_SCADA" ADDRESS="2535" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_ON_Q15_SCADA" ADDRESS="2536" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_OFF_Q16_SCADA" ADDRESS="2537" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_ON_Q16_SCADA" ADDRESS="2538" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.Switch_OFF_Qhead_SCADA" ADDRESS="505" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_ON_Q19_SCADA" ADDRESS="543" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_OFF_Q17_SCADA" ADDRESS="2539" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_ON_Q18_SCADA" ADDRESS="2542" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_OFF_Q18_SCADA" ADDRESS="2541" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_ON_Q19_SCADA" ADDRESS="2543" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.Switch_OFF_Qhead_SCADA" ADDRESS="2505" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_ON_Q17_SCADA" ADDRESS="2540" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_2_CВ).AI-372" ADDRESS="2201" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_2_CВ).AI-373" ADDRESS="2202" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_2_CВ).AI-374" ADDRESS="2203" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_2_CВ).AI-375" ADDRESS="2204" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_2_CВ).AI-376" ADDRESS="2205" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_2_CВ).AI-377" ADDRESS="2206" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_2_CВ).AI-378" ADDRESS="2207" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_2_CВ).AI-379" ADDRESS="2208" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_2_CВ).AI-380" ADDRESS="2209" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_2_CВ).AI-381" ADDRESS="2210" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_2_CВ).AI-382" ADDRESS="2211" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_2_CВ).AI-383" ADDRESS="2212" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_2_CВ).AI-384" ADDRESS="2213" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_2_CВ).AI-385" ADDRESS="2214" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_2_CВ).AI-386" ADDRESS="2215" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_2_CВ).AI-387" ADDRESS="2216" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_2_CВ).AI-388" ADDRESS="2217" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_2_CВ).AI-389" ADDRESS="2218" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_2_CВ).AI-390" ADDRESS="2219" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_2_CВ).AI-424" ADDRESS="2220" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_2_CВ).DI-777" ADDRESS="1201" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_2_CВ).DI-778" ADDRESS="1202" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_2_CВ).DI-779" ADDRESS="1203" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_2_CВ).DI-780" ADDRESS="1204" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_2_CВ).DI-781" ADDRESS="1205" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_2_CВ).DI-782" ADDRESS="1206" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_2_CВ).DI-783" ADDRESS="1207" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_2_CВ).DI-784" ADDRESS="1208" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_2_CВ).DI-865" ADDRESS="1601" ASDU_TYPE="31" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_4_ТН2).AI-375" ADDRESS="2231" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_4_ТН2).AI-376" ADDRESS="2232" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_4_ТН2).AI-377" ADDRESS="2233" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_4_ТН2).AI-378" ADDRESS="2234" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_4_ТН2).AI-379" ADDRESS="2235" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_4_ТН2).AI-380" ADDRESS="2236" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_4_ТН2).DI-779" ADDRESS="1231" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_4_ТН2).DI-780" ADDRESS="1232" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_6_Вв_2).AI-372" ADDRESS="2181" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_6_Вв_2).AI-373" ADDRESS="2182" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_6_Вв_2).AI-374" ADDRESS="2183" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_6_Вв_2).AI-375" ADDRESS="2184" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_6_Вв_2).AI-376" ADDRESS="2185" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_6_Вв_2).AI-377" ADDRESS="2186" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_6_Вв_2).AI-378" ADDRESS="2187" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_6_Вв_2).AI-379" ADDRESS="2188" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_6_Вв_2).AI-380" ADDRESS="2189" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_6_Вв_2).AI-381" ADDRESS="2190" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_6_Вв_2).AI-382" ADDRESS="2191" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_6_Вв_2).AI-383" ADDRESS="2192" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_6_Вв_2).AI-384" ADDRESS="2193" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_6_Вв_2).AI-385" ADDRESS="2194" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_6_Вв_2).AI-386" ADDRESS="2195" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_6_Вв_2).AI-387" ADDRESS="2196" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_6_Вв_2).AI-388" ADDRESS="2197" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_6_Вв_2).AI-389" ADDRESS="2198" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_6_Вв_2).AI-390" ADDRESS="2199" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_6_Вв_2).AI-424" ADDRESS="2200" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_6_Вв_2).DI-777" ADDRESS="1181" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_6_Вв_2).DI-778" ADDRESS="1182" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_6_Вв_2).DI-779" ADDRESS="1183" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_6_Вв_2).DI-780" ADDRESS="1184" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_6_Вв_2).DI-781" ADDRESS="1185" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_6_Вв_2).DI-782" ADDRESS="1186" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_6_Вв_2).DI-865" ADDRESS="1581" ASDU_TYPE="31" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_7_ТП-19-13_яч_7).AI-372" ADDRESS="2081" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_7_ТП-19-13_яч_7).AI-373" ADDRESS="2082" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_7_ТП-19-13_яч_7).AI-374" ADDRESS="2083" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_7_ТП-19-13_яч_7).AI-375" ADDRESS="2084" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_7_ТП-19-13_яч_7).AI-376" ADDRESS="2085" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_7_ТП-19-13_яч_7).AI-377" ADDRESS="2086" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_7_ТП-19-13_яч_7).AI-378" ADDRESS="2087" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_7_ТП-19-13_яч_7).AI-379" ADDRESS="2088" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_7_ТП-19-13_яч_7).AI-380" ADDRESS="2089" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_7_ТП-19-13_яч_7).AI-381" ADDRESS="2090" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_7_ТП-19-13_яч_7).AI-382" ADDRESS="2091" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_7_ТП-19-13_яч_7).AI-383" ADDRESS="2092" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_7_ТП-19-13_яч_7).AI-384" ADDRESS="2093" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_7_ТП-19-13_яч_7).AI-385" ADDRESS="2094" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_7_ТП-19-13_яч_7).AI-386" ADDRESS="2095" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_7_ТП-19-13_яч_7).AI-387" ADDRESS="2096" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_7_ТП-19-13_яч_7).AI-388" ADDRESS="2097" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_7_ТП-19-13_яч_7).AI-389" ADDRESS="2098" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_7_ТП-19-13_яч_7).AI-390" ADDRESS="2099" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_7_ТП-19-13_яч_7).AI-424" ADDRESS="2100" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_7_ТП-19-13_яч_7).DI-777" ADDRESS="1081" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_7_ТП-19-13_яч_7).DI-778" ADDRESS="1082" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_7_ТП-19-13_яч_7).DI-779" ADDRESS="1083" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_7_ТП-19-13_яч_7).DI-780" ADDRESS="1084" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_7_ТП-19-13_яч_7).DI-781" ADDRESS="1085" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_7_ТП-19-13_яч_7).DI-782" ADDRESS="1086" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_7_ТП-19-13_яч_7).DI-783" ADDRESS="1087" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_7_ТП-19-13_яч_7).DI-865" ADDRESS="1481" ASDU_TYPE="31" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_8_ТП-19-13_яч_8).AI-372" ADDRESS="2101" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_8_ТП-19-13_яч_8).AI-373" ADDRESS="2102" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_8_ТП-19-13_яч_8).AI-374" ADDRESS="2103" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_8_ТП-19-13_яч_8).AI-375" ADDRESS="2104" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_8_ТП-19-13_яч_8).AI-376" ADDRESS="2105" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_8_ТП-19-13_яч_8).AI-377" ADDRESS="2106" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_8_ТП-19-13_яч_8).AI-378" ADDRESS="2107" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_8_ТП-19-13_яч_8).AI-379" ADDRESS="2108" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_8_ТП-19-13_яч_8).AI-380" ADDRESS="2109" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_8_ТП-19-13_яч_8).AI-381" ADDRESS="2110" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_8_ТП-19-13_яч_8).AI-382" ADDRESS="2111" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_8_ТП-19-13_яч_8).AI-383" ADDRESS="2112" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_8_ТП-19-13_яч_8).AI-384" ADDRESS="2113" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_8_ТП-19-13_яч_8).AI-385" ADDRESS="2114" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_8_ТП-19-13_яч_8).AI-386" ADDRESS="2115" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_8_ТП-19-13_яч_8).AI-387" ADDRESS="2116" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_8_ТП-19-13_яч_8).AI-388" ADDRESS="2117" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_8_ТП-19-13_яч_8).AI-389" ADDRESS="2118" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_8_ТП-19-13_яч_8).AI-390" ADDRESS="2119" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_8_ТП-19-13_яч_8).AI-424" ADDRESS="2120" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_8_ТП-19-13_яч_8).DI-777" ADDRESS="1101" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_8_ТП-19-13_яч_8).DI-778" ADDRESS="1102" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_8_ТП-19-13_яч_8).DI-779" ADDRESS="1103" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_8_ТП-19-13_яч_8).DI-780" ADDRESS="1104" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_8_ТП-19-13_яч_8).DI-781" ADDRESS="1105" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_8_ТП-19-13_яч_8).DI-782" ADDRESS="1106" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_8_ТП-19-13_яч_8).DI-783" ADDRESS="1107" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_8_ТП-19-13_яч_8).DI-865" ADDRESS="1501" ASDU_TYPE="31" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_9_Вв_1).AI-372" ADDRESS="2161" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_9_Вв_1).AI-373" ADDRESS="2162" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_9_Вв_1).AI-374" ADDRESS="2163" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_9_Вв_1).AI-375" ADDRESS="2164" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_9_Вв_1).AI-376" ADDRESS="2165" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_9_Вв_1).AI-377" ADDRESS="2166" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_9_Вв_1).AI-378" ADDRESS="2167" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_9_Вв_1).AI-379" ADDRESS="2168" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_9_Вв_1).AI-380" ADDRESS="2169" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_9_Вв_1).AI-381" ADDRESS="2170" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_9_Вв_1).AI-382" ADDRESS="2171" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_9_Вв_1).AI-383" ADDRESS="2172" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_9_Вв_1).AI-384" ADDRESS="2173" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_9_Вв_1).AI-385" ADDRESS="2174" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_9_Вв_1).AI-386" ADDRESS="2175" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_9_Вв_1).AI-387" ADDRESS="2176" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_9_Вв_1).AI-388" ADDRESS="2177" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_9_Вв_1).AI-389" ADDRESS="2178" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_9_Вв_1).AI-390" ADDRESS="2179" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_9_Вв_1).AI-424" ADDRESS="2180" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_9_Вв_1).DI-777" ADDRESS="1161" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_9_Вв_1).DI-778" ADDRESS="1162" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_9_Вв_1).DI-779" ADDRESS="1163" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_9_Вв_1).DI-780" ADDRESS="1164" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_9_Вв_1).DI-781" ADDRESS="1165" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_9_Вв_1).DI-782" ADDRESS="1166" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_9_Вв_1).DI-865" ADDRESS="1561" ASDU_TYPE="31" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_11_Т-1  10кВ).AI-372" ADDRESS="2061" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_11_Т-1  10кВ).AI-373" ADDRESS="2062" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_11_Т-1  10кВ).AI-374" ADDRESS="2063" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_11_Т-1  10кВ).AI-375" ADDRESS="2064" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_11_Т-1  10кВ).AI-376" ADDRESS="2065" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_11_Т-1  10кВ).AI-377" ADDRESS="2066" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_11_Т-1  10кВ).AI-378" ADDRESS="2067" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_11_Т-1  10кВ).AI-379" ADDRESS="2068" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_11_Т-1  10кВ).AI-380" ADDRESS="2069" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_11_Т-1  10кВ).AI-381" ADDRESS="2070" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_11_Т-1  10кВ).AI-382" ADDRESS="2071" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_11_Т-1  10кВ).AI-383" ADDRESS="2072" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_11_Т-1  10кВ).AI-384" ADDRESS="2073" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_11_Т-1  10кВ).AI-385" ADDRESS="2074" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_11_Т-1  10кВ).AI-386" ADDRESS="2075" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_11_Т-1  10кВ).AI-387" ADDRESS="2076" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_11_Т-1  10кВ).AI-388" ADDRESS="2077" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_11_Т-1  10кВ).AI-389" ADDRESS="2078" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_11_Т-1  10кВ).AI-390" ADDRESS="2079" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_11_Т-1  10кВ).AI-424" ADDRESS="2080" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_11_Т-1  10кВ).DI-777" ADDRESS="1061" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_11_Т-1  10кВ).DI-778" ADDRESS="1062" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_11_Т-1  10кВ).DI-779" ADDRESS="1063" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_11_Т-1  10кВ).DI-780" ADDRESS="1064" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_11_Т-1  10кВ).DI-781" ADDRESS="1065" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_11_Т-1  10кВ).DI-782" ADDRESS="1066" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_11_Т-1  10кВ).DI-783" ADDRESS="1067" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_11_Т-1  10кВ).DI-865" ADDRESS="1461" ASDU_TYPE="31" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_12_Т-2).AI-372" ADDRESS="2121" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_12_Т-2).AI-373" ADDRESS="2122" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_12_Т-2).AI-374" ADDRESS="2123" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_12_Т-2).AI-375" ADDRESS="2124" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_12_Т-2).AI-376" ADDRESS="2125" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_12_Т-2).AI-377" ADDRESS="2126" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_12_Т-2).AI-378" ADDRESS="2127" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_12_Т-2).AI-379" ADDRESS="2128" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_12_Т-2).AI-380" ADDRESS="2129" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_12_Т-2).AI-381" ADDRESS="2130" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_12_Т-2).AI-382" ADDRESS="2131" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_12_Т-2).AI-383" ADDRESS="2132" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_12_Т-2).AI-384" ADDRESS="2133" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_12_Т-2).AI-385" ADDRESS="2134" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_12_Т-2).AI-386" ADDRESS="2135" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_12_Т-2).AI-387" ADDRESS="2136" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_12_Т-2).AI-388" ADDRESS="2137" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_12_Т-2).AI-389" ADDRESS="2138" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_12_Т-2).AI-390" ADDRESS="2139" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_12_Т-2).AI-424" ADDRESS="2140" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_12_Т-2).DI-777" ADDRESS="1121" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_12_Т-2).DI-778" ADDRESS="1122" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_12_Т-2).DI-779" ADDRESS="1123" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_12_Т-2).DI-780" ADDRESS="1124" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_12_Т-2).DI-781" ADDRESS="1125" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_12_Т-2).DI-782" ADDRESS="1126" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_12_Т-2).DI-783" ADDRESS="1127" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_12_Т-2).DI-865" ADDRESS="1521" ASDU_TYPE="31" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_13_ТП-19-8 яч_5).AI-372" ADDRESS="2041" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_13_ТП-19-8 яч_5).AI-373" ADDRESS="2042" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_13_ТП-19-8 яч_5).AI-374" ADDRESS="2043" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_13_ТП-19-8 яч_5).AI-375" ADDRESS="2044" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_13_ТП-19-8 яч_5).AI-376" ADDRESS="2045" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_13_ТП-19-8 яч_5).AI-377" ADDRESS="2046" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_13_ТП-19-8 яч_5).AI-378" ADDRESS="2047" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_13_ТП-19-8 яч_5).AI-379" ADDRESS="2048" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_13_ТП-19-8 яч_5).AI-380" ADDRESS="2049" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_13_ТП-19-8 яч_5).AI-381" ADDRESS="2050" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_13_ТП-19-8 яч_5).AI-382" ADDRESS="2051" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_13_ТП-19-8 яч_5).AI-383" ADDRESS="2052" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_13_ТП-19-8 яч_5).AI-384" ADDRESS="2053" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_13_ТП-19-8 яч_5).AI-385" ADDRESS="2054" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_13_ТП-19-8 яч_5).AI-386" ADDRESS="2055" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_13_ТП-19-8 яч_5).AI-387" ADDRESS="2056" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_13_ТП-19-8 яч_5).AI-388" ADDRESS="2057" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_13_ТП-19-8 яч_5).AI-389" ADDRESS="2058" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_13_ТП-19-8 яч_5).AI-390" ADDRESS="2059" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_13_ТП-19-8 яч_5).AI-424" ADDRESS="2060" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_13_ТП-19-8 яч_5).DI-777" ADDRESS="1041" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_13_ТП-19-8 яч_5).DI-778" ADDRESS="1042" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_13_ТП-19-8 яч_5).DI-779" ADDRESS="1043" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_13_ТП-19-8 яч_5).DI-780" ADDRESS="1044" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_13_ТП-19-8 яч_5).DI-781" ADDRESS="1045" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_13_ТП-19-8 яч_5).DI-782" ADDRESS="1046" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_13_ТП-19-8 яч_5).DI-783" ADDRESS="1047" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_13_ТП-19-8 яч_5).DI-865" ADDRESS="1441" ASDU_TYPE="31" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_14_ТП-19-8 яч_6).AI-372" ADDRESS="2141" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_14_ТП-19-8 яч_6).AI-373" ADDRESS="2142" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_14_ТП-19-8 яч_6).AI-374" ADDRESS="2143" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_14_ТП-19-8 яч_6).AI-375" ADDRESS="2144" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_14_ТП-19-8 яч_6).AI-376" ADDRESS="2145" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_14_ТП-19-8 яч_6).AI-377" ADDRESS="2146" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_14_ТП-19-8 яч_6).AI-378" ADDRESS="2147" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_14_ТП-19-8 яч_6).AI-379" ADDRESS="2148" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_14_ТП-19-8 яч_6).AI-380" ADDRESS="2149" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_14_ТП-19-8 яч_6).AI-381" ADDRESS="2150" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_14_ТП-19-8 яч_6).AI-382" ADDRESS="2151" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_14_ТП-19-8 яч_6).AI-383" ADDRESS="2152" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_14_ТП-19-8 яч_6).AI-384" ADDRESS="2153" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_14_ТП-19-8 яч_6).AI-385" ADDRESS="2154" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_14_ТП-19-8 яч_6).AI-386" ADDRESS="2155" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_14_ТП-19-8 яч_6).AI-387" ADDRESS="2156" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_14_ТП-19-8 яч_6).AI-388" ADDRESS="2157" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_14_ТП-19-8 яч_6).AI-389" ADDRESS="2158" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_14_ТП-19-8 яч_6).AI-390" ADDRESS="2159" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_14_ТП-19-8 яч_6).AI-424" ADDRESS="2160" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_14_ТП-19-8 яч_6).DI-777" ADDRESS="1141" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_14_ТП-19-8 яч_6).DI-778" ADDRESS="1142" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_14_ТП-19-8 яч_6).DI-779" ADDRESS="1143" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_14_ТП-19-8 яч_6).DI-780" ADDRESS="1144" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_14_ТП-19-8 яч_6).DI-781" ADDRESS="1145" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_14_ТП-19-8 яч_6).DI-782" ADDRESS="1146" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_14_ТП-19-8 яч_6).DI-783" ADDRESS="1147" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_14_ТП-19-8 яч_6).DI-865" ADDRESS="1541" ASDU_TYPE="31" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_15_ТП-19-2 яч_1).AI-372" ADDRESS="2001" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_15_ТП-19-2 яч_1).AI-373" ADDRESS="2002" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_15_ТП-19-2 яч_1).AI-374" ADDRESS="2003" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_15_ТП-19-2 яч_1).AI-375" ADDRESS="2004" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_15_ТП-19-2 яч_1).AI-376" ADDRESS="2005" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_15_ТП-19-2 яч_1).AI-377" ADDRESS="2006" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_15_ТП-19-2 яч_1).AI-378" ADDRESS="2007" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_15_ТП-19-2 яч_1).AI-379" ADDRESS="2008" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_15_ТП-19-2 яч_1).AI-380" ADDRESS="2009" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_15_ТП-19-2 яч_1).AI-381" ADDRESS="2010" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_15_ТП-19-2 яч_1).AI-382" ADDRESS="2011" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_15_ТП-19-2 яч_1).AI-383" ADDRESS="2012" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_15_ТП-19-2 яч_1).AI-384" ADDRESS="2013" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_15_ТП-19-2 яч_1).AI-385" ADDRESS="2014" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_15_ТП-19-2 яч_1).AI-386" ADDRESS="2015" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_15_ТП-19-2 яч_1).AI-387" ADDRESS="2016" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_15_ТП-19-2 яч_1).AI-388" ADDRESS="2017" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_15_ТП-19-2 яч_1).AI-389" ADDRESS="2018" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_15_ТП-19-2 яч_1).AI-390" ADDRESS="2019" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_15_ТП-19-2 яч_1).AI-424" ADDRESS="2020" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_15_ТП-19-2 яч_1).DI-777" ADDRESS="1001" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_15_ТП-19-2 яч_1).DI-778" ADDRESS="1002" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_15_ТП-19-2 яч_1).DI-779" ADDRESS="1003" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_15_ТП-19-2 яч_1).DI-780" ADDRESS="1004" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_15_ТП-19-2 яч_1).DI-865" ADDRESS="1401" ASDU_TYPE="31" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_16_ТП-19-2 яч_2).AI-372" ADDRESS="2021" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_16_ТП-19-2 яч_2).AI-373" ADDRESS="2022" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_16_ТП-19-2 яч_2).AI-374" ADDRESS="2023" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_16_ТП-19-2 яч_2).AI-375" ADDRESS="2024" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_16_ТП-19-2 яч_2).AI-376" ADDRESS="2025" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_16_ТП-19-2 яч_2).AI-377" ADDRESS="2026" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_16_ТП-19-2 яч_2).AI-378" ADDRESS="2027" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_16_ТП-19-2 яч_2).AI-379" ADDRESS="2028" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_16_ТП-19-2 яч_2).AI-380" ADDRESS="2029" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_16_ТП-19-2 яч_2).AI-381" ADDRESS="2030" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_16_ТП-19-2 яч_2).AI-382" ADDRESS="2031" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_16_ТП-19-2 яч_2).AI-383" ADDRESS="2032" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_16_ТП-19-2 яч_2).AI-384" ADDRESS="2033" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_16_ТП-19-2 яч_2).AI-385" ADDRESS="2034" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_16_ТП-19-2 яч_2).AI-386" ADDRESS="2035" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_16_ТП-19-2 яч_2).AI-387" ADDRESS="2036" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_16_ТП-19-2 яч_2).AI-388" ADDRESS="2037" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_16_ТП-19-2 яч_2).AI-389" ADDRESS="2038" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_16_ТП-19-2 яч_2).AI-390" ADDRESS="2039" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_16_ТП-19-2 яч_2).AI-424" ADDRESS="2040" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_16_ТП-19-2 яч_2).DI-777" ADDRESS="1021" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_16_ТП-19-2 яч_2).DI-778" ADDRESS="1022" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_16_ТП-19-2 яч_2).DI-779" ADDRESS="1023" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_16_ТП-19-2 яч_2).DI-780" ADDRESS="1024" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_16_ТП-19-2 яч_2).DI-865" ADDRESS="1421" ASDU_TYPE="31" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_4_ТН2).AI-1392" ADDRESS="2237" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_1_ТН1).AI-375" ADDRESS="2221" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_1_ТН1).AI-376" ADDRESS="2222" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_1_ТН1).AI-377" ADDRESS="2223" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_1_ТН1).AI-378" ADDRESS="2224" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_1_ТН1).AI-379" ADDRESS="2225" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_1_ТН1).AI-380" ADDRESS="2226" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_1_ТН1).AI-1392" ADDRESS="2227" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_2_CВ).Connect" ADDRESS="922" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_4_ТН2).Connect" ADDRESS="924" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_6_Вв_2).Connect" ADDRESS="921" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_7_ТП-19-13_яч_7).Connect" ADDRESS="916" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_8_ТП-19-13_яч_8).Connect" ADDRESS="917" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_9_Вв_1).Connect" ADDRESS="920" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_11_Т-1  10кВ).Connect" ADDRESS="915" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_12_Т-2).Connect" ADDRESS="918" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_13_ТП-19-8 яч_5).Connect" ADDRESS="914" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_14_ТП-19-8 яч_6).Connect" ADDRESS="919" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_15_ТП-19-2 яч_1).Connect" ADDRESS="912" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_16_ТП-19-2 яч_2).Connect" ADDRESS="913" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_1_ТН1).Connect" ADDRESS="923" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (ТП-19-1 яч_2 Ввод_1).AI-372" ADDRESS="2241" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (ТП-19-1 яч_2 Ввод_1).AI-373" ADDRESS="2242" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (ТП-19-1 яч_2 Ввод_1).AI-374" ADDRESS="2243" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (ТП-19-1 яч_2 Ввод_1).AI-375" ADDRESS="2244" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (ТП-19-1 яч_2 Ввод_1).AI-376" ADDRESS="2245" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (ТП-19-1 яч_2 Ввод_1).AI-377" ADDRESS="2246" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (ТП-19-1 яч_2 Ввод_1).AI-378" ADDRESS="2247" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (ТП-19-1 яч_2 Ввод_1).AI-379" ADDRESS="2248" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (ТП-19-1 яч_2 Ввод_1).AI-380" ADDRESS="2249" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (ТП-19-1 яч_2 Ввод_1).AI-381" ADDRESS="2250" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (ТП-19-1 яч_2 Ввод_1).AI-382" ADDRESS="2251" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (ТП-19-1 яч_2 Ввод_1).AI-383" ADDRESS="2252" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (ТП-19-1 яч_2 Ввод_1).AI-384" ADDRESS="2253" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (ТП-19-1 яч_2 Ввод_1).AI-385" ADDRESS="2254" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (ТП-19-1 яч_2 Ввод_1).AI-386" ADDRESS="2255" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (ТП-19-1 яч_2 Ввод_1).AI-387" ADDRESS="2256" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (ТП-19-1 яч_2 Ввод_1).AI-388" ADDRESS="2257" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (ТП-19-1 яч_2 Ввод_1).AI-389" ADDRESS="2258" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (ТП-19-1 яч_2 Ввод_1).AI-390" ADDRESS="2259" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (ТП-19-1 яч_2 Ввод_1).AI-424" ADDRESS="2260" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (ТП-19-1 яч_2 Ввод_1).DI-865" ADDRESS="1641" ASDU_TYPE="31" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (ТП-19-1 яч_2 Ввод_1).Connect" ADDRESS="925" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (ТП-19-1 яч_7 Ввод_2).AI-372" ADDRESS="2261" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (ТП-19-1 яч_7 Ввод_2).AI-373" ADDRESS="2262" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (ТП-19-1 яч_7 Ввод_2).AI-374" ADDRESS="2263" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (ТП-19-1 яч_7 Ввод_2).AI-375" ADDRESS="2264" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (ТП-19-1 яч_7 Ввод_2).AI-376" ADDRESS="2265" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (ТП-19-1 яч_7 Ввод_2).AI-377" ADDRESS="2266" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (ТП-19-1 яч_7 Ввод_2).AI-378" ADDRESS="2267" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (ТП-19-1 яч_7 Ввод_2).AI-379" ADDRESS="2268" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (ТП-19-1 яч_7 Ввод_2).AI-380" ADDRESS="2269" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (ТП-19-1 яч_7 Ввод_2).AI-381" ADDRESS="2270" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (ТП-19-1 яч_7 Ввод_2).AI-382" ADDRESS="2271" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (ТП-19-1 яч_7 Ввод_2).AI-383" ADDRESS="2272" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (ТП-19-1 яч_7 Ввод_2).AI-384" ADDRESS="2273" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (ТП-19-1 яч_7 Ввод_2).AI-385" ADDRESS="2274" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (ТП-19-1 яч_7 Ввод_2).AI-386" ADDRESS="2275" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (ТП-19-1 яч_7 Ввод_2).AI-387" ADDRESS="2276" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (ТП-19-1 яч_7 Ввод_2).AI-388" ADDRESS="2277" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (ТП-19-1 яч_7 Ввод_2).AI-389" ADDRESS="2278" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (ТП-19-1 яч_7 Ввод_2).AI-390" ADDRESS="2279" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (ТП-19-1 яч_7 Ввод_2).AI-424" ADDRESS="2280" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (ТП-19-1 яч_7 Ввод_2).DI-865" ADDRESS="1661" ASDU_TYPE="31" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (ТП-19-1 яч_7 Ввод_2).Connect" ADDRESS="926" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="Modbus-serial.Группа 9.Modbus_Орион _яч9.Connect" ADDRESS="929" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="Modbus-serial.Группа 9.Modbus_Орион _яч9.DI-1351" ADDRESS="1169" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="Modbus-serial.Группа 9.Modbus_Орион _яч9.DI-1353" ADDRESS="1167" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="Modbus-serial.Группа 9.Modbus_Орион _яч9.DI-1485" ADDRESS="1171" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="Modbus-serial.Группа 9.Modbus_Орион _яч9.DI-1488" ADDRESS="1170" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="Modbus-serial.Группа 2.Modbus_Орион _яч2 СВ.Connect" ADDRESS="931" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="Modbus-serial.Группа 2.Modbus_Орион _яч2 СВ.DI-1351" ADDRESS="1211" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="Modbus-serial.Группа 2.Modbus_Орион _яч2 СВ.DI-1353" ADDRESS="1209" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="Modbus-serial.Группа 2.Modbus_Орион _яч2 СВ.DI-1485" ADDRESS="1213" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="Modbus-serial.Группа 2.Modbus_Орион _яч2 СВ.DI-1488" ADDRESS="1212" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="Modbus-serial.Группа 17.Sirius-2L_yach_15.Connect" ADDRESS="927" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="Modbus-serial.Группа 17.Sirius-2L_yach_15.UVars_Control_Led2_9" ADDRESS="1007" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="Modbus-serial.Группа 17.Sirius-2L_yach_15.UVars_Control_Led2_11" ADDRESS="1006" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="Modbus-serial.Группа 17.Sirius-2L_yach_15.UVars_Control_Led2_12" ADDRESS="1008" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="Modbus-serial.Группа 17.Sirius-2L_yach_15.UVars_Control_Relay1_0" ADDRESS="1014" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="Modbus-serial.Группа 17.Sirius-2L_yach_15.UVars_Control_Relay1_1" ADDRESS="1015" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="Modbus-serial.Группа 17.Sirius-2L_yach_15.UVars_Control_Optron1_3" ADDRESS="1009" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="Modbus-serial.Группа 17.Sirius-2L_yach_15.UVars_Control_Optron1_8" ADDRESS="1005" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="Modbus-serial.Группа 17.Sirius-2L_yach_16.Connect" ADDRESS="928" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="Modbus-serial.Группа 17.Sirius-2L_yach_16.UVars_Control_Led2_9" ADDRESS="1027" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="Modbus-serial.Группа 17.Sirius-2L_yach_16.UVars_Control_Led2_11" ADDRESS="1026" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="Modbus-serial.Группа 17.Sirius-2L_yach_16.UVars_Control_Led2_12" ADDRESS="1028" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="Modbus-serial.Группа 17.Sirius-2L_yach_16.UVars_Control_Relay1_0" ADDRESS="1034" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="Modbus-serial.Группа 17.Sirius-2L_yach_16.UVars_Control_Relay1_1" ADDRESS="1035" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="Modbus-serial.Группа 17.Sirius-2L_yach_16.UVars_Control_Optron1_3" ADDRESS="1029" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="Modbus-serial.Группа 17.Sirius-2L_yach_16.UVars_Control_Optron1_8" ADDRESS="1025" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="Modbus-serial.Группа 6.Modbus_Орион _яч6.Connect" ADDRESS="930" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="Modbus-serial.Группа 6.Modbus_Орион _яч6.DI-1351" ADDRESS="1189" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="Modbus-serial.Группа 6.Modbus_Орион _яч6.DI-1353" ADDRESS="1187" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="Modbus-serial.Группа 6.Modbus_Орион _яч6.DI-1485" ADDRESS="1191" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="Modbus-serial.Группа 6.Modbus_Орион _яч6.DI-1488" ADDRESS="1190" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="AUTOTS_CLIENT.autots.DO-1591 - DI-1592" ADDRESS="806" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="AUTOTS_CLIENT.autots.DO-1593 - DI-1594" ADDRESS="803" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.Дорасчетные ТС РЗА.DI-1589" ADDRESS="1168" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.Дорасчетные ТС РЗА.DI-1590" ADDRESS="1188" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.Дорасчетные ТС РЗА.DI-1591" ADDRESS="1210" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.System.RedReady" ADDRESS="900" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="AUTOTS_CLIENT.autots.DO-1604 - DI-1605" ADDRESS="804" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_15_ТП-19-2 яч_1).DI-1553" ADDRESS="1000" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_16_ТП-19-2 яч_2).DI-1554" ADDRESS="1020" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_15_ТП-19-2 яч_1).DI-1549" ADDRESS="1662" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_16_ТП-19-2 яч_2).DI-1550" ADDRESS="1663" ASDU_TYPE="30" Group="0"/>
+      </POINTS>
+      <COMMANDS>
+        <COMMAND NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_2_CВ).DO-922" ADDRESS="3201" TYPE_ID="C_SC_NA_1"/>
+        <COMMAND NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_6_Вв_2).DO-922" ADDRESS="3181" TYPE_ID="C_SC_NA_1"/>
+        <COMMAND NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_7_ТП-19-13_яч_7).DO-922" ADDRESS="3081" TYPE_ID="C_SC_NA_1"/>
+        <COMMAND NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_8_ТП-19-13_яч_8).DO-922" ADDRESS="3101" TYPE_ID="C_SC_NA_1"/>
+        <COMMAND NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_9_Вв_1).DO-922" ADDRESS="3161" TYPE_ID="C_SC_NA_1"/>
+        <COMMAND NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_11_Т-1  10кВ).DO-922" ADDRESS="3061" TYPE_ID="C_SC_NA_1"/>
+        <COMMAND NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_12_Т-2).DO-922" ADDRESS="3121" TYPE_ID="C_SC_NA_1"/>
+        <COMMAND NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_13_ТП-19-8 яч_5).DO-922" ADDRESS="3041" TYPE_ID="C_SC_NA_1"/>
+        <COMMAND NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_14_ТП-19-8 яч_6).DO-922" ADDRESS="3141" TYPE_ID="C_SC_NA_1"/>
+        <COMMAND NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_15_ТП-19-2 яч_1).DO-922" ADDRESS="3001" TYPE_ID="C_SC_NA_1"/>
+        <COMMAND NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_16_ТП-19-2 яч_2).DO-922" ADDRESS="3021" TYPE_ID="C_SC_NA_1"/>
+        <COMMAND NAME="AUTOTS_CLIENT.autots.DO-1591" ADDRESS="606" TYPE_ID="C_SC_NA_1"/>
+        <COMMAND NAME="AUTOTS_CLIENT.autots.DO-1593" ADDRESS="605" TYPE_ID="C_SC_NA_1"/>
+        <COMMAND NAME="AUTOTS_CLIENT.autots.DO-1604" ADDRESS="607" TYPE_ID="C_SC_NA_1"/>
+      </COMMANDS>
+    </MASTER>
+    <MASTER NAME="Передача в ТП-19_2 (1С и 2С)" DESC="" PORT="2405" DISABLED="0">
+      <PARAMS IP_ADDRESS="10.99.14.200" LOC_IP="" TZ="" INTEGRITY_CHECK="0" COMMON_ADDRESS="1" ASDU_ADDRESS_BYTES="2" OBJ_ADDRESS_BYTES="3" COT_BYTES="2" MAX_T1="30" MAX_T2="10" MAX_T3="20" MAX_W="8" ALLOWABLE_DELAY="0" ALLOW_SUBST="0" SPONTANEOUS="1" GI_FIRST="1" SQ="0" PYRAM_GI_ADDR="0" PYRAM_GI_TIMESTAMP="0" USE_ARCHIVE="0" ARCH_MAX="0" CONTROL_PRIORITY="" SYNC_TIME_SHMEM_UNIT="5"/>
+      <PARAMS IP_ADDRESS="10.99.14.201" LOC_IP="" TZ="" INTEGRITY_CHECK="0" COMMON_ADDRESS="1" ASDU_ADDRESS_BYTES="2" OBJ_ADDRESS_BYTES="3" COT_BYTES="2" MAX_T1="30" MAX_T2="10" MAX_T3="20" MAX_W="8" ALLOWABLE_DELAY="0" ALLOW_SUBST="0" SPONTANEOUS="1" GI_FIRST="1" SQ="0" PYRAM_GI_ADDR="0" PYRAM_GI_TIMESTAMP="0" USE_ARCHIVE="0" ARCH_MAX="0" CONTROL_PRIORITY="" SYNC_TIME_SHMEM_UNIT="6"/>
+      <PARAMS IP_ADDRESS="172.26.9.23" LOC_IP="" TZ="" INTEGRITY_CHECK="0" COMMON_ADDRESS="1" ASDU_ADDRESS_BYTES="2" OBJ_ADDRESS_BYTES="3" COT_BYTES="2" MAX_T1="30" MAX_T2="10" MAX_T3="20" MAX_W="8" ALLOWABLE_DELAY="0" ALLOW_SUBST="0" SPONTANEOUS="1" GI_FIRST="1" SQ="0" PYRAM_GI_ADDR="0" PYRAM_GI_TIMESTAMP="0" USE_ARCHIVE="0" ARCH_MAX="0" CONTROL_PRIORITY="" SYNC_TIME_SHMEM_UNIT="7"/>
+      <POINTS>
+        <POINT NAME="LOC.SG_F1.ozz_start_OZZ" ADDRESS="551" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_OFF_Q01" ADDRESS="504" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_ON_Q01" ADDRESS="502" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.ozz_start_OZZ" ADDRESS="2551" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_OFF_Q01" ADDRESS="2504" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_ON_Q01" ADDRESS="2502" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_OFF_Q02" ADDRESS="505" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_ON_Q02" ADDRESS="503" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_OFF_Q02" ADDRESS="2505" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_ON_Q02" ADDRESS="2503" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.Automatic" ADDRESS="2510" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.Automatic" ADDRESS="2511" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.TestSAVS.DI-676" ADDRESS="521" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.TestSAVS.DI-677" ADDRESS="522" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.TestSAVS.DI-678" ADDRESS="2521" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.TestSAVS.DI-679" ADDRESS="2522" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.Дорасчет.DI-1606" ADDRESS="8001" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_15_ТП-19-2 яч_1).DI-1553" ADDRESS="501" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_16_ТП-19-2 яч_2).DI-1554" ADDRESS="2501" ASDU_TYPE="30" Group="0"/>
+      </POINTS>
+      <COMMANDS/>
+    </MASTER>
+    <MASTER NAME="Передача в ТП-19_3 (1С и 2С)" DESC="" PORT="2405" DISABLED="0">
+      <PARAMS IP_ADDRESS="10.99.14.202" LOC_IP="" TZ="" INTEGRITY_CHECK="0" COMMON_ADDRESS="1" ASDU_ADDRESS_BYTES="2" OBJ_ADDRESS_BYTES="3" COT_BYTES="2" MAX_T1="30" MAX_T2="10" MAX_T3="20" MAX_W="8" ALLOWABLE_DELAY="0" ALLOW_SUBST="0" SPONTANEOUS="1" GI_FIRST="1" SQ="0" PYRAM_GI_ADDR="0" PYRAM_GI_TIMESTAMP="0" USE_ARCHIVE="0" ARCH_MAX="0" CONTROL_PRIORITY="" SYNC_TIME_SHMEM_UNIT="8"/>
+      <PARAMS IP_ADDRESS="10.99.14.203" LOC_IP="" TZ="" INTEGRITY_CHECK="0" COMMON_ADDRESS="1" ASDU_ADDRESS_BYTES="2" OBJ_ADDRESS_BYTES="3" COT_BYTES="2" MAX_T1="30" MAX_T2="10" MAX_T3="20" MAX_W="8" ALLOWABLE_DELAY="0" ALLOW_SUBST="0" SPONTANEOUS="1" GI_FIRST="1" SQ="0" PYRAM_GI_ADDR="0" PYRAM_GI_TIMESTAMP="0" USE_ARCHIVE="0" ARCH_MAX="0" CONTROL_PRIORITY="" SYNC_TIME_SHMEM_UNIT="9"/>
+      <PARAMS IP_ADDRESS="172.26.9.24" LOC_IP="" TZ="" INTEGRITY_CHECK="0" COMMON_ADDRESS="1" ASDU_ADDRESS_BYTES="2" OBJ_ADDRESS_BYTES="3" COT_BYTES="2" MAX_T1="30" MAX_T2="10" MAX_T3="20" MAX_W="8" ALLOWABLE_DELAY="0" ALLOW_SUBST="0" SPONTANEOUS="1" GI_FIRST="1" SQ="0" PYRAM_GI_ADDR="0" PYRAM_GI_TIMESTAMP="0" USE_ARCHIVE="0" ARCH_MAX="0" CONTROL_PRIORITY="" SYNC_TIME_SHMEM_UNIT="10"/>
+      <POINTS>
+        <POINT NAME="LOC.SG_F1.ozz_start_OZZ" ADDRESS="551" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="LOC.SG_F2.ozz_start_OZZ" ADDRESS="2551" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_OFF_Q03" ADDRESS="505" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_ON_Q03" ADDRESS="503" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_OFF_Q04" ADDRESS="504" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_ON_Q04" ADDRESS="502" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_OFF_Q03" ADDRESS="2505" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_ON_Q03" ADDRESS="2503" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_OFF_Q04" ADDRESS="2504" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_ON_Q04" ADDRESS="2502" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.Automatic" ADDRESS="2510" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.Automatic" ADDRESS="2511" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.TestSAVS.DI-676" ADDRESS="521" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.TestSAVS.DI-677" ADDRESS="522" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.TestSAVS.DI-678" ADDRESS="2521" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.TestSAVS.DI-679" ADDRESS="2522" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.Дорасчет.DI-1606" ADDRESS="8001" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_15_ТП-19-2 яч_1).DI-1553" ADDRESS="501" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_16_ТП-19-2 яч_2).DI-1554" ADDRESS="2501" ASDU_TYPE="30" Group="0"/>
+      </POINTS>
+      <COMMANDS/>
+    </MASTER>
+    <MASTER NAME="Передача в ТП-19_4 (1С и 2С)" DESC="" PORT="2405" DISABLED="0">
+      <PARAMS IP_ADDRESS="10.99.14.204" LOC_IP="" TZ="" INTEGRITY_CHECK="0" COMMON_ADDRESS="1" ASDU_ADDRESS_BYTES="2" OBJ_ADDRESS_BYTES="3" COT_BYTES="2" MAX_T1="30" MAX_T2="10" MAX_T3="20" MAX_W="8" ALLOWABLE_DELAY="0" ALLOW_SUBST="0" SPONTANEOUS="1" GI_FIRST="1" SQ="0" PYRAM_GI_ADDR="0" PYRAM_GI_TIMESTAMP="0" USE_ARCHIVE="0" ARCH_MAX="0" CONTROL_PRIORITY="" SYNC_TIME_SHMEM_UNIT="11"/>
+      <PARAMS IP_ADDRESS="10.99.14.205" LOC_IP="" TZ="" INTEGRITY_CHECK="0" COMMON_ADDRESS="1" ASDU_ADDRESS_BYTES="2" OBJ_ADDRESS_BYTES="3" COT_BYTES="2" MAX_T1="30" MAX_T2="10" MAX_T3="20" MAX_W="8" ALLOWABLE_DELAY="0" ALLOW_SUBST="0" SPONTANEOUS="1" GI_FIRST="1" SQ="0" PYRAM_GI_ADDR="0" PYRAM_GI_TIMESTAMP="0" USE_ARCHIVE="0" ARCH_MAX="0" CONTROL_PRIORITY="" SYNC_TIME_SHMEM_UNIT="12"/>
+      <PARAMS IP_ADDRESS="172.26.9.25" LOC_IP="" TZ="" INTEGRITY_CHECK="0" COMMON_ADDRESS="1" ASDU_ADDRESS_BYTES="2" OBJ_ADDRESS_BYTES="3" COT_BYTES="2" MAX_T1="30" MAX_T2="10" MAX_T3="20" MAX_W="8" ALLOWABLE_DELAY="0" ALLOW_SUBST="0" SPONTANEOUS="1" GI_FIRST="1" SQ="0" PYRAM_GI_ADDR="0" PYRAM_GI_TIMESTAMP="0" USE_ARCHIVE="0" ARCH_MAX="0" CONTROL_PRIORITY="" SYNC_TIME_SHMEM_UNIT="13"/>
+      <POINTS>
+        <POINT NAME="LOC.SG_F1.ozz_start_OZZ" ADDRESS="551" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="LOC.SG_F2.ozz_start_OZZ" ADDRESS="2551" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_OFF_Q05" ADDRESS="505" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_ON_Q05" ADDRESS="503" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_OFF_Q06" ADDRESS="504" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_ON_Q06" ADDRESS="502" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_OFF_Q05" ADDRESS="2505" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_ON_Q05" ADDRESS="2503" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_OFF_Q06" ADDRESS="2504" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_ON_Q06" ADDRESS="2502" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.Automatic" ADDRESS="2510" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.Automatic" ADDRESS="2511" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.TestSAVS.DI-676" ADDRESS="521" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.TestSAVS.DI-677" ADDRESS="522" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.TestSAVS.DI-678" ADDRESS="2521" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.TestSAVS.DI-679" ADDRESS="2522" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.Дорасчет.DI-1606" ADDRESS="8001" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_15_ТП-19-2 яч_1).DI-1553" ADDRESS="501" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_16_ТП-19-2 яч_2).DI-1554" ADDRESS="2501" ASDU_TYPE="30" Group="0"/>
+      </POINTS>
+      <COMMANDS/>
+    </MASTER>
+    <MASTER NAME="Передача в ТП-19_5 (1С и 2С)" DESC="" PORT="2405" DISABLED="0">
+      <PARAMS IP_ADDRESS="10.99.14.206" LOC_IP="" TZ="" INTEGRITY_CHECK="0" COMMON_ADDRESS="1" ASDU_ADDRESS_BYTES="2" OBJ_ADDRESS_BYTES="3" COT_BYTES="2" MAX_T1="30" MAX_T2="10" MAX_T3="20" MAX_W="8" ALLOWABLE_DELAY="0" ALLOW_SUBST="0" SPONTANEOUS="1" GI_FIRST="1" SQ="0" PYRAM_GI_ADDR="0" PYRAM_GI_TIMESTAMP="0" USE_ARCHIVE="0" ARCH_MAX="0" CONTROL_PRIORITY="" SYNC_TIME_SHMEM_UNIT="14"/>
+      <PARAMS IP_ADDRESS="10.99.14.207" LOC_IP="" TZ="" INTEGRITY_CHECK="0" COMMON_ADDRESS="1" ASDU_ADDRESS_BYTES="2" OBJ_ADDRESS_BYTES="3" COT_BYTES="2" MAX_T1="30" MAX_T2="10" MAX_T3="20" MAX_W="8" ALLOWABLE_DELAY="0" ALLOW_SUBST="0" SPONTANEOUS="1" GI_FIRST="1" SQ="0" PYRAM_GI_ADDR="0" PYRAM_GI_TIMESTAMP="0" USE_ARCHIVE="0" ARCH_MAX="0" CONTROL_PRIORITY="" SYNC_TIME_SHMEM_UNIT="15"/>
+      <PARAMS IP_ADDRESS="172.26.9.26" LOC_IP="" TZ="" INTEGRITY_CHECK="0" COMMON_ADDRESS="1" ASDU_ADDRESS_BYTES="2" OBJ_ADDRESS_BYTES="3" COT_BYTES="2" MAX_T1="30" MAX_T2="10" MAX_T3="20" MAX_W="8" ALLOWABLE_DELAY="0" ALLOW_SUBST="0" SPONTANEOUS="1" GI_FIRST="1" SQ="0" PYRAM_GI_ADDR="0" PYRAM_GI_TIMESTAMP="0" USE_ARCHIVE="0" ARCH_MAX="0" CONTROL_PRIORITY="" SYNC_TIME_SHMEM_UNIT="16"/>
+      <POINTS>
+        <POINT NAME="LOC.SG_F1.ozz_start_OZZ" ADDRESS="551" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="LOC.SG_F2.ozz_start_OZZ" ADDRESS="2551" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_OFF_Q07" ADDRESS="505" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_ON_Q07" ADDRESS="503" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_OFF_Q08" ADDRESS="504" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_ON_Q08" ADDRESS="502" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_OFF_Q07" ADDRESS="2505" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_ON_Q07" ADDRESS="2503" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_OFF_Q08" ADDRESS="2504" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_ON_Q08" ADDRESS="2502" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.Automatic" ADDRESS="2510" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.Automatic" ADDRESS="2511" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.TestSAVS.DI-676" ADDRESS="521" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.TestSAVS.DI-677" ADDRESS="522" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.TestSAVS.DI-678" ADDRESS="2521" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.TestSAVS.DI-679" ADDRESS="2522" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.Дорасчет.DI-1606" ADDRESS="8001" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_15_ТП-19-2 яч_1).DI-1553" ADDRESS="501" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_16_ТП-19-2 яч_2).DI-1554" ADDRESS="2501" ASDU_TYPE="30" Group="0"/>
+      </POINTS>
+      <COMMANDS/>
+    </MASTER>
+    <MASTER NAME="Передача в ТП-37_1 (1С и 2С)" DESC="" PORT="2405" DISABLED="0">
+      <PARAMS IP_ADDRESS="10.99.14.212" LOC_IP="" TZ="" INTEGRITY_CHECK="0" COMMON_ADDRESS="1" ASDU_ADDRESS_BYTES="2" OBJ_ADDRESS_BYTES="3" COT_BYTES="2" MAX_T1="30" MAX_T2="10" MAX_T3="20" MAX_W="8" ALLOWABLE_DELAY="0" ALLOW_SUBST="0" SPONTANEOUS="1" GI_FIRST="1" SQ="0" PYRAM_GI_ADDR="0" PYRAM_GI_TIMESTAMP="0" USE_ARCHIVE="0" ARCH_MAX="0" CONTROL_PRIORITY="" SYNC_TIME_SHMEM_UNIT="17"/>
+      <PARAMS IP_ADDRESS="10.99.14.213" LOC_IP="" TZ="" INTEGRITY_CHECK="0" COMMON_ADDRESS="1" ASDU_ADDRESS_BYTES="2" OBJ_ADDRESS_BYTES="3" COT_BYTES="2" MAX_T1="30" MAX_T2="10" MAX_T3="20" MAX_W="8" ALLOWABLE_DELAY="0" ALLOW_SUBST="0" SPONTANEOUS="1" GI_FIRST="1" SQ="0" PYRAM_GI_ADDR="0" PYRAM_GI_TIMESTAMP="0" USE_ARCHIVE="0" ARCH_MAX="0" CONTROL_PRIORITY="" SYNC_TIME_SHMEM_UNIT="18"/>
+      <PARAMS IP_ADDRESS="172.26.9.27" LOC_IP="" TZ="" INTEGRITY_CHECK="0" COMMON_ADDRESS="1" ASDU_ADDRESS_BYTES="2" OBJ_ADDRESS_BYTES="3" COT_BYTES="2" MAX_T1="30" MAX_T2="10" MAX_T3="20" MAX_W="8" ALLOWABLE_DELAY="0" ALLOW_SUBST="0" SPONTANEOUS="1" GI_FIRST="1" SQ="0" PYRAM_GI_ADDR="0" PYRAM_GI_TIMESTAMP="0" USE_ARCHIVE="0" ARCH_MAX="0" CONTROL_PRIORITY="" SYNC_TIME_SHMEM_UNIT="19"/>
+      <POINTS>
+        <POINT NAME="LOC.SG_F1.ozz_start_OZZ" ADDRESS="551" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="LOC.SG_F2.ozz_start_OZZ" ADDRESS="2551" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_OFF_Q09" ADDRESS="504" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_ON_Q09" ADDRESS="502" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_OFF_Q10" ADDRESS="505" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_ON_Q10" ADDRESS="503" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_OFF_Q09" ADDRESS="2504" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_ON_Q09" ADDRESS="2502" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_OFF_Q10" ADDRESS="2505" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_ON_Q10" ADDRESS="2503" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.Automatic" ADDRESS="2510" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.Automatic" ADDRESS="2511" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.TestSAVS.DI-676" ADDRESS="521" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.TestSAVS.DI-677" ADDRESS="522" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.TestSAVS.DI-678" ADDRESS="2521" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.TestSAVS.DI-679" ADDRESS="2522" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.Дорасчет.DI-1606" ADDRESS="8001" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_15_ТП-19-2 яч_1).DI-1553" ADDRESS="501" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_16_ТП-19-2 яч_2).DI-1554" ADDRESS="2501" ASDU_TYPE="30" Group="0"/>
+      </POINTS>
+      <COMMANDS/>
+    </MASTER>
+    <MASTER NAME="Передача в ТП-37_3 (1С и 2С)" DESC="" PORT="2405" DISABLED="0">
+      <PARAMS IP_ADDRESS="10.99.14.208" LOC_IP="" TZ="" INTEGRITY_CHECK="0" COMMON_ADDRESS="1" ASDU_ADDRESS_BYTES="2" OBJ_ADDRESS_BYTES="3" COT_BYTES="2" MAX_T1="30" MAX_T2="10" MAX_T3="20" MAX_W="8" ALLOWABLE_DELAY="0" ALLOW_SUBST="0" SPONTANEOUS="1" GI_FIRST="1" SQ="0" PYRAM_GI_ADDR="0" PYRAM_GI_TIMESTAMP="0" USE_ARCHIVE="0" ARCH_MAX="0" CONTROL_PRIORITY="" SYNC_TIME_SHMEM_UNIT="20"/>
+      <PARAMS IP_ADDRESS="10.99.14.209" LOC_IP="" TZ="" INTEGRITY_CHECK="0" COMMON_ADDRESS="1" ASDU_ADDRESS_BYTES="2" OBJ_ADDRESS_BYTES="3" COT_BYTES="2" MAX_T1="30" MAX_T2="10" MAX_T3="20" MAX_W="8" ALLOWABLE_DELAY="0" ALLOW_SUBST="0" SPONTANEOUS="1" GI_FIRST="1" SQ="0" PYRAM_GI_ADDR="0" PYRAM_GI_TIMESTAMP="0" USE_ARCHIVE="0" ARCH_MAX="0" CONTROL_PRIORITY="" SYNC_TIME_SHMEM_UNIT="21"/>
+      <PARAMS IP_ADDRESS="172.26.9.28" LOC_IP="" TZ="" INTEGRITY_CHECK="0" COMMON_ADDRESS="1" ASDU_ADDRESS_BYTES="2" OBJ_ADDRESS_BYTES="3" COT_BYTES="2" MAX_T1="30" MAX_T2="10" MAX_T3="20" MAX_W="8" ALLOWABLE_DELAY="0" ALLOW_SUBST="0" SPONTANEOUS="1" GI_FIRST="1" SQ="0" PYRAM_GI_ADDR="0" PYRAM_GI_TIMESTAMP="0" USE_ARCHIVE="0" ARCH_MAX="0" CONTROL_PRIORITY="" SYNC_TIME_SHMEM_UNIT="22"/>
+      <POINTS>
+        <POINT NAME="LOC.SG_F1.ozz_start_OZZ" ADDRESS="551" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="LOC.SG_F2.ozz_start_OZZ" ADDRESS="2551" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_OFF_Q11" ADDRESS="505" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_ON_Q11" ADDRESS="503" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_OFF_Q12" ADDRESS="504" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_ON_Q12" ADDRESS="502" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_OFF_Q11" ADDRESS="2505" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_ON_Q11" ADDRESS="2503" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_OFF_Q12" ADDRESS="2504" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_ON_Q12" ADDRESS="2502" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.Automatic" ADDRESS="2510" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.Automatic" ADDRESS="2511" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.TestSAVS.DI-676" ADDRESS="521" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.TestSAVS.DI-677" ADDRESS="522" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.TestSAVS.DI-678" ADDRESS="2521" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.TestSAVS.DI-679" ADDRESS="2522" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.Дорасчет.DI-1606" ADDRESS="8001" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_15_ТП-19-2 яч_1).DI-1553" ADDRESS="501" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_16_ТП-19-2 яч_2).DI-1554" ADDRESS="2501" ASDU_TYPE="30" Group="0"/>
+      </POINTS>
+      <COMMANDS/>
+    </MASTER>
+    <MASTER NAME="Передача в ТП-37_2 (1С и 2С)" DESC="" PORT="2405" DISABLED="0">
+      <PARAMS IP_ADDRESS="10.99.14.210" LOC_IP="" TZ="" INTEGRITY_CHECK="0" COMMON_ADDRESS="1" ASDU_ADDRESS_BYTES="2" OBJ_ADDRESS_BYTES="3" COT_BYTES="2" MAX_T1="30" MAX_T2="10" MAX_T3="20" MAX_W="8" ALLOWABLE_DELAY="0" ALLOW_SUBST="0" SPONTANEOUS="1" GI_FIRST="1" SQ="0" PYRAM_GI_ADDR="0" PYRAM_GI_TIMESTAMP="0" USE_ARCHIVE="0" ARCH_MAX="0" CONTROL_PRIORITY="" SYNC_TIME_SHMEM_UNIT="23"/>
+      <PARAMS IP_ADDRESS="10.99.14.211" LOC_IP="" TZ="" INTEGRITY_CHECK="0" COMMON_ADDRESS="1" ASDU_ADDRESS_BYTES="2" OBJ_ADDRESS_BYTES="3" COT_BYTES="2" MAX_T1="30" MAX_T2="10" MAX_T3="20" MAX_W="8" ALLOWABLE_DELAY="0" ALLOW_SUBST="0" SPONTANEOUS="1" GI_FIRST="1" SQ="0" PYRAM_GI_ADDR="0" PYRAM_GI_TIMESTAMP="0" USE_ARCHIVE="0" ARCH_MAX="0" CONTROL_PRIORITY="" SYNC_TIME_SHMEM_UNIT="24"/>
+      <PARAMS IP_ADDRESS="172.26.9.29" LOC_IP="" TZ="" INTEGRITY_CHECK="0" COMMON_ADDRESS="1" ASDU_ADDRESS_BYTES="2" OBJ_ADDRESS_BYTES="3" COT_BYTES="2" MAX_T1="30" MAX_T2="10" MAX_T3="20" MAX_W="8" ALLOWABLE_DELAY="0" ALLOW_SUBST="0" SPONTANEOUS="1" GI_FIRST="1" SQ="0" PYRAM_GI_ADDR="0" PYRAM_GI_TIMESTAMP="0" USE_ARCHIVE="0" ARCH_MAX="0" CONTROL_PRIORITY="" SYNC_TIME_SHMEM_UNIT="25"/>
+      <POINTS>
+        <POINT NAME="LOC.SG_F1.ozz_start_OZZ" ADDRESS="551" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="LOC.SG_F2.ozz_start_OZZ" ADDRESS="2551" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_OFF_Q13" ADDRESS="505" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_ON_Q13" ADDRESS="503" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_OFF_Q14" ADDRESS="504" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_ON_Q14" ADDRESS="502" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_OFF_Q13" ADDRESS="2505" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_ON_Q13" ADDRESS="2503" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_OFF_Q14" ADDRESS="2504" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_ON_Q14" ADDRESS="2502" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.Automatic" ADDRESS="2510" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.Automatic" ADDRESS="2511" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.TestSAVS.DI-676" ADDRESS="521" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.TestSAVS.DI-677" ADDRESS="522" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.TestSAVS.DI-678" ADDRESS="2521" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.TestSAVS.DI-679" ADDRESS="2522" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.Дорасчет.DI-1606" ADDRESS="8001" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_15_ТП-19-2 яч_1).DI-1553" ADDRESS="501" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_16_ТП-19-2 яч_2).DI-1554" ADDRESS="2501" ASDU_TYPE="30" Group="0"/>
+      </POINTS>
+      <COMMANDS/>
+    </MASTER>
+    <MASTER NAME="Передача в ТП-18_2 (1С и 2С)" DESC="" PORT="2405" DISABLED="0">
+      <PARAMS IP_ADDRESS="10.99.3.77" LOC_IP="" TZ="" INTEGRITY_CHECK="0" COMMON_ADDRESS="1" ASDU_ADDRESS_BYTES="2" OBJ_ADDRESS_BYTES="3" COT_BYTES="2" MAX_T1="30" MAX_T2="10" MAX_T3="20" MAX_W="8" ALLOWABLE_DELAY="0" ALLOW_SUBST="0" SPONTANEOUS="1" GI_FIRST="1" SQ="0" PYRAM_GI_ADDR="0" PYRAM_GI_TIMESTAMP="0" USE_ARCHIVE="0" ARCH_MAX="0" CONTROL_PRIORITY="" SYNC_TIME_SHMEM_UNIT="26"/>
+      <PARAMS IP_ADDRESS="10.99.3.78" LOC_IP="" TZ="" INTEGRITY_CHECK="0" COMMON_ADDRESS="1" ASDU_ADDRESS_BYTES="2" OBJ_ADDRESS_BYTES="3" COT_BYTES="2" MAX_T1="30" MAX_T2="10" MAX_T3="20" MAX_W="8" ALLOWABLE_DELAY="0" ALLOW_SUBST="0" SPONTANEOUS="1" GI_FIRST="1" SQ="0" PYRAM_GI_ADDR="0" PYRAM_GI_TIMESTAMP="0" USE_ARCHIVE="0" ARCH_MAX="0" CONTROL_PRIORITY="" SYNC_TIME_SHMEM_UNIT="27"/>
+      <PARAMS IP_ADDRESS="172.26.9.30" LOC_IP="" TZ="" INTEGRITY_CHECK="0" COMMON_ADDRESS="1" ASDU_ADDRESS_BYTES="2" OBJ_ADDRESS_BYTES="3" COT_BYTES="2" MAX_T1="30" MAX_T2="10" MAX_T3="20" MAX_W="8" ALLOWABLE_DELAY="0" ALLOW_SUBST="0" SPONTANEOUS="1" GI_FIRST="1" SQ="0" PYRAM_GI_ADDR="0" PYRAM_GI_TIMESTAMP="0" USE_ARCHIVE="0" ARCH_MAX="0" CONTROL_PRIORITY="" SYNC_TIME_SHMEM_UNIT="28"/>
+      <POINTS>
+        <POINT NAME="LOC.SG_F1.ozz_start_OZZ" ADDRESS="551" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="LOC.SG_F2.ozz_start_OZZ" ADDRESS="2551" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_OFF_Q15" ADDRESS="505" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_ON_Q15" ADDRESS="503" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_OFF_Q16" ADDRESS="504" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_ON_Q16" ADDRESS="502" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_OFF_Q15" ADDRESS="2505" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_ON_Q15" ADDRESS="2503" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_OFF_Q16" ADDRESS="2504" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_ON_Q16" ADDRESS="2502" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.Automatic" ADDRESS="2510" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.Automatic" ADDRESS="2511" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.TestSAVS.DI-676" ADDRESS="521" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.TestSAVS.DI-677" ADDRESS="522" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.TestSAVS.DI-678" ADDRESS="2521" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.TestSAVS.DI-679" ADDRESS="2522" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.Дорасчет.DI-1606" ADDRESS="8001" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_15_ТП-19-2 яч_1).DI-1553" ADDRESS="501" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_16_ТП-19-2 яч_2).DI-1554" ADDRESS="2501" ASDU_TYPE="30" Group="0"/>
+      </POINTS>
+      <COMMANDS/>
+    </MASTER>
+    <MASTER NAME="Передача в ТП-18_3 (1С и 2С)" DESC="" PORT="2405" DISABLED="0">
+      <PARAMS IP_ADDRESS="10.99.3.79" LOC_IP="" TZ="" INTEGRITY_CHECK="0" COMMON_ADDRESS="1" ASDU_ADDRESS_BYTES="2" OBJ_ADDRESS_BYTES="3" COT_BYTES="2" MAX_T1="30" MAX_T2="10" MAX_T3="20" MAX_W="8" ALLOWABLE_DELAY="0" ALLOW_SUBST="0" SPONTANEOUS="1" GI_FIRST="1" SQ="0" PYRAM_GI_ADDR="0" PYRAM_GI_TIMESTAMP="0" USE_ARCHIVE="0" ARCH_MAX="0" CONTROL_PRIORITY="" SYNC_TIME_SHMEM_UNIT="29"/>
+      <PARAMS IP_ADDRESS="10.99.3.80" LOC_IP="" TZ="" INTEGRITY_CHECK="0" COMMON_ADDRESS="1" ASDU_ADDRESS_BYTES="2" OBJ_ADDRESS_BYTES="3" COT_BYTES="2" MAX_T1="30" MAX_T2="10" MAX_T3="20" MAX_W="8" ALLOWABLE_DELAY="0" ALLOW_SUBST="0" SPONTANEOUS="1" GI_FIRST="1" SQ="0" PYRAM_GI_ADDR="0" PYRAM_GI_TIMESTAMP="0" USE_ARCHIVE="0" ARCH_MAX="0" CONTROL_PRIORITY="" SYNC_TIME_SHMEM_UNIT="30"/>
+      <PARAMS IP_ADDRESS="172.26.9.31" LOC_IP="" TZ="" INTEGRITY_CHECK="0" COMMON_ADDRESS="1" ASDU_ADDRESS_BYTES="2" OBJ_ADDRESS_BYTES="3" COT_BYTES="2" MAX_T1="30" MAX_T2="10" MAX_T3="20" MAX_W="8" ALLOWABLE_DELAY="0" ALLOW_SUBST="0" SPONTANEOUS="1" GI_FIRST="1" SQ="0" PYRAM_GI_ADDR="0" PYRAM_GI_TIMESTAMP="0" USE_ARCHIVE="0" ARCH_MAX="0" CONTROL_PRIORITY="" SYNC_TIME_SHMEM_UNIT="31"/>
+      <POINTS>
+        <POINT NAME="LOC.SG_F1.ozz_start_OZZ" ADDRESS="551" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="LOC.SG_F2.ozz_start_OZZ" ADDRESS="2551" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_OFF_Q17" ADDRESS="505" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_ON_Q17" ADDRESS="503" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_OFF_Q18" ADDRESS="504" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_ON_Q18" ADDRESS="502" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.Automatic" ADDRESS="2510" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_OFF_Q17" ADDRESS="2505" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_ON_Q18" ADDRESS="2502" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_OFF_Q18" ADDRESS="2504" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.Automatic" ADDRESS="2511" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_ON_Q17" ADDRESS="2503" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.TestSAVS.DI-676" ADDRESS="521" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.TestSAVS.DI-677" ADDRESS="522" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.TestSAVS.DI-678" ADDRESS="2521" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.TestSAVS.DI-679" ADDRESS="2522" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.Дорасчет.DI-1606" ADDRESS="8001" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_15_ТП-19-2 яч_1).DI-1553" ADDRESS="501" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_16_ТП-19-2 яч_2).DI-1554" ADDRESS="2501" ASDU_TYPE="30" Group="0"/>
+      </POINTS>
+      <COMMANDS/>
+    </MASTER>
+    <MASTER NAME="в РП-25" DESC="Обмен с РП-25" PORT="2404" DISABLED="0">
+      <PARAMS IP_ADDRESS="10.99.3.58" LOC_IP="" TZ="" INTEGRITY_CHECK="0" COMMON_ADDRESS="1" ASDU_ADDRESS_BYTES="2" OBJ_ADDRESS_BYTES="3" COT_BYTES="2" MAX_T1="30" MAX_T2="10" MAX_T3="20" MAX_W="8" ALLOWABLE_DELAY="0" ALLOW_SUBST="0" SPONTANEOUS="1" GI_FIRST="1" SQ="0" PYRAM_GI_ADDR="0" PYRAM_GI_TIMESTAMP="0" USE_ARCHIVE="0" ARCH_MAX="0" CONTROL_PRIORITY="" SYNC_TIME_SHMEM_UNIT="32"/>
+      <PARAMS IP_ADDRESS="10.99.3.59" LOC_IP="" TZ="" INTEGRITY_CHECK="0" COMMON_ADDRESS="1" ASDU_ADDRESS_BYTES="2" OBJ_ADDRESS_BYTES="3" COT_BYTES="2" MAX_T1="30" MAX_T2="10" MAX_T3="20" MAX_W="8" ALLOWABLE_DELAY="0" ALLOW_SUBST="0" SPONTANEOUS="1" GI_FIRST="1" SQ="0" PYRAM_GI_ADDR="0" PYRAM_GI_TIMESTAMP="0" USE_ARCHIVE="0" ARCH_MAX="0" CONTROL_PRIORITY="" SYNC_TIME_SHMEM_UNIT="33"/>
+      <PARAMS IP_ADDRESS="172.26.9.20" LOC_IP="" TZ="" INTEGRITY_CHECK="0" COMMON_ADDRESS="1" ASDU_ADDRESS_BYTES="2" OBJ_ADDRESS_BYTES="3" COT_BYTES="2" MAX_T1="30" MAX_T2="10" MAX_T3="20" MAX_W="8" ALLOWABLE_DELAY="0" ALLOW_SUBST="0" SPONTANEOUS="1" GI_FIRST="1" SQ="0" PYRAM_GI_ADDR="0" PYRAM_GI_TIMESTAMP="0" USE_ARCHIVE="0" ARCH_MAX="0" CONTROL_PRIORITY="" SYNC_TIME_SHMEM_UNIT="34"/>
+      <PARAMS IP_ADDRESS="172.26.9.21" LOC_IP="" TZ="" INTEGRITY_CHECK="0" COMMON_ADDRESS="1" ASDU_ADDRESS_BYTES="2" OBJ_ADDRESS_BYTES="3" COT_BYTES="2" MAX_T1="30" MAX_T2="10" MAX_T3="20" MAX_W="8" ALLOWABLE_DELAY="0" ALLOW_SUBST="0" SPONTANEOUS="1" GI_FIRST="1" SQ="0" PYRAM_GI_ADDR="0" PYRAM_GI_TIMESTAMP="0" USE_ARCHIVE="0" ARCH_MAX="0" CONTROL_PRIORITY="" SYNC_TIME_SHMEM_UNIT="35"/>
+      <POINTS>
+        <POINT NAME="LOC.SG_F1.Q_POSZ" ADDRESS="503" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.Q_POSZopp" ADDRESS="504" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F1.Z" ADDRESS="505" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="LOC.SG_F2.Q_POSZ" ADDRESS="2503" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.Q_POSZopp" ADDRESS="2504" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.Z" ADDRESS="2505" ASDU_TYPE="36" Group="0"/>
+        <POINT NAME="LOC.SG_F1.switch_ON_Q19" ADDRESS="502" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="LOC.SG_F2.switch_ON_Q19" ADDRESS="2502" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_15_ТП-19-2 яч_1).DI-1553" ADDRESS="501" ASDU_TYPE="30" Group="0"/>
+        <POINT NAME="IEC 60870-5-104 Req.ЭНИП-2-45 (Яч_16_ТП-19-2 яч_2).DI-1554" ADDRESS="2501" ASDU_TYPE="30" Group="0"/>
+      </POINTS>
+      <COMMANDS/>
+    </MASTER>
+  </MASTERS>
+</NODES>

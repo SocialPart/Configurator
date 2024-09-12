@@ -15,7 +15,7 @@ slaves_element = root.find('SLAVES')
 
 #slaves = []
 
-s
+
 
 for slave_element in slaves_element.findall('SLAVE'):
     slave_info = defs.parse_xml(slave_element)
