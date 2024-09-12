@@ -1,5 +1,5 @@
 from lxml import etree
-import warehouse_classes
+import models.warehouse_classes as warehouse_classes
 
 path = '../Temp/etc/KC/warehouse.xml'
 

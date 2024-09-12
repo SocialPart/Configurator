@@ -1,8 +1,8 @@
 from lxml import etree
-import iec101req_classes
+import models.iec101req_classes as iec101req_classes
 from warehouse_parser import warehouse
 import sys
-import defs
+import utils.defs as defs
 
 path = '../Temp/etc/KC/iec101_req.xml'
 initial_tag = 'IEC 60870-5-101 Req'
@@ -122,9 +122,9 @@ for slave_element in slaves_element.findall('SLAVE'):
 
 
 print(sys.getsizeof(slaves))
-# print(slaves[0].devices[0].points[0].warehouse_link)
-# print(slaves[0].devices[0].points[0].warehouse_tag)
-print(warehouse['points'][427].source_link.warehouse_tag)
-print(warehouse['points'][427].name)
+print(slaves[0].devices[0].points[0].warehouse_link)
+print(slaves[0].devices[0].points[0].warehouse_tag)
+#print(warehouse['points'][427].source_link.warehouse_tag)
+#print(warehouse['points'][427].name)
 print(warehouse['commands'][11].source_link.warehouse_tag)
 print(warehouse['commands'][11].name)

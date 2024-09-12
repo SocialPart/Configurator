@@ -4,7 +4,9 @@ import tarfile
 import os
 import shutil
 
-#Import and extraction directories config, etc, var in Temp
+# Распаковка содержимого архива (etc, var, config) во временную папку. \
+# Впоследствии - расчёт контрольной суммы, дата и платформа
+
 def open_and_extract(path):
     extract_dir = '../Temp'
     if not os.path.exists(extract_dir):
@@ -15,7 +17,7 @@ def open_and_extract(path):
         inner_tar_file = outer_tar.extractfile(inner_tar_info)
 
         with tarfile.open(fileobj=inner_tar_file, mode='r') as inner_tar:
-           inner_tar.extractall(path=extract_dir)
+           inner_tar.extractall(path=extract_dir) #Распаковка файлов
 
 def deleting_temp_after_close():
     shutil.rmtree('../Temp', ignore_errors=True, onerror='Any')

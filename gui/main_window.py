@@ -1,7 +1,7 @@
 from tkinter import *
 from tkinter import ttk
 from tkinter import filedialog
-import tar_prepare as prep
+from services import tar_prepare as prep
 
 
 # Получение расположения бэкапа
