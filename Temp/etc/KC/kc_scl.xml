@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<SCL xmlns="http://www.iec.ch/61850/2003/SCL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.iec.ch/61850/2003/SCL xsd/SCL.xsd" version="2007" revision="A">
-  <Header id="KC" nameStructure="IEDName"/>
-  <Communication>
-    <SubNetwork/>
-  </Communication>
-</SCL>
