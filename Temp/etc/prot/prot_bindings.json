@@ -1,0 +1,241 @@
+{
+ "clients": [
+  {
+   "name": "Custom_inputs",
+   "channels": [
+    {
+     "name": "KQT",
+     "source": "DIO01.DM_CSWI06.FAST.DI02",
+     "receivers": [
+      "indication.signal02"
+     ]
+    },
+    {
+     "name": "KQC1",
+     "source": "DIO01.DM_CSWI06.FAST.DI01",
+     "receivers": [
+      "indication.signal01"
+     ]
+    },
+    {
+     "name": "Oper_circuit",
+     "source": "DI02.DM_CSWI06.FAST.02",
+     "receivers": []
+    },
+    {
+     "name": "Block_close1",
+     "source": "DI02.DM_CSWI06.FAST.01",
+     "receivers": []
+    },
+    {
+     "name": "External_trip",
+     "source": "DIO01.DM_CSWI06.FAST.DI11",
+     "receivers": []
+    },
+    {
+     "name": "DI_sensor1",
+     "source": "DIO04.DM_CSWI06.FAST.DI02",
+     "receivers": []
+    },
+    {
+     "name": "DI_sensor2",
+     "source": "DIO04.DM_CSWI06.FAST.DI01",
+     "receivers": []
+    },
+    {
+     "name": "DI_sensor3",
+     "source": "DIO04.DM_CSWI06.FAST.DI03",
+     "receivers": []
+    }
+   ]
+  },
+  {
+   "name": "control_inputs",
+   "channels": [
+    {
+     "name": "DI_on",
+     "source": "DIO01.DM_CSWI06.FAST.DI09",
+     "receivers": []
+    },
+    {
+     "name": "DI_off",
+     "source": "DIO01.DM_CSWI06.FAST.DI10",
+     "receivers": []
+    },
+    {
+     "name": "on",
+     "source": "DM_CSWI06.In.03",
+     "receivers": []
+    },
+    {
+     "name": "off",
+     "source": "DM_CSWI06.In.04",
+     "receivers": []
+    },
+    {
+     "name": "but_remote",
+     "source": "DM_CSWI06.In.06",
+     "receivers": []
+    }
+   ]
+  },
+  {
+   "name": "OverCurrent",
+   "channels": [
+    {
+     "name": "Trip_to",
+     "source": "",
+     "receivers": [
+      "indication.signal05"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "MTZ1",
+   "channels": [
+    {
+     "name": "Start_mtz",
+     "source": "",
+     "receivers": [
+      "DIO04.DM_CSWI06.FAST.DO03",
+      "DIO04.DM_CSWI06.FAST.DO04"
+     ]
+    },
+    {
+     "name": "Trip_mtz",
+     "source": "",
+     "receivers": [
+      "indication.signal03"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "USKOR",
+   "channels": [
+    {
+     "name": "trip_uskor",
+     "source": "",
+     "receivers": [
+      "indication.signal04"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "ZDZ_fider",
+   "channels": [
+    {
+     "name": "trip_ZDZ",
+     "source": "",
+     "receivers": [
+      "indication.signal06"
+     ]
+    },
+    {
+     "name": "ZDZ_sens_bus",
+     "source": "",
+     "receivers": [
+      "DIO04.DM_CSWI06.FAST.DO06"
+     ]
+    },
+    {
+     "name": "key",
+     "source": "DI02.DM_CSWI06.FAST.04",
+     "receivers": [],
+     "src_inverted": true
+    }
+   ]
+  },
+  {
+   "name": "UROV",
+   "channels": [
+    {
+     "name": "srab_UROV",
+     "source": "",
+     "receivers": [
+      "DIO04.DM_CSWI06.FAST.DO01",
+      "DIO04.DM_CSWI06.FAST.DO02"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "TRIP",
+   "channels": [
+    {
+     "name": "Open",
+     "source": "",
+     "receivers": [
+      "DIO05.DM_CSWI06.FAST.DO02"
+     ]
+    },
+    {
+     "name": "Close",
+     "source": "",
+     "receivers": [
+      "DIO05.DM_CSWI06.FAST.DO01"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Breaker_supervision",
+   "channels": [
+    {
+     "name": "Avar_otkl",
+     "source": "",
+     "receivers": [
+      "DIO05.DM_CSWI06.FAST.DO05",
+      "indication.signal07"
+     ]
+    },
+    {
+     "name": "Fault_CC",
+     "source": "",
+     "receivers": [
+      "indication.signal08"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Button_remote",
+   "channels": [
+    {
+     "name": "remote_control",
+     "source": "",
+     "receivers": [
+      "indication.signal09"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Custom_inputs",
+   "channels": [
+    {
+     "name": "SettingsGroup",
+     "source": "DM_CSWI06.AI.10",
+     "receivers": []
+    }
+   ]
+  },
+  {
+   "name": "indication",
+   "channels": [
+    {
+     "name": "reset",
+     "source": "DM_CSWI06.In.01",
+     "receivers": []
+    },
+    {
+     "name": "reset_asu",
+     "source": "DM_CSWI06.In.02",
+     "receivers": []
+    }
+   ]
+  }
+ ]
+}

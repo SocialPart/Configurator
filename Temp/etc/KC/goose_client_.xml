@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<SCL>
+  <LDevice iface_name="en1" name="EKRA_BE2704LD" MAC-Address="00:26:57:00:1F:02">
+    <GSEControl name="EKRAMessage" APPID="" datSet="GOOSEOut" MAC-Address="01:0C:CD:01:00:06" DESC="" DISABLED="0">
+      <DataSet>
+        <FCDA name="DI-304" type="1"/>
+      </DataSet>
+    </GSEControl>
+  </LDevice>
+</SCL>

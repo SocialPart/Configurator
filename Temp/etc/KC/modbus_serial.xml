@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<NODES VERSION="2">
+  <GLOBAL_CONFIG DATA_UPDATE_PERIOD="0" TRACE="0" TRACE_ADDRESS=""/>
+  <MBDevice Protocol="RTU" Name="Группа 1" Port="COM1" BaudRate="9600" Parity="NONE" StopBits="1" DataBits="8" BYTE_READING="1" RETRIES="3" InterReqDelay="100" ReqTimeout="500" ChannelMod="">
+    <MBNode Name="Modbus" DESC="" Type="" DISABLED="0" UseZeroBased="1" DevId="10" HoldingRegistersNumber="8" InputRegistersNumber="8" DiscreteInputsNumber="8" CoilsNumber="8" WriteMultibyteSizeDependent="1" COMTRADE_CHECK="0" COMTRADE_CHECK_CYCLE="300" COMTRADE_ENCODING="UTF-8" DevicePasswd="" TimeSync="0" TimeAddr="0" Broadcast="0" Recalc="0" RecalcK="0" RecalcB="0" ByteOrder="HighFirst" WordOrder="LowFirst">
+      <oscill_addresses active_flags_count_address="" oscill_state_flags_address="" downloadable_oscill_address=""/>
+      <DD ID_ZONE="0x2204" ORDER_ADDRESS="0x2200" BAGGAGE_ADDRESS="0x2300"/>
+      <Tags>
+        <Tag Name="ActiveConnect" Function="" Type="" Address="" Bit="-1"/>
+        <Tag Name="Connect"/>
+        <Tag Name="Beh" Function="" Type="" Address="" Bit="-1"/>
+        <Tag Name="RedBeh" Function="" Type="" Address="" Bit="-1"/>
+        <Tag Name="DI-437" Function="1" Type="BIT" Address="0"/>
+        <Tag Name="DI-438" Function="1" Type="BIT" Address="1"/>
+        <Tag Name="DI-439" Function="1" Type="BIT" Address="2"/>
+        <Tag Name="DI-440" Function="1" Type="BIT" Address="3"/>
+        <Tag Name="DI-441" Function="1" Type="BIT" Address="4"/>
+        <Tag Name="DI-442" Function="1" Type="BIT" Address="5"/>
+        <Tag Name="DI-443" Function="1" Type="BIT" Address="6"/>
+        <Tag Name="DI-444" Function="1" Type="BIT" Address="7"/>
+        <Tag Name="Connect1"/>
+        <Tag Name="DI-446" Function="2" Type="BIT" Address="0"/>
+        <Tag Name="DI-447" Function="2" Type="BIT" Address="1"/>
+        <Tag Name="DI-448" Function="2" Type="BIT" Address="2"/>
+        <Tag Name="DI-449" Function="2" Type="BIT" Address="3"/>
+        <Tag Name="DI-450" Function="2" Type="BIT" Address="4"/>
+        <Tag Name="DI-451" Function="2" Type="BIT" Address="5"/>
+        <Tag Name="DI-452" Function="2" Type="BIT" Address="6"/>
+        <Tag Name="DI-453" Function="2" Type="BIT" Address="7"/>
+        <Tag Name="AI-455" Function="3" Type="WORD" Address="1"/>
+        <Tag Name="AI-456" Function="3" Type="FLOAT" Address="2"/>
+        <Tag Name="AI-457" Function="3" Type="INT" Address="4"/>
+        <Tag Name="AI-458" Function="3" Type="UNSIGNED" Address="6"/>
+        <Tag Name="DI-445" Function="1" Type="BIT" Address="8"/>
+        <Tag Name="DI-455" Function="1" Type="BIT" Address="9"/>
+        <Tag Name="DI-456" Function="1" Type="BIT" Address="10"/>
+        <Tag Name="DI-457" Function="1" Type="BIT" Address="11"/>
+        <Tag Name="DI-458" Function="1" Type="BIT" Address="12"/>
+        <Tag Name="DI-459" Function="1" Type="BIT" Address="13"/>
+        <Tag Name="DI-460" Function="1" Type="BIT" Address="14"/>
+        <Tag Name="DI-461" Function="1" Type="BIT" Address="15"/>
+        <Tag Name="DI-462" Function="2" Type="BIT" Address="8"/>
+        <Tag Name="DI-463" Function="2" Type="BIT" Address="9"/>
+        <Tag Name="DI-464" Function="2" Type="BIT" Address="10"/>
+        <Tag Name="DI-465" Function="2" Type="BIT" Address="11"/>
+        <Tag Name="DI-466" Function="2" Type="BIT" Address="12"/>
+        <Tag Name="DI-467" Function="2" Type="BIT" Address="13"/>
+        <Tag Name="DI-468" Function="2" Type="BIT" Address="14"/>
+        <Tag Name="DI-469" Function="2" Type="BIT" Address="15"/>
+        <Tag Name="DI-491" Function="3" Type="INNER BIT" Address="0" Bit="0"/>
+        <Tag Name="DI-492" Function="3" Type="INNER BIT" Address="0" Bit="1"/>
+        <Tag Name="DI-493" Function="3" Type="INNER BIT" Address="0" Bit="2"/>
+        <Tag Name="DI-494" Function="3" Type="INNER BIT" Address="0" Bit="3"/>
+        <Tag Name="DI-495" Function="3" Type="INNER BIT" Address="0" Bit="4"/>
+        <Tag Name="DI-496" Function="3" Type="INNER BIT" Address="0" Bit="5"/>
+        <Tag Name="DI-497" Function="3" Type="INNER BIT" Address="0" Bit="6"/>
+        <Tag Name="DI-498" Function="3" Type="INNER BIT" Address="0" Bit="7"/>
+        <Tag Name="DI-499" Function="3" Type="INNER BIT" Address="0" Bit="8"/>
+        <Tag Name="DI-500" Function="3" Type="INNER BIT" Address="0" Bit="9"/>
+        <Tag Name="DI-501" Function="3" Type="INNER BIT" Address="0" Bit="10"/>
+        <Tag Name="DI-502" Function="3" Type="INNER BIT" Address="0" Bit="11"/>
+        <Tag Name="DI-503" Function="3" Type="INNER BIT" Address="0" Bit="12"/>
+        <Tag Name="DI-504" Function="3" Type="INNER BIT" Address="0" Bit="13"/>
+        <Tag Name="DI-505" Function="3" Type="INNER BIT" Address="0" Bit="14"/>
+        <Tag Name="DI-506" Function="3" Type="INNER BIT" Address="0" Bit="15"/>
+        <Tag Name="DI-507" Function="4" Type="INNER BIT" Address="0" Bit="0"/>
+        <Tag Name="DI-508" Function="4" Type="INNER BIT" Address="0" Bit="1"/>
+        <Tag Name="DI-509" Function="4" Type="INNER BIT" Address="0" Bit="2"/>
+        <Tag Name="DI-510" Function="4" Type="INNER BIT" Address="0" Bit="3"/>
+        <Tag Name="DI-511" Function="4" Type="INNER BIT" Address="0" Bit="4"/>
+        <Tag Name="DI-512" Function="4" Type="INNER BIT" Address="0" Bit="5"/>
+        <Tag Name="DI-513" Function="4" Type="INNER BIT" Address="0" Bit="6"/>
+        <Tag Name="DI-514" Function="4" Type="INNER BIT" Address="0" Bit="7"/>
+        <Tag Name="DI-515" Function="4" Type="INNER BIT" Address="0" Bit="8"/>
+        <Tag Name="DI-516" Function="4" Type="INNER BIT" Address="0" Bit="9"/>
+        <Tag Name="DI-517" Function="4" Type="INNER BIT" Address="0" Bit="10"/>
+        <Tag Name="DI-518" Function="4" Type="INNER BIT" Address="0" Bit="11"/>
+        <Tag Name="DI-519" Function="4" Type="INNER BIT" Address="0" Bit="12"/>
+        <Tag Name="DI-520" Function="4" Type="INNER BIT" Address="0" Bit="13"/>
+        <Tag Name="DI-521" Function="4" Type="INNER BIT" Address="0" Bit="14"/>
+        <Tag Name="DI-522" Function="4" Type="INNER BIT" Address="0" Bit="15"/>
+        <Tag Name="AI-518" Function="3" Type="SHORT" Address="8"/>
+        <Tag Name="AI-519" Function="3" Type="CHAR" Address="9"/>
+        <Tag Name="AI-520" Function="3" Type="BYTE" Address="10"/>
+        <Tag Name="AI-521" Function="3" Type="HIGH CHAR" Address="9"/>
+        <Tag Name="AI-522" Function="3" Type="HIGH BYTE" Address="10"/>
+        <Tag Name="AI-459" Function="4" Type="WORD" Address="1"/>
+        <Tag Name="AI-460" Function="4" Type="FLOAT" Address="2"/>
+        <Tag Name="AI-461" Function="4" Type="INT" Address="4"/>
+        <Tag Name="AI-462" Function="4" Type="UNSIGNED" Address="6"/>
+        <Tag Name="AI-523" Function="4" Type="SHORT" Address="8"/>
+        <Tag Name="AI-524" Function="4" Type="CHAR" Address="9"/>
+        <Tag Name="AI-525" Function="4" Type="BYTE" Address="10"/>
+        <Tag Name="AI-526" Function="4" Type="HIGH CHAR" Address="9"/>
+        <Tag Name="AI-527" Function="4" Type="HIGH BYTE" Address="10"/>
+      </Tags>
+      <COMMANDS>
+        <COMMAND Name="DO-463">
+          <ON Function="5" Type="BIT" Address="0" Data="FF00"/>
+          <OFF Function="5" Type="BIT" Address="0" Data="0000"/>
+        </COMMAND>
+        <COMMAND Name="DO-464">
+          <ON Function="5" Type="BIT" Address="1" Data="FF00"/>
+          <ON Function="5" Type="BIT" Address="2" Data="FF00"/>
+          <OFF Function="5" Type="BIT" Address="3" Data="FF00"/>
+          <OFF Function="5" Type="BIT" Address="2" Data="0000"/>
+        </COMMAND>
+        <COMMAND Name="DO-474">
+          <ON Function="15" Type="UNSIGNED" Address="4" Bit="3" Data="FF00"/>
+          <ON Function="15" Type="UNSIGNED" Address="10" Bit="3" Data="FF00"/>
+          <OFF Function="15" Type="UNSIGNED" Address="7" Bit="3" Data="FF00"/>
+          <OFF Function="15" Type="UNSIGNED" Address="10" Bit="3" Data="0000"/>
+        </COMMAND>
+        <COMMAND Name="DO-522">
+          <ON Function="6" Type="UNSIGNED" Address="1" Data="FFFF"/>
+          <OFF Function="6" Type="UNSIGNED" Address="1" Data="BBBB"/>
+        </COMMAND>
+        <COMMAND Name="DO-523">
+          <ON Function="6" Type="UNSIGNED" Address="2" Data="AAAA"/>
+          <ON Function="6" Type="UNSIGNED" Address="3" Data="BBBB"/>
+          <OFF Function="6" Type="UNSIGNED" Address="2" Data="CCCC"/>
+          <OFF Function="6" Type="UNSIGNED" Address="3" Data="DDDD"/>
+        </COMMAND>
+        <COMMAND Name="DO-524">
+          <ON Function="16" Type="UNSIGNED" Address="4" Data="AEAEBEBE"/>
+          <OFF Function="16" Type="UNSIGNED" Address="4" Data="CECEDEDE"/>
+        </COMMAND>
+        <COMMAND Name="DO-512">
+          <ON Function="16 bit-wise" Type="UNSIGNED" Address="6" Data="FFFFFFFF" Mask="55555555"/>
+          <OFF Function="16 bit-wise" Type="UNSIGNED" Address="6" Data="FFFFFFFF" Mask="AAAAAAAA"/>
+        </COMMAND>
+        <COMMAND Name="DO-532">
+          <ON Function="16" Type="UNSIGNED" Address="8" Data="D8E69D804490"/>
+          <OFF Function="16" Type="UNSIGNED" Address="8" Data="62FD7F7B190F"/>
+        </COMMAND>
+      </COMMANDS>
+    </MBNode>
+  </MBDevice>
+</NODES>

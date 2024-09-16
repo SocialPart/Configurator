@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<Dnp3 Version="1">
+    <Masters>
+        <Master Name="Клиент DNP3" Desc="" MasterUid="2564530255">
+            <Signals />
+            <Measurements>
+                <Measurement Name="DNP3-Master.Клиент DNP3.AI-290" Index="0" Group="30" Variation="3" />
+                <Measurement Name="DNP3-Master.Клиент DNP3.AI-291" Index="1" Group="30" Variation="4" />
+                <Measurement Name="DNP3-Master.Клиент DNP3.AI-292" Index="2" Group="30" Variation="4" />
+                <Measurement Name="DNP3-Master.Клиент DNP3.AI-293" Index="3" Group="30" Variation="4" />
+                <Measurement Name="DNP3-Master.Клиент DNP3.AI-294" Index="4" Group="30" Variation="4" />
+                <Measurement Name="DNP3-Master.Клиент DNP3.AI-295" Index="5" Group="30" Variation="4" />
+                <Measurement Name="DNP3-Master.Клиент DNP3.AI-296" Index="6" Group="30" Variation="4" />
+                <Measurement Name="DNP3-Master.Клиент DNP3.AI-297" Index="7" Group="30" Variation="4" />
+                <Measurement Name="DNP3-Master.Клиент DNP3.AI-298" Index="8" Group="30" Variation="4" />
+                <Measurement Name="DNP3-Master.Клиент DNP3.AI-299" Index="9" Group="30" Variation="4" />
+                <Measurement Name="DNP3-Master.Клиент DNP3.AI-300" Index="10" Group="30" Variation="4" />
+                <Measurement Name="DNP3-Master.Клиент DNP3.AI-301" Index="11" Group="30" Variation="4" />
+                <Measurement Name="DNP3-Master.Клиент DNP3.AI-302" Index="12" Group="30" Variation="4" />
+                <Measurement Name="DNP3-Master.Клиент DNP3.AI-303" Index="13" Group="30" Variation="4" />
+            </Measurements>
+            <Commands />
+        </Master>
+    </Masters>
+    <Opendnp3Set>
+        <Log Filter="LOG_INFO" />
+        <Master Uid="2564530255" PhysicalLayer="Группа 1">
+            <Stack>
+                <LinkLayer IsMaster="true" LocalAddress="1" RemoteAddress="1" UseConfirmations="false" AckTimeoutMS="1000" NumRetries="3" />
+                <AppLayer TimeoutMS="500" MaxFragSize="2048" NumRetries="3" />
+            </Stack>
+            <MasterSettings AllowTimeSync="false" TaskRetryMS="500" IntegrityPeriodMS="5000" UseNonStandardVtoTransferCode="false" />
+            <Unsol DoTask="false" Enable="false" Class1="true" Class2="true" Class3="true" />
+        </Master>
+        <PhysicalLayerList>
+            <Serial Name="Группа 1" OpenRetryMS="500" Device="/dev/vcom1" BaudRate="19200" Parity="PARITY_NONE" DBits="DATABITS_8" StopBits="STOPBITS_1" FlowControl="FLOW_NONE" />
+        </PhysicalLayerList>
+    </Opendnp3Set>
+</Dnp3>
