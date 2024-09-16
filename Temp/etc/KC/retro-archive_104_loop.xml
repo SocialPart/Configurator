@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ARCHIVE VERSION="0">
+  <GLOBAL_CONFIG BUFFERED_RECORDS="128" RETRO_ARCHIVE_DEPTH="32" RETRO_FTP_DIR="" HAS_SERVER="1"/>
+  <POINTS>
+    <POINT NAME="LOC.Virt.ChBoo"/>
+    <POINT NAME="LOC.Virt.ChFlo"/>
+  </POINTS>
+</ARCHIVE>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<Dnp3 Version="1">
+    <Outstations />
+    <Opendnp3OutstationSet>
+        <Log Filter="LOG_WARNING" />
+    </Opendnp3OutstationSet>
+</Dnp3>

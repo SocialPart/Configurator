@@ -1,0 +1,14 @@
+[
+   {
+      "name" : "LOC.Control.Disabled",
+      "value" : "0"
+   },
+   {
+      "name" : "LOC.Control.Remote",
+      "value" : "0"
+   },
+   {
+      "name" : "LOC.Control.Local",
+      "value" : "1"
+   }
+]

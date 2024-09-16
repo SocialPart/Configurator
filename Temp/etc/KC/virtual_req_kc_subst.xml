@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<NODES VERSION="0">
+  <GLOBAL_CONFIG/>
+  <SLAVES>
+    <SLAVE NAME="Virt">
+      <POINT NAME="LOC.Virt.ChBoo"/>
+      <POINT NAME="LOC.Virt.ChFlo"/>
+    </SLAVE>
+  </SLAVES>
+</NODES>

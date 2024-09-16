@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<KERNEL VERSION="0">
+  <PROTOCOL LIB_PATH="./libkep_master.so" IS_MASTER="1" TYPE="101"/>
+  <PROTOCOL LIB_PATH="./libkep_slave.so" IS_MASTER="0" TYPE="101"/>
+  <PROTOCOL LIB_PATH="./libiec101_req.so" IS_MASTER="0" TYPE="1"/>
+  <PROTOCOL LIB_PATH="./libiec104_req.so" IS_MASTER="0" TYPE="3"/>
+  <PROTOCOL LIB_PATH="./modbus_serial.so" IS_MASTER="0" TYPE="5"/>
+  <PROTOCOL LIB_PATH="./libdnp3_master.so" IS_MASTER="0" TYPE="29"/>
+  <PROTOCOL LIB_PATH="./libiec101_serv.so" IS_MASTER="1" TYPE="1"/>
+  <PROTOCOL LIB_PATH="./libiec104_serv.so" IS_MASTER="1" TYPE="3"/>
+  <PROTOCOL LIB_PATH="./libretroarch.so" IS_MASTER="1" TYPE="255"/>
+  <LOG>
+    <PARAMS LOG_ENABLE="1" LOG_LEVEL="INFO"/>
+    <LOG_DST TYPE="FILE" FILE_NAME="/var/log/kc/kc.log"/>
+  </LOG>
+  <GLOBAL_CONFIG/>
+  <POINTS>
+    <POINT NAME="KC.Kernel.Connect" SIGNAL_TYPE="1"/>
+    <POINT NAME="LOC.System.WorkMode" SIGNAL_TYPE="8"/>
+    <POINT NAME="LOC.Time.Stamp" SIGNAL_TYPE="13"/>
+    <POINT NAME="LOC.Time.COM1" SIGNAL_TYPE="1"/>
+    <POINT NAME="AUTOTS_CLIENT.AutoTS.Connect" SIGNAL_TYPE="1"/>
+    <POINT NAME="AUTOTS_CLIENT.AutoTS.DO-2991-DI-2992.OperCls" SIGNAL_TYPE="1"/>
+    <POINT NAME="AUTOTS_CLIENT.AutoTS.DO-2991-DI-2992.OperOpn" SIGNAL_TYPE="1"/>
+    <POINT NAME="AUTOTS_CLIENT.AutoTS.DO-2992-DI-2995.OperCls" SIGNAL_TYPE="1"/>
+    <POINT NAME="AUTOTS_CLIENT.AutoTS.DO-2992-DI-2995.OperOpn" SIGNAL_TYPE="1"/>
+    <POINT NAME="AUTOTS_CLIENT.AutoTS.DO-2863-DI-2864.OperCls" SIGNAL_TYPE="1"/>
+    <POINT NAME="AUTOTS_CLIENT.AutoTS.DO-2863-DI-2864.OperOpn" SIGNAL_TYPE="1"/>
+    <POINT NAME="AUTOTS_CLIENT.AutoTS.DO-2900-DI-2901.OperCls" SIGNAL_TYPE="1"/>
+    <POINT NAME="AUTOTS_CLIENT.AutoTS.DO-2900-DI-2901.OperOpn" SIGNAL_TYPE="1"/>
+    <POINT NAME="Tracking.TrkCmd.Connect" SIGNAL_TYPE="1"/>
+    <POINT NAME="DNP3-Master.Клиент DNP3.Connect" SIGNAL_TYPE="1"/>
+    <POINT NAME="DNP3-Master.Клиент DNP3.AI-290" SIGNAL_TYPE="10"/>
+    <POINT NAME="DNP3-Master.Клиент DNP3.AI-291" SIGNAL_TYPE="10"/>
+    <POINT NAME="DNP3-Master.Клиент DNP3.AI-292" SIGNAL_TYPE="10"/>
+    <POINT NAME="DNP3-Master.Клиент DNP3.AI-293" SIGNAL_TYPE="10"/>
+    <POINT NAME="DNP3-Master.Клиент DNP3.AI-294" SIGNAL_TYPE="10"/>
+    <POINT NAME="DNP3-Master.Клиент DNP3.AI-295" SIGNAL_TYPE="10"/>
+    <POINT NAME="DNP3-Master.Клиент DNP3.AI-296" SIGNAL_TYPE="10"/>
+    <POINT NAME="DNP3-Master.Клиент DNP3.AI-297" SIGNAL_TYPE="10"/>
+    <POINT NAME="DNP3-Master.Клиент DNP3.AI-298" SIGNAL_TYPE="10"/>
+    <POINT NAME="DNP3-Master.Клиент DNP3.AI-299" SIGNAL_TYPE="10"/>
+    <POINT NAME="DNP3-Master.Клиент DNP3.AI-300" SIGNAL_TYPE="10"/>
+    <POINT NAME="DNP3-Master.Клиент DNP3.AI-301" SIGNAL_TYPE="10"/>
+    <POINT NAME="DNP3-Master.Клиент DNP3.AI-302" SIGNAL_TYPE="10"/>
+    <POINT NAME="DNP3-Master.Клиент DNP3.AI-303" SIGNAL_TYPE="10"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.ActiveConnect" SIGNAL_TYPE="4"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.Connect" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.Beh" SIGNAL_TYPE="4"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.RedBeh" SIGNAL_TYPE="4"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-437" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-438" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-439" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-440" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-441" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-442" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-443" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-444" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.Connect1" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-446" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-447" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-448" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-449" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-450" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-451" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-452" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-453" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.AI-455" SIGNAL_TYPE="3"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.AI-456" SIGNAL_TYPE="10"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.AI-457" SIGNAL_TYPE="8"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.AI-458" SIGNAL_TYPE="4"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-445" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-455" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-456" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-457" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-458" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-459" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-460" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-461" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-462" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-463" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-464" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-465" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-466" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-467" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-468" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-469" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-491" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-492" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-493" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-494" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-495" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-496" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-497" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-498" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-499" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-500" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-501" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-502" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-503" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-504" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-505" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-506" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-507" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-508" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-509" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-510" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-511" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-512" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-513" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-514" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-515" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-516" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-517" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-518" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-519" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-520" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-521" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.DI-522" SIGNAL_TYPE="1"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.AI-518" SIGNAL_TYPE="7"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.AI-519" SIGNAL_TYPE="6"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.AI-520" SIGNAL_TYPE="2"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.AI-521" SIGNAL_TYPE="6"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.AI-522" SIGNAL_TYPE="2"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.AI-459" SIGNAL_TYPE="3"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.AI-460" SIGNAL_TYPE="10"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.AI-461" SIGNAL_TYPE="8"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.AI-462" SIGNAL_TYPE="4"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.AI-523" SIGNAL_TYPE="7"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.AI-524" SIGNAL_TYPE="6"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.AI-525" SIGNAL_TYPE="2"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.AI-526" SIGNAL_TYPE="6"/>
+    <POINT NAME="Modbus-serial.Группа 1.Modbus.AI-527" SIGNAL_TYPE="2"/>
+    <POINT NAME="IEC 60870-5-104 Serv.Сервер 104.10_2_69_1_2404.Connect" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Serv.Сервер 104.10_2_69_1_2404.Exceed" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Serv.Сервер 104.10_2_69_1_2404.SpontQueue" SIGNAL_TYPE="4"/>
+    <POINT NAME="IEC 60870-5-104 Serv.Сервер 104.10_2_69_1_2404.APDUlist" SIGNAL_TYPE="4"/>
+    <POINT NAME="IEC 60870-5-104 Serv.Сервер 104.10_2_69_1_2404.UnconfObjects" SIGNAL_TYPE="4"/>
+    <POINT NAME="IEC 60870-5-101 Req.Группа 1.Клиент 101.ActiveConnect" SIGNAL_TYPE="4"/>
+    <POINT NAME="IEC 60870-5-101 Req.Группа 1.Клиент 101.Connect" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-101 Req.Группа 1.Клиент 101 (2).ActiveConnect" SIGNAL_TYPE="4"/>
+    <POINT NAME="IEC 60870-5-101 Req.Группа 1.Клиент 101 (2).Connect" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-101 Req.Группа 1.Клиент 101 (3).ActiveConnect" SIGNAL_TYPE="4"/>
+    <POINT NAME="IEC 60870-5-101 Req.Группа 1.Клиент 101 (3).Connect" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-101 Req.Группа 1.Клиент 101.AI-411" SIGNAL_TYPE="10" LO="12" HI="23" VAR="1" ABS_VAR="2" FORMULA="X+X"/>
+    <POINT NAME="IEC 60870-5-101 Req.Группа 1.Клиент 101.AI-412" SIGNAL_TYPE="2" LO="12" HI="23" VAR="1" ABS_VAR="2"/>
+    <POINT NAME="IEC 60870-5-101 Req.Группа 1.Клиент 101.AI-413" SIGNAL_TYPE="10" LO="12" HI="23" VAR="1" ABS_VAR="2"/>
+    <POINT NAME="IEC 60870-5-101 Req.Группа 1.Клиент 101.DI-414" SIGNAL_TYPE="1" INVERT="1" FORMULA="ifeq(X,1,1,0)"/>
+    <POINT NAME="IEC 60870-5-101 Req.Группа 1.Клиент 101.DI-415" SIGNAL_TYPE="8"/>
+    <POINT NAME="Tracking.TrkCmd.Trk1.serviceType" SIGNAL_TYPE="4"/>
+    <POINT NAME="Tracking.TrkCmd.Trk1.ctlVal" SIGNAL_TYPE="4"/>
+    <POINT NAME="Tracking.TrkCmd.Trk1.Level" SIGNAL_TYPE="4"/>
+    <POINT NAME="Tracking.TrkCmd.Trk1.orCat" SIGNAL_TYPE="4"/>
+    <POINT NAME="Tracking.TrkCmd.Trk1.OrIdent" SIGNAL_TYPE="4"/>
+    <POINT NAME="Tracking.TrkCmd.Trk1.Error" SIGNAL_TYPE="1"/>
+    <POINT NAME="Tracking.TrkCmd.Trk1.respErrorCode" SIGNAL_TYPE="4"/>
+    <POINT NAME="IEC 60870-5-101 Req.Группа 1.Клиент 101.DI-426" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-101 Req.Группа 1.Клиент 101.DI-427" SIGNAL_TYPE="2"/>
+    <POINT NAME="IEC 60870-5-101 Req.Группа 1.Клиент 101.DI-428" SIGNAL_TYPE="3"/>
+    <POINT NAME="IEC 60870-5-101 Req.Группа 1.Клиент 101.DI-429" SIGNAL_TYPE="4"/>
+    <POINT NAME="IEC 60870-5-101 Req.Группа 1.Клиент 101.DI-430" SIGNAL_TYPE="5"/>
+    <POINT NAME="IEC 60870-5-101 Req.Группа 1.Клиент 101.DI-431" SIGNAL_TYPE="8"/>
+    <POINT NAME="IEC 60870-5-101 Req.Группа 1.Клиент 101.AI-432" SIGNAL_TYPE="10" LO="12" HI="23" VAR="1" ABS_VAR="2"/>
+    <POINT NAME="IEC 60870-5-101 Req.Группа 1.Клиент 101.AI-433" SIGNAL_TYPE="2" LO="12" HI="23" VAR="1" ABS_VAR="2"/>
+    <POINT NAME="IEC 60870-5-101 Req.Группа 1.Клиент 101.AI-434" SIGNAL_TYPE="3" LO="12" HI="23" VAR="1" ABS_VAR="2"/>
+    <POINT NAME="IEC 60870-5-101 Req.Группа 1.Клиент 101.AI-435" SIGNAL_TYPE="4" LO="12" HI="23" VAR="1" ABS_VAR="2"/>
+    <POINT NAME="IEC 60870-5-101 Req.Группа 1.Клиент 101.AI-436" SIGNAL_TYPE="5" LO="12" HI="23" VAR="1" ABS_VAR="2"/>
+    <POINT NAME="IEC 60870-5-101 Req.Группа 1.Клиент 101.AI-437" SIGNAL_TYPE="6" LO="12" HI="23" VAR="1" ABS_VAR="2"/>
+    <POINT NAME="IEC 60870-5-101 Req.Группа 1.Клиент 101.AI-438" SIGNAL_TYPE="7" LO="12" HI="23" VAR="1" ABS_VAR="2"/>
+    <POINT NAME="IEC 60870-5-101 Req.Группа 1.Клиент 101.AI-439" SIGNAL_TYPE="8" LO="12" HI="23" VAR="1" ABS_VAR="2"/>
+    <POINT NAME="IEC 60870-5-101 Req.Группа 1.Клиент 101.AI-440" SIGNAL_TYPE="9" LO="12" HI="23" VAR="1" ABS_VAR="2"/>
+    <POINT NAME="IEC 60870-5-101 Req.Группа 1.Клиент 101.AI-441" SIGNAL_TYPE="11" LO="12" HI="23" VAR="1" ABS_VAR="2"/>
+    <POINT NAME="IEC 60870-5-101 Req.Группа 1.Клиент 101.AI-442" SIGNAL_TYPE="13" LO="12" HI="23" VAR="1" ABS_VAR="2"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104.Connect1" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104.ActiveConnect" SIGNAL_TYPE="4"/>
+    <POINT NAME="IEC 60870-5-104 Req.Клиент 104.Connect" SIGNAL_TYPE="1"/>
+    <POINT NAME="IEC 60870-5-101 Req.Группа 1.Клиент 101 (3).AI-446" SIGNAL_TYPE="4"/>
+    <POINT NAME="IEC 60870-5-101 Req.Группа 1.Клиент 101 (3).AI-447" SIGNAL_TYPE="10" LO="1" HI="23" VAR="1" ABS_VAR="2" FORMULA="X"/>
+  </POINTS>
+  <COMMANDS>
+    <COMMAND NAME="KC.Kernel.Reboot" SIGNAL_TYPE="14" USE_TRACKING="0"/>
+    <COMMAND NAME="Modbus-serial.Группа 1.Modbus.DO-463" SIGNAL_TYPE="14" USE_TRACKING="0"/>
+    <COMMAND NAME="Modbus-serial.Группа 1.Modbus.DO-464" SIGNAL_TYPE="14" USE_TRACKING="0"/>
+    <COMMAND NAME="Modbus-serial.Группа 1.Modbus.DO-474" SIGNAL_TYPE="14" USE_TRACKING="0"/>
+    <COMMAND NAME="Modbus-serial.Группа 1.Modbus.DO-522" SIGNAL_TYPE="14" USE_TRACKING="0"/>
+    <COMMAND NAME="Modbus-serial.Группа 1.Modbus.DO-523" SIGNAL_TYPE="14" USE_TRACKING="0"/>
+    <COMMAND NAME="Modbus-serial.Группа 1.Modbus.DO-524" SIGNAL_TYPE="14" USE_TRACKING="0"/>
+    <COMMAND NAME="Modbus-serial.Группа 1.Modbus.DO-512" SIGNAL_TYPE="14" USE_TRACKING="0"/>
+    <COMMAND NAME="Modbus-serial.Группа 1.Modbus.DO-532" SIGNAL_TYPE="14" USE_TRACKING="0"/>
+    <COMMAND NAME="IEC 60870-5-101 Req.Группа 1.Клиент 101.DO-416" SIGNAL_TYPE="15" TRK="Tracking.TrkCmd.Trk1" USE_TRACKING="1"/>
+    <COMMAND NAME="IEC 60870-5-101 Req.Группа 1.Клиент 101.DO-424" SIGNAL_TYPE="15" USE_TRACKING="0"/>
+    <COMMAND NAME="IEC 60870-5-101 Req.Группа 1.Клиент 101.DO-425" SIGNAL_TYPE="14" USE_TRACKING="0"/>
+  </COMMANDS>
+</KERNEL>
