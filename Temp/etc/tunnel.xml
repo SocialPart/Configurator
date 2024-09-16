@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<NODES>
-  <TUNNEL name="Туннель 1" conn_type="2" tout="100" ip_address="0.0.0.0" ip_port="5001" idle_to="600" port="162" baud_rate="19200" byte_size="8" parity="0" stop_bits="0"/>
-</NODES>
