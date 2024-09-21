@@ -1,6 +1,6 @@
 # warehouse_classes.py
 from dataclasses import dataclass, field # Используем dataclasses для более удобного задания классов, полей и т.д
-from CommonTypes import SignalType, CType # Описание типов сигналов согласно кодам
+from models.CommonTypes import SignalType, CType # Описание типов сигналов согласно кодам
 
 
 @dataclass

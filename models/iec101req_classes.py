@@ -1,17 +1,32 @@
 # iec101req_classes.py
 from dataclasses import dataclass, field
+from email.policy import default
+
+"""
+Файл для хранения результатов парсинга конфигурационного файла
+клиента МЭК-101. Реализована иерархическая система (основываясь на структуре xml)
+"""
+
 
 """Создание класса для хранения данных клиента МЭК-101"""
 
 @dataclass
-class IEC101reqPoint
 class IEC101reqPoint:
-    def __init__(self, warehouse_tag, warehouse_link, name: str = '', address: int = 0):
-        self.warehouse_tag = warehouse_tag
-        self.warehouse_link = warehouse_link
-        self.to_warehouse_link = warehouse_link.source_link = self
-        self.name = name
-        self.address = address
+    warehouse_tag: any
+    warehouse_link: any
+    name: str = field(default=None)
+    address: int = field(default=0)
+
+    def __post_init__(self):
+        self.to_warehouse_link = self.warehouse_link.source_link = self
+
+# class IEC101reqPoint:
+#     def __init__(self, warehouse_tag, warehouse_link, name: str = '', address: int = 0):
+#         self.warehouse_tag = warehouse_tag
+#         self.warehouse_link = warehouse_link
+#         self.to_warehouse_link = warehouse_link.source_link = self
+#         self.name = name
+#         self.address = address
 
 
 class IEC101reqCommand:
@@ -32,7 +47,7 @@ class IEC101reqCommand:
 
 
 class IEC101reqDevice:
-    def __init__(self, points: list = None, commands: list = None, name: str = '', desc: str = '',
+    def __init__(self, points: list = [], commands: list = [], name: str = '', desc: str = '',
                  disabled: int = 0, station_address: int = 1, tz: int = None,
                  common_address_of_asdu: int = 1, asdu_address_bytes: int = 1, obj_address_bytes: int = 2,
                  cot_bytes: int = 1, station_address_bytes: int = 1, interrogation_check: int = 60, InterrogationType: str = None,
@@ -88,6 +103,4 @@ class IEC101reqSlave:
 # IEC101req_default_points = [IEC101reqPoint(name='Connect', address=0),
 #                             IEC101reqPoint(name='ActiveConnect', address=0)]
 
-# s = IEC101req_Device(name='ss')
-# s.points.append(IEC101req_Point(name='Test', address=123))
-# print(s.points)
+
