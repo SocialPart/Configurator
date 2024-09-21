@@ -1,8 +1,10 @@
 # iec101req_classes.py
+from dataclasses import dataclass, field
 
 """Создание класса для хранения данных клиента МЭК-101"""
 
-
+@dataclass
+class IEC101reqPoint
 class IEC101reqPoint:
     def __init__(self, warehouse_tag, warehouse_link, name: str = '', address: int = 0):
         self.warehouse_tag = warehouse_tag
