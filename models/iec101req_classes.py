@@ -1,5 +1,6 @@
 # iec101req_classes.py
 from dataclasses import dataclass, field
+from models.CommonTypes import SignalType, CType
 from email.policy import default
 
 """
@@ -17,61 +18,71 @@ class IEC101reqPoint:
     name: str = field(default=None)
     address: int = field(default=0)
 
+    """Добавлен метод для связи с тэгом Warehouse, после создания экземпляра 
+    IEC101reqPoint"""
     def __post_init__(self):
         self.to_warehouse_link = self.warehouse_link.source_link = self
 
-# class IEC101reqPoint:
-#     def __init__(self, warehouse_tag, warehouse_link, name: str = '', address: int = 0):
-#         self.warehouse_tag = warehouse_tag
-#         self.warehouse_link = warehouse_link
-#         self.to_warehouse_link = warehouse_link.source_link = self
-#         self.name = name
-#         self.address = address
 
-
+@dataclass
 class IEC101reqCommand:
-    def __init__(self, warehouse_tag, warehouse_link, name: str = '', address: int = 0, off_address: int = 0,
-                 qu: int = 0, common_address: int = 1, type_id: str = 'C_SC_NA_1',
-                 signal_type: int = 14, wait_a: int = None):
-        self.warehouse_tag = warehouse_tag
-        self.warehouse_link = warehouse_link
-        self.to_warehouse_link = warehouse_link.source_link = self
-        self.name = name
-        self.address = address
-        self.off_address = off_address
-        self.qu = qu
-        self.common_address = common_address
-        self.type_id = type_id
-        self.signal_type = signal_type
-        self.wait_a = wait_a
+    warehouse_tag: any
+    warehouse_link: any
+    name: str = field(default=None)
+    address: int = field(default=0)
+    off_address: str = field(default=0)
+    qu: int = field(default=0)
+    common_address: int = field(default=1)
+    type_id: str = field(default='C_SC_NA_1')
+    signal_type: SignalType = field(default=SignalType.CMD)
+    wait_a: int = field(default=0)
 
+    def __post_init__(self):
+        self.to_warehouse_link = self.warehouse_link.source_link = self
 
+@dataclass
 class IEC101reqDevice:
-    def __init__(self, points: list = [], commands: list = [], name: str = '', desc: str = '',
-                 disabled: int = 0, station_address: int = 1, tz: int = None,
-                 common_address_of_asdu: int = 1, asdu_address_bytes: int = 1, obj_address_bytes: int = 2,
-                 cot_bytes: int = 1, station_address_bytes: int = 1, interrogation_check: int = 60, InterrogationType: str = None,
-                 clock_sync: int = 1, clock_sync_check: int = 60, ClockSyncType: str = None,
-                sleep: int = 0):
-        self.points = points
-        self.commands = commands
-        self.name = name
-        self.desc = desc
-        self.disabled = disabled
-        self.station_address = station_address
-        self.tz = tz
-        self.common_address_of_asdu = common_address_of_asdu
-        self.asdu_address_bytes = asdu_address_bytes
-        self.obj_address_bytes = obj_address_bytes
-        self.cot_bytes = cot_bytes
-        self.station_address_bytes = station_address_bytes
-        self.interrogation_check = interrogation_check
-        self.interrogation_type = InterrogationType
-        self.clock_sync = clock_sync
-        self.clock_sync_check = clock_sync_check
-        self.clock_sync_type = ClockSyncType
-        self.sleep = sleep
+    points: list = field(default_factory=list)
+    commands: list = field(default_factory=list)
+    points_map: dict = field(default_factory=dict)
+    commands_map: dict = field(default_factory=dict)
+    name: str = field(default="")
+    desc: str = field(default="")
+    disabled: int = field(default=0)
+    station_address: int = field(default=1)
+    tz: int = field(default=None)
+    common_address_of_asdu : int = field(default=1)
+    asdu_address_bytes : int = field(default=1)
+    obj_address_bytes : int = field(default=2)
+    cot_bytes : int = field(default=1)
+    station_address_bytes : int = field(default=1)
+    interrogation_check : int = field(default=60)
+    interrogation_type : str = field(default="")
+    clock_sync : int = field(default=1)
+    clock_sync_check : int = field(default=60)
+    clock_sync_type : int = field(default=None)
+    sleep : int = field(default=10)
 
+@dataclass
+class IEC101reqDataSource:
+    self.port = port
+    self.port_speed = port_speed
+    self.byte_reading = byte_reading
+    self.byte_reading_timeout = byte_reading_timeout
+    self.port_parity = port_parity
+    self.port_bytesize = port_bytesize
+    self.port_stopbits = port_stopbits
+    self.balanced = balanced
+    self.retries = retries
+    self.interleave = interleave
+    self.responce_to = responce_to
+
+@dataclass
+class IEC101reqSlave:
+    data_sources = data_sources
+    devices : list = field(default_factory=list)
+    devices_map : dict = field(default_factory=dict)
+    name : str = field(default="")
 
 class IEC101reqDataSource:
     def __init__(self, port: str = '', port_speed: int = 9600, byte_reading: int = 0, byte_reading_timeout: int = 100,
