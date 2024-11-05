@@ -57,5 +57,5 @@ for command_element in commands_element.findall('COMMAND'):
                                              use_tracking=command_use_tracking)
     warehouse['commands'].append(command)
 
-# for i in warehouse.get('points'):
-#     print(i.name)
+for i in warehouse.get('points'):
+    print(i.name)

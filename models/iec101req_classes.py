@@ -65,17 +65,17 @@ class IEC101reqDevice:
 
 @dataclass
 class IEC101reqDataSource:
-    self.port = port
-    self.port_speed = port_speed
-    self.byte_reading = byte_reading
-    self.byte_reading_timeout = byte_reading_timeout
-    self.port_parity = port_parity
-    self.port_bytesize = port_bytesize
-    self.port_stopbits = port_stopbits
-    self.balanced = balanced
-    self.retries = retries
-    self.interleave = interleave
-    self.responce_to = responce_to
+    port: str = field(default=None)
+    port_speed: int = field(default=9600)
+    byte_reading: int = field(default=1)
+    byte_reading_timeout: int = field(default=100)
+    port_parity: int = field(default=0)
+    port_bytesize: int = field(default=8)
+    port_stopbits: int = field(default=0)
+    balanced: int = field(default=0)
+    retries: int = field(default=3)
+    interleave: int = field(default=100)
+    responce_to: int = field(default=500)
 
 @dataclass
 class IEC101reqSlave:
@@ -84,28 +84,28 @@ class IEC101reqSlave:
     devices_map : dict = field(default_factory=dict)
     name : str = field(default="")
 
-class IEC101reqDataSource:
-    def __init__(self, port: str = '', port_speed: int = 9600, byte_reading: int = 0, byte_reading_timeout: int = 100,
-                 port_parity: int = 0, port_bytesize: int = 8, port_stopbits: int = 0, balanced: int = 0,
-                 retries: int = 3, interleave: int = 100, responce_to: int = 500):
-        self.port = port
-        self.port_speed = port_speed
-        self.byte_reading = byte_reading
-        self.byte_reading_timeout = byte_reading_timeout
-        self.port_parity = port_parity
-        self.port_bytesize = port_bytesize
-        self.port_stopbits = port_stopbits
-        self.balanced = balanced
-        self.retries = retries
-        self.interleave = interleave
-        self.responce_to = responce_to
+# class IEC101reqDataSource:
+#     def __init__(self, port: str = '', port_speed: int = 9600, byte_reading: int = 0, byte_reading_timeout: int = 100,
+#                  port_parity: int = 0, port_bytesize: int = 8, port_stopbits: int = 0, balanced: int = 0,
+#                  retries: int = 3, interleave: int = 100, responce_to: int = 500):
+#         self.port = port
+#         self.port_speed = port_speed
+#         self.byte_reading = byte_reading
+#         self.byte_reading_timeout = byte_reading_timeout
+#         self.port_parity = port_parity
+#         self.port_bytesize = port_bytesize
+#         self.port_stopbits = port_stopbits
+#         self.balanced = balanced
+#         self.retries = retries
+#         self.interleave = interleave
+#         self.responce_to = responce_to
 
 
-class IEC101reqSlave:
-    def __init__(self, name: str = '', data_sources: list = None, devices: list = None):
-        self.data_sources = data_sources
-        self.devices = devices
-        self.name = name
+# class IEC101reqSlave:
+#     def __init__(self, name: str = '', data_sources: list = None, devices: list = None):
+#         self.data_sources = data_sources
+#         self.devices = devices
+#         self.name = name
 
 
 """Дефолтные каналы будут добавляться только при создании нового клиента, 
