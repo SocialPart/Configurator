@@ -1,5 +1,6 @@
 from lxml import etree
 import models.iec101req_classes as iec101req_classes
+from models.warehouse_classes import DiscretePoint
 from warehouse_parser import warehouse
 import sys
 import utils.defs as defs

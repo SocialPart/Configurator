@@ -1,50 +1,51 @@
 # warehouse_classes.py
+from dataclasses import dataclass, field # Используем dataclasses для более удобного задания классов, полей и т.д
+from models.CommonTypes import SignalType, CType # Описание типов сигналов согласно кодам
 
+"""Классы для хранения тэгов трансляции"""
+
+"""Явное задание пустой строки по дефолту будет соответствовать
+полю, которое присутствует в warehouse даже при отсутствии там значения
+если поле None, то данный атрибут не попадет в warehouse.xml"""
+
+"""Для реализации менеджера объектов нужно будет удалить source link"""
+
+@dataclass
 class AnalogPoint:
-    def __init__(self, source_link: str = None, name: str = '', signal_type: int = 10, naming: str = '',
-                 lo: int = None, hi: int = None, formula: str = None,
-                 formula_time: str = None, aging: int = None):
-        self.source_link = source_link
-        self.name = name
-        self.c = 0
-        self.signal_type = signal_type
-        self.naming = naming
-        self.lo = lo
-        self.hi = hi
-        self.formula = formula
-        self.formula_time = formula_time
-        self.aging = aging
+    source_link: str = field(default=None)
+    name: str = field(default="")
+    c: CType = field(default=CType.ANALOG)
+    signal_type: SignalType = field(default=SignalType.FLOAT)
+    naming: str = field(default="")
+    lo: int = field(default=None)
+    hi: int = field(default=None)
+    formula: str = field(default=None)
+    formula_time: str = field(default=None)
+    aging: int = field(default=None)
 
 
+@dataclass
 class DiscretePoint:
-    def __init__(self, source_link: str = None, name: str = '', signal_type: int = 1, naming: str = '',
-                 formula: str = None, formula_time: str = None, aging: int = None,
-                 invert: int = None):
-        self.source_link = source_link
-        self.name = name
-        self.c = 1
-        self.signal_type = signal_type
-        self.naming = naming
-        self.formula = formula
-        self.formula_time = formula_time
-        self.aging = aging
-        self.invert = invert
+    source_link: str = field(default=None)
+    name: str = field(default="")
+    c: CType = field(default=CType.DISCRETE)
+    signal_type: SignalType = field(default=SignalType.BOOL)
+    naming: str = field(default="")
+    formula: str = field(default=None)
+    formula_time: str = field(default=None)
+    aging: int = field(default=None)
+    invert: int = field(default=None)
 
-
+@dataclass
 class CommandPoint:
-    def __init__(self, source_link: str = None, name: str = '', signal_type: int = 15, naming: str = '',
-                 state: str = None, last: str = None, lock_cond_on: str = None,
-                 lock_cond_off: str = None, trk: str = None, use_tracking: int = 0):
-        self.source_link = source_link
-        self.name = name
-        self.c = 2
-        self.signal_type = signal_type
-        self.naming = naming
-        self.state = state
-        self.last = last
-        self.lock_cond_on = lock_cond_on
-        self.lock_cond_off = lock_cond_off
-        self.trk = trk
-        self.use_tracking = use_tracking
-
-
+    source_link: str = field(default=None)
+    name: str = field(default="")
+    c: CType = field(default=CType.COMMAND)
+    signal_type: SignalType = field(default=SignalType.SEL_EXEC)
+    naming: str = field(default="")
+    state: str = field(default=None)
+    last: str = field(default=None)
+    lock_cond_on: str = field(default=None)
+    lock_cond_off: str = field(default=None)
+    trk: str = field(default="")
+    use_tracking: int = field(default=0)
